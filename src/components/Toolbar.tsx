@@ -1,20 +1,35 @@
 import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
-import { FaGithub, FaTwitter, FaDribbble, FaAngleDown } from 'react-icons/fa'
-import { isBreakpoint } from 'lib/css'
-import { AppColorName } from 'lib/css'
+import {
+  FaGithub,
+  FaTwitter,
+  FaDribbble,
+  FaAngleDown,
+  FaSun,
+  FaMoon,
+} from 'react-icons/fa'
+import { isBreakpoint, useTailwindCx } from 'lib/theme'
+import { ColorName } from 'lib/theme'
 import { MdSearch, MdEdit } from 'react-icons/md'
 import ToolbarButton from 'components/ToolbarButton'
 import { useQuickOpen } from 'lib/quickOpen/hooks'
+import { useTheme } from 'lib/theme'
+import Logo from 'assets/svg/logo.svg'
+import Tooltip from '@reach/tooltip'
 
 export interface ToolbarProps {
   readonly className?: string
-  readonly color?: AppColorName
+  readonly color?: ColorName
 }
 
 const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
+  const theme = useTheme()
+  const tcx = useTailwindCx(color)
   const quickOpen = useQuickOpen()
+  const handleThemeChange = (): void => {
+    theme.setTheme(theme.name === 'dark' ? 'light' : 'dark')
+  }
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
     if (!isBreakpoint('md')) {
       e.preventDefault()
@@ -27,9 +42,15 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
     <div className={cx('flex flex-row relative', className)}>
       <Link href="/">
         <a className="flex items-center mr-auto" onClick={handleLogoClick}>
-          <span className="text-3xl font-mono font-bold">
-            vinicius<span className="text-secondary-600">.app</span>
-          </span>
+          <Logo
+            alt="Vinicius.app"
+            width="146px"
+            height="32px"
+            className={`${tcx('text', 700)} ${tcx('hover:text', 800)}`}
+          />
+          <Tooltip label="Status: Surfando">
+            <span className="text-2xl ml-3">🏄🏻‍♂️</span>
+          </Tooltip>
           <FaAngleDown className="inline-block ml-2 text-xl md:hidden" />
         </a>
       </Link>
@@ -60,12 +81,28 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
             hideText
           />
           <ToolbarButton
-            href="/"
+            href="https://dribbble.com/oivini"
             icon={FaDribbble}
             label="Dribbble"
             color={color}
             hideText
           />
+          <Tooltip
+            label={
+              theme.name === 'light'
+                ? 'Ativar modo dark'
+                : 'Desativar modo dark'
+            }
+          >
+            <ToolbarButton
+              as="button"
+              icon={theme.name === 'dark' ? FaMoon : FaSun}
+              label="Dribbble"
+              color={color}
+              onClick={handleThemeChange}
+              hideText
+            />
+          </Tooltip>
         </div>
       </div>
     </div>

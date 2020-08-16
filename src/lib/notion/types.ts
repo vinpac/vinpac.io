@@ -1,4 +1,4 @@
-import { AppColorName } from 'lib/css'
+import { ColorName } from 'lib/theme'
 
 export interface BlogPost {
   id: string
@@ -6,7 +6,7 @@ export interface BlogPost {
   name: string
   isPublished: boolean
   date: string | null
-  color: AppColorName
+  color: ColorName
   description: string | null
   tags: string[]
 }
@@ -24,7 +24,7 @@ export interface BlogTableRow {
   Tags?: string[]
   Description: string
   Date: string
-  Color: AppColorName
+  Color: ColorName
   Page: string
   Published?: boolean
 }

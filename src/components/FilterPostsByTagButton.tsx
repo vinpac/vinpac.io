@@ -19,7 +19,7 @@ const FilterPostsByTagButton: React.FC<FilterPostsByTagButtonProps> = ({
     <button
       className={cx(
         className,
-        `px-2 py-1 border-2 bg-white hover:border-primary-500 hover:underline font-medium rounded-lg mr-2`,
+        `px-2 py-1 border-2 border-theme-300 bg-theme hover:border-primary-500 hover:underline font-medium rounded-lg mr-2`,
       )}
       title={`Filtrar pela tag #${tag}`}
       onClick={handleClick}

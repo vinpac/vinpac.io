@@ -3,7 +3,7 @@ import cx from 'classnames'
 import Link from 'next/link'
 import { BlogPost } from 'lib/notion'
 import moment from 'moment'
-import { useTailwindCx } from 'lib/css'
+import { useTailwindCx } from 'lib/theme'
 import ShadowColor from 'components/ShadowColor'
 import { FaClock } from 'react-icons/fa'
 
@@ -19,21 +19,25 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
   shadowClassName,
   post,
 }) => {
+  const tcx = useTailwindCx('gray')
   const vx = useTailwindCx(post.color)
   return (
     <ShadowColor color={post.color} distance="2" className={shadowClassName}>
       <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
         <a
           className={cx(
-            `rounded-xl block ${vx(
+            `rounded-xl block ${tcx(
               'border',
               500,
-            )} border-2 p-6 bg-white shadow relative z-10 transform hover:-translate-y-1 duration-75`,
+              700,
+            )} border-2 p-6 bg-theme shadow relative z-10 transform hover:-translate-y-1 duration-75`,
             className,
           )}
         >
-          <h1 className={`font-bold text-3xl text-gray-900`}>{post.name}</h1>
-          <p className={`${vx('text', 900, 900)} text-lg mb-2 flex-grow`}>
+          <h1 className={`font-bold text-3xl ${tcx('text', 900)}`}>
+            {post.name}
+          </h1>
+          <p className={`${vx('text', 900, 300)} text-lg mb-2 flex-grow`}>
             {post.description}
           </p>
 

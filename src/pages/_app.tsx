@@ -2,6 +2,7 @@ import moment from 'moment'
 import '@reach/tooltip/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
 import '../styles.css'
+import '../animate.css'
 import '../notion.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
@@ -9,6 +10,7 @@ import QuickOpenProvider from 'components/QuickOpenProvider'
 import { DefaultSeo } from 'next-seo'
 import PageTransitionLoadingBar from 'components/PageTransitionLoadingBar'
 import { buildSuggestionsList } from 'lib/quickOpen/suggestions'
+import ThemeProvider from 'components/ThemeProvider'
 
 moment.locale('pt-br')
 
@@ -56,36 +58,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           sizes="152x152"
           href="apple-touch-icon-152x152.png"
         />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-196x196.png"
-          sizes="196x196"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-32x32.png"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-16x16.png"
-          sizes="16x16"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-128.png"
-          sizes="128x128"
-        />
+        <link rel="icon" type="image/svg" href="/assets/Favicon.svg" />
         <meta name="application-name" content="&nbsp;" />
         <meta name="msapplication-TileImage" content="mstile-144x144.png" />
         <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
@@ -118,10 +91,14 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           cardType: 'summary_large_image',
         }}
       />
-      <PageTransitionLoadingBar />
-      <QuickOpenProvider buildSuggestionsList={buildSuggestionsList}>
-        <Component {...pageProps} />
-      </QuickOpenProvider>
+
+      <ThemeProvider>
+        <PageTransitionLoadingBar />
+
+        <QuickOpenProvider buildSuggestionsList={buildSuggestionsList}>
+          <Component {...pageProps} />
+        </QuickOpenProvider>
+      </ThemeProvider>
     </>
   )
 }

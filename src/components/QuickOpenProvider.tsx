@@ -46,7 +46,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
 
   const ctx = useMemo<QuickOpenContextType>(() => {
     return { open, close }
-  }, [open])
+  }, [open, close])
 
   return (
     <QuickOpenContext.Provider value={ctx}>
@@ -55,7 +55,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
         <Dialog
           isOpen
           onDismiss={close}
-          className="max-w-xl bg-white search-dialog"
+          className="max-w-xl bg-theme-standout search-dialog"
           aria-labelledby="Quick Open"
         >
           <QuickOpen

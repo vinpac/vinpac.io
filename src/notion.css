@@ -1,3 +1,7 @@
+:root {
+  --notion-border-radius: 8px;
+}
+
 .notion > * {
   padding: 3px 0px;
 }
@@ -7,86 +11,77 @@
   margin-block-end: 0px;
 }
 
-.notion-red {
-  color: rgb(224, 62, 62);
+.notion-red,
+.notion-red_co {
+  color: var(--notion-color-red);
 }
-.notion-pink {
-  color: rgb(173, 26, 114);
+.notion-pink,
+.notion-pink_co {
+  color: var(--notion-color-pink);
 }
-.notion-blue {
-  color: rgb(11, 110, 153);
+.notion-blue,
+.notion-blue_co {
+  color: var(--notion-color-blue);
 }
-.notion-purple {
-  color: rgb(105, 64, 165);
+.notion-purple,
+.notion-purple_co {
+  color: var(--notion-color-purple);
 }
-.notion-teal {
-  color: rgb(15, 123, 108);
+.notion-teal,
+.notion-teal_co {
+  color: var(--notion-color-teal);
 }
-.notion-yellow {
-  color: rgb(223, 171, 1);
+.notion-yellow,
+.notion-yellow_co {
+  color: var(--notion-color-yellow);
 }
-.notion-orange {
-  color: rgb(217, 115, 13);
+.notion-orange,
+.notion-orange_co {
+  color: var(--notion-color-orange);
 }
-.notion-brown {
-  color: rgb(100, 71, 58);
+.notion-brown,
+.notion-brown_co {
+  color: var(--notion-color-brown);
 }
-.notion-gray {
-  color: rgb(155, 154, 151);
+.notion-gray,
+.notion-gray_co {
+  color: var(--notion-color-gray);
 }
-.notion-red_background {
-  background-color: rgb(251, 228, 228);
-}
-.notion-pink_background {
-  background-color: rgb(244, 223, 235);
-}
-.notion-blue_background {
-  background-color: rgb(221, 235, 241);
-}
-.notion-purple_background {
-  background-color: rgb(234, 228, 242);
-}
-.notion-teal_background {
-  background-color: rgb(221, 237, 234);
-}
-.notion-yellow_background {
-  background-color: rgb(251, 243, 219);
-}
-.notion-orange_background {
-  background-color: rgb(250, 235, 221);
-}
-.notion-brown_background {
-  background-color: rgb(233, 229, 227);
-}
-.notion-gray_background {
-  background-color: rgb(235, 236, 237);
-}
+.notion-red_background,
 .notion-red_background_co {
-  background-color: rgb(251, 228, 228, 0.3);
+  background-color: var(--notion-background-red);
 }
+.notion-pink_background,
 .notion-pink_background_co {
-  background-color: rgb(244, 223, 235, 0.3);
+  background-color: var(--notion-background-pink);
 }
+.notion-blue_background,
 .notion-blue_background_co {
-  background-color: rgb(221, 235, 241, 0.3);
+  background-color: var(--notion-background-blue);
 }
+.notion-purple_background,
 .notion-purple_background_co {
-  background-color: rgb(234, 228, 242, 0.3);
+  background-color: var(--notion-background-purple);
 }
+.notion-teal_background,
 .notion-teal_background_co {
-  background-color: rgb(221, 237, 234, 0.3);
+  background-color: var(--notion-background-teal);
 }
+.notion-yellow_background,
 .notion-yellow_background_co {
-  background-color: rgb(251, 243, 219, 0.3);
+  background-color: var(--notion-background-yellow);
 }
+.notion-orange_background,
 .notion-orange_background_co {
-  background-color: rgb(250, 235, 221, 0.3);
+  background-color: var(--notion-background-orange);
 }
+.notion-brown_background,
 .notion-brown_background_co {
-  background-color: rgb(233, 229, 227, 0.3);
+  background-color: var(--notion-background-brown);
 }
+.notion-gray_background,
 .notion-gray_background_co {
-  background-color: rgb(235, 236, 237, 0.3);
+  background-color: var(--notion-background-gray);
 }
 
 .notion b {
@@ -231,7 +226,7 @@ img.notion-page-icon {
   color: #eb5757 !important;
   padding: 0.2em 0.4em;
   background: rgba(135, 131, 120, 0.15);
-  border-radius: 3px;
+  border-radius: var(--notion-border-radius);
   font-size: 85%;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
@@ -296,7 +291,7 @@ img.notion-page-icon {
   box-sizing: border-box;
   text-decoration: none;
   border: 1px solid rgba(55, 53, 47, 0.16);
-  border-radius: 3px;
+  border-radius: var(--notion-border-radius);
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -307,7 +302,6 @@ img.notion-page-icon {
   padding: 12px 14px 14px;
   overflow: hidden;
   text-align: left;
-  color: rgb(55, 53, 47);
 }
 
 .notion-bookmark-title {
@@ -338,12 +332,12 @@ img.notion-page-icon {
   height: 16px;
   min-width: 16px;
   margin-right: 6px;
+  vertical-align: top;
 }
 
 .notion-bookmark-link > div {
   font-size: 12px;
   line-height: 16px;
-  color: rgb(55, 53, 47);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -409,8 +403,7 @@ img.notion-page-icon {
   padding: 16px 16px 16px 12px;
   display: inline-flex;
   width: 100%;
-  border-radius: 3px;
-  border-width: 1px;
+  border-radius: var(--notion-border-radius);
   align-items: center;
   box-sizing: border-box;
   margin: 4px 0;
@@ -429,7 +422,7 @@ img.notion-page-icon {
 .notion-table,
 .notion-th,
 .notion-td {
-  border: 1px solid rgba(55, 53, 47, 0.09);
+  border: 1px solid var(--color-300);
   border-collapse: collapse;
 }
 
@@ -455,7 +448,7 @@ img.notion-page-icon {
 }
 
 .notion-th {
-  color: rgba(55, 53, 47, 0.6);
+  color: inherit;
   font-size: 14px;
 }
 
@@ -475,7 +468,7 @@ img.notion-page-icon {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-rows: 1fr;
   gap: 16px;
-  border-top: 1px solid rgba(55, 53, 47, 0.16);
+  border-top: 1px solid var(--color-300);
   padding-top: 16px;
   padding-bottom: 4px;
 }
@@ -485,7 +478,7 @@ img.notion-page-icon {
   text-decoration: none;
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 2px 4px;
-  border-radius: 3px;
+  border-radius: var(--notion-border-radius);
   background: white;
   overflow: hidden;
   transition: background 100ms ease-out 0s;
@@ -520,7 +513,7 @@ img.notion-page-icon {
 }
 
 .notion-image-inset {
-  border-radius: 12px;
+  border-radius: var(--notion-border-radius);
 }
 .notion-hr {
   margin-top: 0.5rem !important;
@@ -565,4 +558,19 @@ img.notion-page-icon {
 .prose .notion-inline-code::before,
 .prose .notion-inline-code::after {
   content: '';
+}
+
+.theme-dark .notion-bookmark-link img {
+  filter: invert(100%) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+a.notion-bookmark {
+  text-decoration: none;
+}
+
+.notion-bookmark-image > img,
+.notion-bookmark-link > img {
+  margin-top: 0;
+  margin-bottom: 0;
 }

@@ -1,5 +1,5 @@
 import { Suggestion } from 'lib/quickOpen/types'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaMoon } from 'react-icons/fa'
 import { MdEdit, MdHome } from 'react-icons/md'
 
 export const staticSuggestions: Suggestion[] = [
@@ -35,6 +35,14 @@ export const staticSuggestions: Suggestion[] = [
     icon: { type: 'component', component: FaGithub },
     keywords: ['Github', 'git', 'vinpac'],
     title: 'Github',
+    showDescription: false,
+  },
+  {
+    id: 'theme',
+    href: '/',
+    icon: { type: 'component', component: FaMoon },
+    keywords: ['Dark', 'Tema', 'Ativar'],
+    title: 'Desativar modo Dark',
     showDescription: false,
   },
 ]

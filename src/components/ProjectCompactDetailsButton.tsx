@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import { useTailwindCx, AppColorName } from 'lib/css'
 import ShadowColor from 'components/ShadowColor'
 
 export interface ProjectCompactDetailsButtonProps {
@@ -10,40 +9,47 @@ export interface ProjectCompactDetailsButtonProps {
   readonly description: string
   readonly logoSrc: string
   readonly active?: boolean
-  readonly color?: AppColorName
 }
 
 const ProjectCompactDetailsButton: React.FC<ProjectCompactDetailsButtonProps> = ({
   className,
   name,
-  description,
   logoSrc,
-  color = 'gray',
 }) => {
-  const tcx = useTailwindCx(color)
   return (
-    <ShadowColor color={color} distance="1" className={className}>
-      <button
-        className={cx(
-          'rounded-xl w-full text-left p-4 bg-white relative z-10 border-2',
-          tcx('border', 500),
-        )}
-      >
-        <div className="flex mb-2">
+    <div className={cx(className)}>
+      <div className="pl-32">
+        <ShadowColor
+          color="primary"
+          distance="2"
+          className="w-32 float-left -ml-32"
+        >
           <img
             src={logoSrc}
-            className="w-12 h-12 rounded-full bg-gray-500 block mr-3"
+            className="w-32 h-32 rounded-xl bg-gray-500 relative z-10"
           />
-          <div className="leading-tight flex flex-col justify-center">
-            <h4 className="text-xl font-medium -mt-1 truncate text-gray-900">
-              {name}
-            </h4>
-            <p className="text-sm text-gray-600 mb-0">4 anos . CTO</p>
-          </div>
+        </ShadowColor>
+        <div className="pl-8">
+          <h1 className="text-2xl font-medium truncate text-theme-900 -mt-1">
+            {name}
+          </h1>
+          <h4 className="text-green-600 font-medium mb-1">
+            Co-Founder & COO, Since June 2019{' '}
+            <span className="text-gray-600 font-normal"> . São Paulo, SP</span>
+          </h4>
+          <p className="text-base text-theme-700">
+            Civics Unplugged (CU) is a nonpartisan 501(c)(3) social enterprise
+            and digitally-powered community that provides leaders of Generation
+            Z training, funds, and support to build the future of American
+            communities and democracy. Civics Unplugged&apos;s flagship program
+            is the CU Fellowship, which had its inaugural year in 2020 and
+            trained a diverse cohort of two-hundred exceptional high schoolers
+            representing every region of the US.
+            <br />
+          </p>
         </div>
-        <p className="text-base text-gray-700 mb-2">{description}</p>
-      </button>
-    </ShadowColor>
+      </div>
+    </div>
   )
 }
 

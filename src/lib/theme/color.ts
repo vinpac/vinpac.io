@@ -1,5 +1,6 @@
-import { ColorShade, AppColorName } from 'lib/css/types'
+import { ColorShade, ColorName } from 'lib/theme/types'
 import { useCallback } from 'react'
+import { useThemeName } from 'lib/theme/hooks'
 
 export const screensWidth = {
   xs: 0,
@@ -21,7 +22,8 @@ export type ColorClassNameFn = (
   inverseShade?: ColorShade,
 ) => string
 
-export const useTailwindCx = (color?: AppColorName): ColorClassNameFn => {
+export const useTailwindCx = (color?: ColorName): ColorClassNameFn => {
+  const theme = useThemeName()
   return useCallback(
     (
       className: string,
@@ -32,8 +34,9 @@ export const useTailwindCx = (color?: AppColorName): ColorClassNameFn => {
         throw new Error('Color is undefined')
       }
 
-      const isDark = color.endsWith('dark')
-      const colorName: string = isDark
+      const hasDarkInName = color.endsWith('dark')
+      const isDark = theme === 'dark' ? !hasDarkInName : hasDarkInName
+      const colorName: string = hasDarkInName
         ? color.substr(0, color.indexOf('.'))
         : color
       let resultShade = shade
@@ -56,6 +59,6 @@ export const useTailwindCx = (color?: AppColorName): ColorClassNameFn => {
 
       return `${className}-${colorName}-${resultShade}`
     },
-    [color],
+    [color, theme],
   )
 }

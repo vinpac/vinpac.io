@@ -1,4 +1,4 @@
-import { AppColorName } from 'lib/css'
+import { ColorName } from 'lib/theme'
 
 export interface BuildSuggestionsListFn {
   (input: string): Promise<Suggestion[]>
@@ -27,5 +27,5 @@ interface IconAsset {
 
 interface ColorIcon {
   type: 'color'
-  color: AppColorName
+  color: ColorName
 }

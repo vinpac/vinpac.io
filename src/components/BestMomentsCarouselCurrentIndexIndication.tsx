@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import cx from 'classnames'
 import Tooltip from '@reach/tooltip'
-import { AppColorName } from 'lib/css/types'
-import { useTailwindCx } from 'lib/css'
 
 export interface BestMomentsCarouselCurrentIndexIndicationProps {
   readonly className?: string
   readonly positionClassName?: string
-  readonly color?: AppColorName
   readonly activeSlideIndex: number
   readonly timeout: number
   readonly slidesLength: number
@@ -19,9 +16,7 @@ const BestMomentsCarouselCurrentIndexIndication: React.FC<BestMomentsCarouselCur
   activeSlideIndex,
   timeout,
   slidesLength,
-  color,
 }) => {
-  const vx = useTailwindCx(color)
   const [timeoutPercentage, setTimeoutPercentage] = useState(0)
   useEffect(() => {
     let elapsedMs = 0
@@ -43,23 +38,15 @@ const BestMomentsCarouselCurrentIndexIndication: React.FC<BestMomentsCarouselCur
     <Tooltip label="É o index po">
       <span
         className={cx(
-          `component leading-3 ${vx(
-            'text',
-            700,
-          )} font-medium flex items-center rounded-full`,
+          `component leading-3 text-theme-700 font-medium flex items-center rounded-full`,
           positionClassName,
           className,
         )}
       >
-        <div
-          className={`${vx(
-            'bg',
-            200,
-          )} w-8 h-2 rounded-full overflow-hidden mr-2`}
-        >
+        <div className="bg-theme-200 w-8 h-2 rounded-full overflow-hidden mr-2">
           <span
             style={{ width: `${timeoutPercentage}%` }}
-            className={`block ${vx('bg', 400)} h-full`}
+            className="block bg-theme-400 h-full"
           />
         </div>
         <span className="text-xs">

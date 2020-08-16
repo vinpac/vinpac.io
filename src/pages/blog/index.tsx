@@ -7,10 +7,12 @@ import { useSWRFetch } from 'lib/fetch/hooks'
 import { updateBlogIndexCacheInBrowser } from 'lib/blog/browser'
 import { NextSeo } from 'next-seo'
 import BlockPlaceholder from 'components/BlockPlaceholder'
+import { useTailwindCx } from 'lib/theme'
 
 const BlogPage: React.FC = () => {
   const [view] = useState<'list' | 'grid'>('grid')
   const { data } = useSWRFetch<BlogIndex>('/api/blog')
+  const tcx = useTailwindCx('primary')
   useEffect(() => {
     if (data) {
       updateBlogIndexCacheInBrowser(data)
@@ -19,7 +21,7 @@ const BlogPage: React.FC = () => {
   return (
     <Layout
       hero={
-        <div className="container pb-10">
+        <div className="container pb-12">
           <h1 className="text-6xl font-bold mb-4">Blog</h1>
           {data && (
             <div className="h-10 animated fadeInUp-25 animated_faster">
@@ -31,10 +33,13 @@ const BlogPage: React.FC = () => {
           {!data && <BlockPlaceholder className="w-1/4 h-10" />}
         </div>
       }
-      color="gray"
+      heroClassName="bg-theme"
     >
       <NextSeo title="Blog" />
-      <div className="container relative z-10 -translate-y-8 transform">
+      <div
+        className={`h-3 ${tcx('bg', 200)} ${tcx('border', 500)} border-t-4`}
+      />
+      <div className="container relative z-10 -translate-y-12 transform">
         <div className="flex flex-wrap -mx-2">
           {data?.posts.map((post) => (
             <div key={post.id} className="w-full md:w-1/2 px-2 mb-4">

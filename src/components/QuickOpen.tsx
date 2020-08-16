@@ -68,7 +68,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         }
       }
     },
-    [suggestions, selectionIndex, onSelectItem],
+    [onSelectItem],
   )
 
   // Handle ENTER, UP and DOWN when the text input is focused
@@ -83,7 +83,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         handleSuggestionSelect(suggestion)
       }
     },
-    [selectionIndex, moveSelection],
+    [selectionIndex, suggestions, handleSuggestionSelect, moveSelection],
   )
 
   // Listen for ENTER to activate selection
@@ -121,14 +121,14 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       timedout = true
       clearTimeout(timeout)
     }
-  }, [text, setSuggestions, setSelectionIndex])
+  }, [text, setSuggestions, buildSuggestionsList, setSelectionIndex])
 
   return (
-    <div className={cx(className, 'pb-3')}>
+    <div className={cx(className, !isLoading && 'pb-3')}>
       <div className="relative">
         <input
           type="text"
-          className="w-full pl-16 pr-4 pt-4 pb-3 focus:border-primary-500 rounded-lg outline-none text-xl"
+          className="w-full pl-16 pr-4 pt-4 pb-3 rounded-lg outline-none text-xl bg-theme-standout"
           placeholder={`Tente digitar "${tip}"`}
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
@@ -136,7 +136,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         />
         <MdSearch
           size={28}
-          className="absolute left-0 top-0 bottom-0 ml-5 mt-4 text-primary-500"
+          className="absolute left-0 top-0 bottom-0 ml-5 mt-4 text-primary-400"
         />
       </div>
       {suggestions.map((suggestion, idx) => (
@@ -151,12 +151,12 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       {!isLoading && suggestions.length === 0 && (
         <div className="py-6 animated">
           <NatureForFunSVG className="w-full h-24 mx-auto mb-3" />
-          <p className="text-gray-700 text-center font-medium fadeInUp-25 animated_faster">
+          <p className="text-theme-700 text-center font-medium fadeInUp-25 animated_faster">
             Infelizmente nada foi encontrado
           </p>
         </div>
       )}
-      {isLoading && <div className="py-8 bg-gray-100"></div>}
+      {isLoading && <div className="py-8 bg-theme-100 rounded-b-lg"></div>}
     </div>
   )
 }

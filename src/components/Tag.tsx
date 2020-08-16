@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
-import { AppColorName, useTailwindCx } from 'lib/css'
+import { ColorName, useTailwindCx } from 'lib/theme'
 
 export interface TagProps {
   readonly className?: string
   readonly bg?: string
-  readonly color?: AppColorName
+  readonly color?: ColorName
   readonly children?: React.ReactNode
 }
 

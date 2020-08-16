@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
-import { AppColorName, useTailwindCx } from 'lib/css'
+import { ColorName, useTailwindCx } from 'lib/theme'
 
 export interface ButtonProps {
   readonly as?: React.ComponentType<{ className: string }> | string
   readonly className?: string
-  readonly color?: AppColorName
+  readonly color?: ColorName
   readonly paddingClassName?: string
 }
 

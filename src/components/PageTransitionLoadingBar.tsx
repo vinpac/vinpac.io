@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import cx from 'classnames'
 import Router from 'next/router'
+import { useThemeName } from 'lib/theme'
 
 export interface PageTransitionLoadingBarProps {
   readonly className?: string
@@ -10,6 +11,7 @@ const PageTransitionLoadingBar: React.FC<PageTransitionLoadingBarProps> = ({
   className,
 }) => {
   const [isLoading, setLoading] = useState(false)
+  const theme = useThemeName()
   useEffect(() => {
     const start = (): void => setLoading(true)
     const disable = (): void => setLoading(false)
@@ -28,11 +30,13 @@ const PageTransitionLoadingBar: React.FC<PageTransitionLoadingBarProps> = ({
     return null
   }
 
+  const colorClassName = theme === 'dark' ? 'bg-primary-300' : 'bg-primary-500'
+
   return (
     <div className={cx('slider', className)}>
-      <div className="bg-primary-500 line" />
-      <div className="bg-primary-500 subline inc" />
-      <div className="bg-primary-500 subline dec" />
+      <div className={`${colorClassName} line`} />
+      <div className={`${colorClassName} subline inc`} />
+      <div className={`${colorClassName} subline dec`} />
       <style jsx>{`
         .slider {
           position: fixed;

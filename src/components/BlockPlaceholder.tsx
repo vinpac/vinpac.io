@@ -10,7 +10,7 @@ const BlockPlaceholder: React.FC<BlockPlaceholderProps> = ({
   children,
 }) => {
   return (
-    <div className={cx('bg-gray-400 rounded animate-pulse', className)}>
+    <div className={cx('bg-theme-400 rounded animate-pulse', className)}>
       {children}
     </div>
   )

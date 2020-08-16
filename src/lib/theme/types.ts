@@ -1,4 +1,4 @@
-export type AppColorName =
+export type ColorName =
   | 'white'
   | 'primary'
   | 'alpha-white'
@@ -9,16 +9,6 @@ export type AppColorName =
   | 'purple'
   | 'red'
   | 'orange'
-  | 'white.dark'
-  | 'primary.dark'
-  | 'alpha-white.dark'
-  | 'secondary.dark'
-  | 'gray.dark'
-  | 'green.dark'
-  | 'pink.dark'
-  | 'purple.dark'
-  | 'red.dark'
-  | 'orange.dark'
 
 export type ColorShade =
   | 50
@@ -31,3 +21,5 @@ export type ColorShade =
   | 700
   | 800
   | 900
+
+export type ThemeName = 'dark' | 'light'

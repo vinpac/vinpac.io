@@ -47,7 +47,9 @@ export const buildSuggestionsList: BuildSuggestionsListFn = async (
   input: string,
 ) => {
   if (input.trim().replace(' ', '') === '') {
-    return ['home', 'blog', 'twitter'].map((id) => suggestionsById[id])
+    return ['home', 'blog', 'twitter', 'github', 'theme'].map(
+      (id) => suggestionsById[id],
+    )
   }
 
   const searchRegex = buildSearchRegex(input)

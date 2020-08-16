@@ -1,12 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
-import { useTailwindCx, AppColorName } from 'lib/css'
+import { useTailwindCx, ColorName } from 'lib/theme'
 import { MdSearch } from 'react-icons/md'
 import { useQuickOpen } from 'lib/quickOpen/hooks'
 
 export interface FakeSearchBarProps {
   readonly className?: string
-  readonly color: AppColorName
+  readonly color: ColorName
 }
 
 const FakeSearchBar: React.FC<FakeSearchBarProps> = ({ className, color }) => {

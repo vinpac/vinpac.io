@@ -1,10 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 import Toolbar from 'components/Toolbar'
-import { useTailwindCx, AppColorName } from 'lib/css'
+import { useTailwindCx, ColorName } from 'lib/theme'
 
 export interface LayoutProps {
-  readonly color?: AppColorName
+  readonly color?: ColorName
   readonly toolbar?: React.ReactNode | null
   readonly toolbarClassName?: string
   readonly className?: string

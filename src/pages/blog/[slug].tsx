@@ -3,7 +3,7 @@ import React from 'react'
 import { getBlogPostBySlug } from 'lib/blog/server'
 import { BlogPostPageIndex } from 'lib/notion/types'
 import Layout from 'components/Layout'
-import { useTailwindCx } from 'lib/css'
+import { useTailwindCx } from 'lib/theme'
 import moment from 'moment'
 import { NotionRenderer } from 'react-notion'
 import { NextSeo } from 'next-seo'
@@ -43,7 +43,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
           {!post && <BlockPlaceholder className="h-6 w-1/2" />}
         </div>
       }
-      heroClassName={`${vx('border', 500)} border-b-4`}
       color={!post ? 'gray' : post.color}
     >
       <NextSeo
@@ -52,8 +51,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
       />
       <div
         className={`h-2 ${vx('bg', 200)}${!post ? ' animate-bounce' : ''}`}
-      ></div>
-      <div className="container max-w-2xl text-gray-800 prose prose-md py-8">
+      />
+      <div className="container max-w-2xl text-theme-800 prose prose-md py-8">
         {notionBlockMap && post && <NotionRenderer blockMap={notionBlockMap} />}
         {!post && (
           <>
