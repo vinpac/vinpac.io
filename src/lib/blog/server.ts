@@ -13,6 +13,7 @@ export const getBlogIndex = async (): Promise<BlogIndex> => {
   const tableRows = await fetchTableFromNotion<BlogTableRow>(BLOG_INDEX_ID)
 
   const tags = new Set<string>()
+  const folders = new Set<string>()
   const posts: BlogPost[] = []
   tableRows.forEach((row) => {
     if (!row.Slug || !row.Page) {
@@ -23,12 +24,17 @@ export const getBlogIndex = async (): Promise<BlogIndex> => {
       row.Tags.forEach((tag) => tags.add(tag))
     }
 
+    if (row.Folder) {
+      folders.add(row.Folder)
+    }
+
     posts.push(blogRowToPost(row))
   })
 
   return {
     posts,
     tags: Array.from(tags),
+    folders: Array.from(folders),
   }
 }
 

@@ -2,32 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes pulse-secondary {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(242, 183, 5, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(242, 183, 5, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(242, 183, 5, 0);
-  }
-}
-
-.pulse-secondary {
-  animation: pulse-secondary 2s infinite;
-  transform: scale(1);
-}
-
-.opacity-0-force {
-  opacity: 0 !important;
-}
-
 .rounded-xl {
   border-radius: 16px;
 }
@@ -91,4 +65,15 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -6,7 +6,11 @@ import { buildSearchRegex } from 'lib/quickOpen/suggestions'
 import QuickOpenSuggestion from 'components/QuickOpenSuggestion'
 import NatureForFunSVG from 'assets/svg/nature-for-fun.svg'
 import Router from 'next/router'
-import { BuildSuggestionsListFn, Suggestion } from 'lib/quickOpen/types'
+import {
+  BuildSuggestionsListFn,
+  Suggestion,
+  LinkSuggestion,
+} from 'lib/quickOpen/types'
 
 export interface QuickOpenProps {
   readonly className?: string
@@ -58,11 +62,13 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   const handleSuggestionSelect = useCallback(
     (suggestion: Suggestion) => {
       if (suggestion) {
-        if (suggestion.nextHref) {
-          Router.push(suggestion.nextHref, suggestion.href)
-        } else {
-          window.open(suggestion.href)
+        const { nextHref, href } = suggestion as Partial<LinkSuggestion>
+        if (nextHref) {
+          Router.push(nextHref, href)
+        } else if (href) {
+          window.open(href)
         }
+
         if (onSelectItem) {
           onSelectItem(suggestion)
         }
@@ -128,7 +134,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       <div className="relative">
         <input
           type="text"
-          className="w-full pl-16 pr-4 pt-4 pb-3 rounded-lg outline-none text-xl bg-theme-standout"
+          className="w-full pl-16 pr-4 pt-4 pb-3 rounded-lg outline-none text-xl bg-accent"
           placeholder={`Tente digitar "${tip}"`}
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
@@ -136,7 +142,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         />
         <MdSearch
           size={28}
-          className="absolute left-0 top-0 bottom-0 ml-5 mt-4 text-primary-400"
+          className="absolute left-0 top-0 bottom-0 ml-5 mt-4 text-primary-600"
         />
       </div>
       {suggestions.map((suggestion, idx) => (

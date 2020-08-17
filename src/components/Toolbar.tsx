@@ -9,7 +9,7 @@ import {
   FaSun,
   FaMoon,
 } from 'react-icons/fa'
-import { isBreakpoint, useTailwindCx } from 'lib/theme'
+import { isBreakpoint } from 'lib/theme'
 import { ColorName } from 'lib/theme'
 import { MdSearch, MdEdit } from 'react-icons/md'
 import ToolbarButton from 'components/ToolbarButton'
@@ -25,7 +25,6 @@ export interface ToolbarProps {
 
 const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
   const theme = useTheme()
-  const tcx = useTailwindCx(color)
   const quickOpen = useQuickOpen()
   const handleThemeChange = (): void => {
     theme.setTheme(theme.name === 'dark' ? 'light' : 'dark')
@@ -46,7 +45,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
             alt="Vinicius.app"
             width="146px"
             height="32px"
-            className={`${tcx('text', 700)} ${tcx('hover:text', 800)}`}
+            className={`text-${color}-700 hover:text-${color}-800`}
           />
           <Tooltip label="Status: Surfando">
             <span className="text-2xl ml-3">🏄🏻‍♂️</span>

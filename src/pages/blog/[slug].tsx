@@ -3,12 +3,13 @@ import React from 'react'
 import { getBlogPostBySlug } from 'lib/blog/server'
 import { BlogPostPageIndex } from 'lib/notion/types'
 import Layout from 'components/Layout'
-import { useTailwindCx } from 'lib/theme'
-import moment from 'moment'
 import { NotionRenderer } from 'react-notion'
 import { NextSeo } from 'next-seo'
 import TextPlaceholder from 'components/TextPlaceholder'
 import BlockPlaceholder from 'components/BlockPlaceholder'
+import PageDivider from 'components/PageDivider'
+import { FaClock, FaFolder } from 'react-icons/fa'
+import SearchLink from 'components/SearchLink'
 
 export interface BlogPostPageProps extends Partial<BlogPostPageIndex> {
   readonly className?: string
@@ -18,40 +19,62 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
   post,
   notionBlockMap,
 }) => {
-  const vx = useTailwindCx((!post ? 'gray' : post?.color) || 'gray')
+  const color = post?.color || 'default'
   return (
     <Layout
+      heroClassName={`bg-theme text-${color}-900`}
       hero={
-        <div className="container max-w-2xl pb-6">
-          <h1 className="text-5xl font-bold">
+        <div className="container max-w-2xl py-8">
+          <h1 className="text-5xl font-bold mb-2">
             {post?.name || <TextPlaceholder />}
           </h1>
 
           {post && (
-            <div className="space-x-2">
-              {post?.date && (
-                <>
-                  <span className={vx('text', 600)}>
-                    {moment(post.date).fromNow()}
-                  </span>
-                  <span className={vx('text', 700)}>.</span>
-                </>
-              )}
-              <span className={vx('text', 600)}>☕️ 5 min</span>
+            <div className="md:flex space-y-4 md:space-y-0">
+              <div className="block md:flex mr-auto">
+                <SearchLink query="Notes/" passHref>
+                  <a
+                    className={`px-2 py-2 font-medium hover:bg-${color}-300 text-theme-600 rounded-md mr-2`}
+                  >
+                    <FaFolder
+                      size={14}
+                      className="inline-block mr-2 align-middle -mt-1"
+                    />
+                    Notes
+                  </a>
+                </SearchLink>
+                <span className={`py-2 font-medium text-theme-600`}>
+                  <FaClock
+                    size={14}
+                    className="inline-block mr-2 align-middle -mt-1"
+                  />
+                  há um mês
+                </span>
+              </div>
+              <div className="flex space-x-2">
+                <button
+                  className={`bg-${color}-200 text-${color}-600 rounded-md px-2 py-2 font-medium flex-grow`}
+                >
+                  🇺🇸 English
+                </button>
+                <button
+                  className={`bg-theme text-theme-800 text-white font-normal rounded-md px-2 py-2 flex-grow`}
+                >
+                  🇧🇷 Portuguese
+                </button>
+              </div>
             </div>
           )}
           {!post && <BlockPlaceholder className="h-6 w-1/2" />}
         </div>
       }
-      color={!post ? 'gray' : post.color}
+      color={color}
     >
       <NextSeo
         title={!post ? 'Carregando...' : `${post.name} | Blog`}
         description={post?.description || '...'}
       />
-      <div
-        className={`h-2 ${vx('bg', 200)}${!post ? ' animate-bounce' : ''}`}
-      />
+      <PageDivider color={post?.color || 'gray'} />
       <div className="container max-w-2xl text-theme-800 prose prose-md py-8">
         {notionBlockMap && post && <NotionRenderer blockMap={notionBlockMap} />}
         {!post && (
@@ -63,7 +86,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
             <BlockPlaceholder className="h-4 mb-3" />
             <BlockPlaceholder className="h-4 mb-3" />
             <BlockPlaceholder className="h-4 w-1/2 mb-8" />
-            <BlockPlaceholder className="h-48 bg-gray-200" />
+            <BlockPlaceholder className="h-48 bg-theme-200" />
           </>
         )}
       </div>

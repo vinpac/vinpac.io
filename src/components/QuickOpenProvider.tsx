@@ -6,7 +6,8 @@ import {
   QuickOpenContextType,
 } from 'lib/quickOpen/context'
 import QuickOpen from 'components/QuickOpen'
-import { BuildSuggestionsListFn } from 'lib/quickOpen/types'
+import { BuildSuggestionsListFn, Suggestion } from 'lib/quickOpen/types'
+import { useTheme } from 'lib/theme'
 
 export interface QuickOpenProviderProps {
   buildSuggestionsList: BuildSuggestionsListFn
@@ -48,6 +49,21 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
     return { open, close }
   }, [open, close])
 
+  const theme = useTheme()
+  const handleSelectItem = useCallback(
+    (suggestion: Suggestion) => {
+      if (suggestion.id === 'theme') {
+        if (theme.name === 'dark') {
+          theme.setTheme('light')
+        } else {
+          theme.setTheme('dark')
+        }
+      }
+      close()
+    },
+    [close, theme],
+  )
+
   return (
     <QuickOpenContext.Provider value={ctx}>
       {children}
@@ -55,12 +71,12 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
         <Dialog
           isOpen
           onDismiss={close}
-          className="max-w-xl bg-theme-standout search-dialog"
+          className="max-w-xl bg-accent search-dialog"
           aria-labelledby="Quick Open"
         >
           <QuickOpen
             defaultText={defaultText}
-            onSelectItem={close}
+            onSelectItem={handleSelectItem}
             buildSuggestionsList={buildSuggestionsList}
           />
         </Dialog>

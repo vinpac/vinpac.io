@@ -4,16 +4,23 @@ export interface BuildSuggestionsListFn {
   (input: string): Promise<Suggestion[]>
 }
 
-export interface Suggestion {
+export interface BaseSuggestion {
   id: string
   title: string
   description?: string
   showDescription?: boolean
-  nextHref?: string
   keywords: Array<string | number>
-  href: string
   icon: IconComponent | IconAsset | ColorIcon
 }
+export interface LinkSuggestion extends BaseSuggestion {
+  nextHref?: string
+  href: string
+}
+export interface ButtonSuggestion extends BaseSuggestion {
+  as: 'button'
+}
+
+export type Suggestion = ButtonSuggestion | LinkSuggestion
 
 interface IconComponent {
   type: 'component'

@@ -2,17 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { BlogIndex } from 'lib/notion/types'
 import Layout from 'components/Layout'
 import BlogPostGridItem from 'components/BlogPostGridItem'
-import FilterPostsByTagButton from 'components/FilterPostsByTagButton'
+import FilterPostsByFolderButton from 'components/FilterPostsByFolderButton'
 import { useSWRFetch } from 'lib/fetch/hooks'
 import { updateBlogIndexCacheInBrowser } from 'lib/blog/browser'
 import { NextSeo } from 'next-seo'
 import BlockPlaceholder from 'components/BlockPlaceholder'
-import { useTailwindCx } from 'lib/theme'
+import PageDivider from 'components/PageDivider'
 
 const BlogPage: React.FC = () => {
   const [view] = useState<'list' | 'grid'>('grid')
   const { data } = useSWRFetch<BlogIndex>('/api/blog')
-  const tcx = useTailwindCx('primary')
   useEffect(() => {
     if (data) {
       updateBlogIndexCacheInBrowser(data)
@@ -22,11 +21,11 @@ const BlogPage: React.FC = () => {
     <Layout
       hero={
         <div className="container pb-12">
-          <h1 className="text-6xl font-bold mb-4">Blog</h1>
+          <h1 className="text-6xl font-bold mb-2">Blog</h1>
           {data && (
-            <div className="h-10 animated fadeInUp-25 animated_faster">
-              {data?.tags.map((tag) => (
-                <FilterPostsByTagButton key={tag} tag={tag} />
+            <div className="h-10 animated fadeInUp-25 animated_faster whitespace-no-wrap -mx-2 px-2 py-1 overflow-x-scroll scrolling-touch scrollbar-none">
+              {data?.folders.map((folder) => (
+                <FilterPostsByFolderButton key={folder} folder={folder} />
               ))}
             </div>
           )}
@@ -36,9 +35,7 @@ const BlogPage: React.FC = () => {
       heroClassName="bg-theme"
     >
       <NextSeo title="Blog" />
-      <div
-        className={`h-3 ${tcx('bg', 200)} ${tcx('border', 500)} border-t-4`}
-      />
+      <PageDivider color="primary" />
       <div className="container relative z-10 -translate-y-12 transform">
         <div className="flex flex-wrap -mx-2">
           {data?.posts.map((post) => (

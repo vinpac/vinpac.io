@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { useTailwindCx, ColorName } from 'lib/theme'
+import { ColorName } from 'lib/theme'
 
 export interface ToolbarButtonProps {
   readonly as?:
@@ -22,32 +22,31 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
       icon: Icon,
       label,
       className,
-      color = 'gray',
+      color = 'theme',
       hideText,
       ...props
     },
     ref,
   ) => {
-    const tcx = useTailwindCx(color)
-
     return (
       <Component
         ref={ref}
         title={label}
         className={cx(
-          tcx('text', 800),
           'hover:underline leading-9 group',
+          `text-${color}-800`,
           className,
         )}
         {...props}
       >
         <div
-          className={`w-10 h-10 rounded-full inline-block align-top text-center text-white ${tcx(
-            'bg',
-            300,
-          )} ${tcx('group-hover:bg', 400)}${!hideText ? ' mr-2' : ''}`}
+          className={cx(
+            'w-10 h-10 rounded-full inline-block align-top text-center text-white',
+            `bg-${color}-300 group-hover:bg-${color}-400`,
+            !hideText && 'mr-2',
+          )}
         >
-          <Icon size={21} className={`inline-block ${tcx('text', 900)}`} />
+          <Icon size={21} className={`inline-block text-${color}-900`} />
         </div>
         {!hideText && label}
       </Component>

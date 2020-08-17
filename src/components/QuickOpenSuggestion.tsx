@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import cx from 'classnames'
-import { Suggestion } from 'lib/quickOpen/types'
+import { Suggestion, LinkSuggestion } from 'lib/quickOpen/types'
 import Link from 'next/link'
 import reactStringReplace from 'react-string-replace'
 import ShadowColor from 'components/ShadowColor'
@@ -23,6 +23,7 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
   onSelect,
 }) => {
   const theme = useThemeName()
+  const { href, nextHref } = suggestion as Partial<LinkSuggestion>
   const highlightText = useCallback(
     (text: string) => {
       if (!highlightRegex) {
@@ -73,7 +74,7 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
             distance="1"
           >
             <div
-              className={`w-full h-full rounded-full bg-theme-standout-100 border-2 border-${suggestion.icon.color}-500 relative`}
+              className={`w-full h-full rounded-full bg-accent-100 border-2 border-${suggestion.icon.color}-500 relative`}
             />
           </ShadowColor>
         )}
@@ -82,14 +83,16 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
             className={`block font-medium text-base text-theme-900 truncate`}
           >
             {highlightText(suggestion.title)}
-            <span
-              className={cx('text-sm truncate ml-2', {
-                ['text-primary-500']: theme === 'light',
-                ['text-primary-400']: theme === 'dark',
-              })}
-            >
-              {suggestion.href}
-            </span>
+            {href && (
+              <span
+                className={cx('text-sm truncate ml-2', {
+                  ['text-primary-500']: theme === 'light',
+                  ['text-primary-600']: theme === 'dark',
+                })}
+              >
+                {href}
+              </span>
+            )}
           </span>
           {suggestion.description && suggestion.showDescription !== false && (
             <p className="text-theme-600 truncate text-xs">
@@ -101,9 +104,9 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
     </button>
   )
 
-  if (suggestion.nextHref) {
+  if (nextHref) {
     return (
-      <Link href={suggestion.nextHref} as={suggestion.href}>
+      <Link href={nextHref} as={href}>
         {anchor}
       </Link>
     )

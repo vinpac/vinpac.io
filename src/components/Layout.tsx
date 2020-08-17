@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import Toolbar from 'components/Toolbar'
-import { useTailwindCx, ColorName } from 'lib/theme'
+import { ColorName } from 'lib/theme'
 
 export interface LayoutProps {
   readonly color?: ColorName
@@ -19,16 +19,15 @@ const Layout: React.FC<LayoutProps> = ({
   toolbarClassName,
   hero,
   heroClassName,
-  color = 'gray',
+  color = 'theme' as ColorName,
 }) => {
   const Hero = hero ? 'div' : React.Fragment
-  const vx = useTailwindCx(color)
   return (
     <div className={cx('layout', className)}>
       {toolbar !== null &&
         (hero ? (
           <Hero
-            className={heroClassName || `${vx('bg', 200)} ${vx('text', 900)}`}
+            className={heroClassName || `bg-${color}-200 text-${color}-900`}
           >
             <div className={`container py-3 relative z-20`}>
               {toolbar || (

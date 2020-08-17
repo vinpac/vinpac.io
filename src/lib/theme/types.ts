@@ -1,4 +1,5 @@
 export type ColorName =
+  | 'theme'
   | 'white'
   | 'primary'
   | 'alpha-white'

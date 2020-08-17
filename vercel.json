@@ -1,7 +1,0 @@
-{
-  "env": {
-    "CMS_PRISMIC_REPOSITORY_NAME": "tech4covid",
-    "CMS_PRISMIC_API_TOKEN": "@prismic-api-token",
-    "CMS_PRISMIC_REPOSITORY_LOCALE": "pt-br"
-  }
-}

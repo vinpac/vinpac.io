@@ -30,7 +30,7 @@ const PageTransitionLoadingBar: React.FC<PageTransitionLoadingBarProps> = ({
     return null
   }
 
-  const colorClassName = theme === 'dark' ? 'bg-primary-300' : 'bg-primary-500'
+  const colorClassName = theme === 'dark' ? 'bg-primary-700' : 'bg-primary-500'
 
   return (
     <div className={cx('slider', className)}>

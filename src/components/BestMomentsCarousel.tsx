@@ -81,7 +81,7 @@ const BestMomentsCarousel: React.FC<BestMomentselProps> = ({
               <div
                 className={cx(
                   'best-moment bg-cover bg-bottom',
-                  isActive && 'best-moment-current bg-gray-200',
+                  isActive && 'best-moment-current bg-theme-200',
                   isNext && `best-moment-next bg-white`,
                 )}
                 style={{ backgroundImage: `url('${item}')` }}

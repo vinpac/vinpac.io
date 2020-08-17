@@ -8,17 +8,16 @@ import Footer from 'components/Footer'
 import Link from 'next/link'
 import ShadowColor from 'components/ShadowColor'
 import Button from 'components/Button'
-import { useTailwindCx } from 'lib/theme'
+import PageDivider from 'components/PageDivider'
 
 const HomePage: React.FC = () => {
-  const tcx = useTailwindCx('primary')
   return (
     <Layout
       heroClassName="overflow-x-hidden pb-10 md:pb-20"
       hero={
         <div className="container relative">
           <div>
-            <div className="animated fadeInUp-15 mb-8 pt-8">
+            <div className="animated mb-8 pt-8">
               <h1 className="text-6xl font-bold leading-tight max-w-2xl mb-6">
                 Oi, eu sou o
                 <br />
@@ -30,7 +29,7 @@ const HomePage: React.FC = () => {
                 retailers, subscription businesses, and software
               </p>
             </div>
-            <div className="md:flex items-center space-x-4 animated fadeInUp-25 animated_delay-05s">
+            <div className="md:flex items-center space-x-4 animated fadeInUp-25">
               <ShadowColor color="primary" distance="2">
                 <Link href="/blog" passHref>
                   <Button
@@ -64,9 +63,7 @@ const HomePage: React.FC = () => {
       }
     >
       <NextSeo title="Inicio" description="A short description goes here." />
-      <div
-        className={`h-3 ${tcx('bg', 200)} ${tcx('border', 500)} border-t-4`}
-      />
+      <PageDivider color="primary" />
       <LastProjectsSection />
       <Footer />
     </Layout>

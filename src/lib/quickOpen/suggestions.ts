@@ -1,13 +1,18 @@
-import { staticSuggestions } from 'lib/quickOpen/data'
+import { staticSuggestions } from 'lib/quickOpen/defaultSuggestions'
 import { getBlogIndexInBrowser } from 'lib/blog/browser'
-import { Suggestion, BuildSuggestionsListFn } from 'lib/quickOpen/types'
+import {
+  Suggestion,
+  BuildSuggestionsListFn,
+  LinkSuggestion,
+} from 'lib/quickOpen/types'
+import { escapeRegex } from 'lib/utils/regexp'
 
 export const buildSearchRegex = (input: string): RegExp => {
-  const trimmed = input.trim()
+  const trimmed = escapeRegex(input.trim())
   const parts = trimmed.split(' ')
   return new RegExp(
     `(${trimmed}|${parts.join('_')}|${parts.join('-')}|${trimmed.replace(
-      /(-|_|\/)/g,
+      /(\\-|_|\\\/)/g,
       ' ',
     )})`,
     'i',
@@ -29,11 +34,17 @@ const buildBlogSuggestions = async (): Promise<void> => {
 
   const blogIndex = await getBlogIndexInBrowser()
   blogIndex.posts.forEach((post) => {
+    const keywords: string[] = ['post', ...post.tags.map((tag) => `#${tag}`)]
+
+    if (post.folder) {
+      keywords.push(`${post.folder}/`)
+    }
+
     allSuggestions.push({
       id: `post/${post.id}`,
       href: `/blog/${post.slug}`,
       icon: { type: 'color', color: post.color },
-      keywords: ['post', ...post.tags.map((tag) => `#${tag}`)],
+      keywords: keywords,
       title: post.name,
       nextHref: '/blog/[slug]',
       description: post.description || '',
@@ -75,7 +86,8 @@ export const buildSuggestionsList: BuildSuggestionsListFn = async (
       score += 1
     }
 
-    if (searchRegex.test(suggestion.href)) {
+    const { href } = suggestion as LinkSuggestion
+    if (href && searchRegex.test(href)) {
       score += 1
     }
 

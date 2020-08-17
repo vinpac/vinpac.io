@@ -1,29 +1,25 @@
 import React from 'react'
 import cx from 'classnames'
-import { ColorName, useTailwindCx } from 'lib/theme'
+import { ColorName } from 'lib/theme'
 
 export interface TagProps {
   readonly className?: string
-  readonly bg?: string
+  readonly bgClassName?: string
   readonly color?: ColorName
   readonly children?: React.ReactNode
 }
 
 const Tag: React.FC<TagProps> = ({
   className,
-  bg,
   color = 'gray',
+  bgClassName: bg = `bg-${color}-100`,
   children,
 }) => {
-  const vx = useTailwindCx(color)
   return (
     <span
       className={cx(
         className,
-        `${bg || vx('bg', 100)} ${vx(
-          'text',
-          600,
-        )} text-xs px-2 inline-block rounded font-medium`,
+        `${bg} text-${color}-600 text-xs px-2 inline-block rounded font-medium`,
       )}
     >
       {children}

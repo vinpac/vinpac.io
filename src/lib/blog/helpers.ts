@@ -10,5 +10,6 @@ export const blogRowToPost = (row: BlogTableRow): BlogPost => {
     isPublished: Boolean(row.Published),
     tags: row.Tags || [],
     color: row.Color || 'gray',
+    folder: row.Folder,
   }
 }

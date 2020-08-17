@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import { ProjectCompactDetailsButton } from 'components/ProjectCompactDetailsButton'
-import { useTailwindCx } from 'lib/theme'
 
 export interface LastProjectsSectionProps {
   readonly className?: string
@@ -10,17 +9,11 @@ export interface LastProjectsSectionProps {
 const LastProjectsSection: React.FC<LastProjectsSectionProps> = ({
   className,
 }) => {
-  const tcx = useTailwindCx('gray')
   return (
     <div className={cx('component relative', className)}>
       <div className="container pt-16 relative z-10 max-w-4xl">
         <div className="relative z-30">
-          <h2
-            className={`text-4xl font-bold mb-4 text-center ${tcx(
-              'text',
-              900,
-            )}`}
-          >
+          <h2 className="text-4xl font-bold mb-4 text-center text-defaul-900">
             O que eu fiz até hoje
           </h2>
         </div>

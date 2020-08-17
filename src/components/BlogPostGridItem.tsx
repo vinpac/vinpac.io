@@ -3,9 +3,8 @@ import cx from 'classnames'
 import Link from 'next/link'
 import { BlogPost } from 'lib/notion'
 import moment from 'moment'
-import { useTailwindCx } from 'lib/theme'
 import ShadowColor from 'components/ShadowColor'
-import { FaClock } from 'react-icons/fa'
+import { FaClock, FaFolder } from 'react-icons/fa'
 
 export interface BlogPostGridItemProps {
   readonly post: BlogPost
@@ -19,48 +18,49 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
   shadowClassName,
   post,
 }) => {
-  const tcx = useTailwindCx('gray')
-  const vx = useTailwindCx(post.color)
+  const { color } = post
   return (
     <ShadowColor color={post.color} distance="2" className={shadowClassName}>
       <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
         <a
           className={cx(
-            `rounded-xl block ${tcx(
-              'border',
-              500,
-              700,
-            )} border-2 p-6 bg-theme shadow relative z-10 transform hover:-translate-y-1 duration-75`,
+            'rounded-xl border-2 p-6 bg-theme shadow relative z-10 transform hover:-translate-y-1 duration-75',
+            `border-${color}-400`,
             className,
           )}
         >
-          <h1 className={`font-bold text-3xl ${tcx('text', 900)}`}>
-            {post.name}
-          </h1>
-          <p className={`${vx('text', 900, 300)} text-lg mb-2 flex-grow`}>
+          <h1 className="font-bold text-3xl text-theme-900">{post.name}</h1>
+          <p className={`text-${color}-700 text-lg mb-2 flex-grow`}>
             {post.description}
           </p>
 
-          <div className={`space-x-2 text-sm  mb-2 text-gray-600`}>
+          <div
+            className={`space-y-2 md:space-y-0 md:space-x-2 text-sm text-theme-700 md:truncate md:whitespace-no-wrap`}
+          >
+            {post.folder && (
+              <span className="mr-2">
+                <FaFolder size={16} className="inline-block mr-2" />
+                {post.folder}
+              </span>
+            )}
             {post.date && (
-              <>
+              <abbr title={moment(post.date).format('LL')}>
                 <FaClock size={16} className="inline-block mr-2" />
                 {moment(post.date).fromNow()}
-                <span className={vx('text', 700)}>{' . '}</span>
-              </>
+              </abbr>
             )}
-            <span>Leiam em 5 min</span>
+
+            <ul className="space-x-2 overflow-hidden truncate block md:inline-block align-middle">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-theme-500 hover:underline text-sm"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </ul>
           </div>
-          <ul className="h-6 whitespace-no-wrap space-x-2 overflow-hidden truncate">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className={`${vx('text', 500)} hover:underline text-sm`}
-              >
-                #{tag}
-              </span>
-            ))}
-          </ul>
         </a>
       </Link>
     </ShadowColor>

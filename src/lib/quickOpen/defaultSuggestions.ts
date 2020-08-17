@@ -39,10 +39,10 @@ export const staticSuggestions: Suggestion[] = [
   },
   {
     id: 'theme',
-    href: '/',
+    as: 'button',
     icon: { type: 'component', component: FaMoon },
     keywords: ['Dark', 'Tema', 'Ativar'],
-    title: 'Desativar modo Dark',
+    title: 'Ativar modo Dark',
     showDescription: false,
   },
 ]
