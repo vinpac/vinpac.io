@@ -11,8 +11,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "post-commit": "git update-index --again"
+      "pre-commit": "yarn type-check && lint-staged",
+      "post-commit": "yarn type-check && git update-index --again"
     }
   },
   "lint-staged": {

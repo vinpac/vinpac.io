@@ -19,7 +19,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
   post,
   notionBlockMap,
 }) => {
-  const color = post?.color || 'default'
+  const color = post?.color || 'theme'
   return (
     <Layout
       heroClassName={`bg-theme text-${color}-900`}
