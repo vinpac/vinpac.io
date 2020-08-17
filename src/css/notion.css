@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 :root {
   --notion-border-radius: 8px;
 }
@@ -574,3 +575,4 @@ a.notion-bookmark {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* purgecss end ignore */

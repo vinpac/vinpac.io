@@ -27,7 +27,7 @@ module.exports = {
   },
   theme: {
     typography: (theme) => ({
-      theme: {
+      default: {
         css: {
           color: theme('colors.theme.700'),
           '[class~="lead"]': {
