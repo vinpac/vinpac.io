@@ -17,13 +17,11 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "**/*.{ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
