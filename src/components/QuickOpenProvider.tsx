@@ -25,6 +25,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
       if (event.keyCode === 80 && event.metaKey) {
         event.preventDefault()
         setShowDialog(true)
+        setDefaultText('')
       }
     }
 

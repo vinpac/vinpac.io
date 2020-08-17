@@ -8,16 +8,22 @@ const colors = [
   'green',
   'pink',
   'purple',
+  'yellow',
+  'teal',
+  'indigo',
   'red',
   'orange',
 ]
 
 module.exports = {
-  purge: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
-  purgeConfig: {
-    // Here we whitelist every class for the colors (such as text-[color]-[shade])
-    // So we can support it by our large ranged theme
-    whitelistPatterns: [new RegExp(`/(\\w+:)?(${colors.join('|')})-\\d+$/`)],
+  purge: {
+    content: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
+
+    options: {
+      // Here we whitelist every class for the colors (such as text-[color]-[shade])
+      // So we can support it by our large ranged theme
+      whitelistPatterns: [new RegExp(`-(${colors.join('|')})-\\d+$`)],
+    },
   },
   theme: {
     typography: (theme) => ({
@@ -89,7 +95,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        gray: null,
         primary: {
           50: 'var(--color-primary-50)',
           100: 'var(--color-primary-100)',
@@ -237,9 +242,6 @@ module.exports = {
         },
       },
     },
-  },
-  variants: {
-    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [require('@tailwindcss/typography')],
 }
