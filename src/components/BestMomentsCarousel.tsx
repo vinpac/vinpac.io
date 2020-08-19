@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import cx from 'classnames'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import { BestMomentsCarouselCurrentIndexIndication } from 'components/BestMomentsCarouselCurrentIndexIndication'
 import { ColorName } from 'lib/theme/types'
 
@@ -81,18 +81,18 @@ const BestMomentsCarousel: React.FC<BestMomentselProps> = ({
               <div
                 className={cx(
                   'best-moment bg-cover bg-bottom',
-                  isActive && 'best-moment-current bg-theme-200',
-                  isNext && `best-moment-next bg-white`,
+                  isActive && 'best-moment-current bg-theme-500',
+                  isNext && `best-moment-next bg-theme-300`,
                 )}
                 style={{ backgroundImage: `url('${item}')` }}
               >
                 {isActive && (
                   <button
                     onClick={() => skipSlide()}
-                    className="w-10 h-10 rounded-full bg-theme-300 hover:bg-theme-400 -ml-16 absolute top-0 bottom-0 my-auto animated fadeIn animated_delay-1s"
+                    className="w-10 h-10 bg-alpha-white-300 rounded-full absolute bottom-0 right-0 my-auto mb-5 mr-5 animated fadeIn animated_delay-1s"
                     title="Pular slide"
                   >
-                    <FaArrowLeft className="mx-auto text-theme-800" />
+                    <FaArrowRight className="mx-auto text-gray-900 transform rotate-45" />
                   </button>
                 )}
               </div>
@@ -130,13 +130,14 @@ const BestMomentsCarousel: React.FC<BestMomentselProps> = ({
 
         .best-moment-next.best-moment-enter {
           opacity: 0 !important;
-          transform: scale(0.6) rotateZ(0deg) translateX(200px) translateY(10px);
+          transform: scale(0.6) rotateZ(0deg) translateX(-200px)
+            translateY(10px);
         }
 
         .best-moment-next {
           z-index: 9;
-          transform: scale(0.8) rotateZ(20deg) translateX(100px)
-            translateY(20px);
+          transform: scale(0.8) rotateZ(-15deg) translateX(-120px)
+            translateY(-40px);
           transition: all 1.5s;
           opacity: 0.4;
         }
@@ -148,8 +149,8 @@ const BestMomentsCarousel: React.FC<BestMomentselProps> = ({
         .best-moment-exit {
           opacity: 0;
           z-index: 30 !important;
-          transform: scale(1.2) rotateZ(-12deg) rotateY(-22deg)
-            translateX(-20px) translateY(-20px);
+          transform: scale(1.2) rotateZ(12deg) rotateY(-22deg) translateX(20px)
+            translateY(-20px);
           pointer-events: none;
         }
       `}</style>
