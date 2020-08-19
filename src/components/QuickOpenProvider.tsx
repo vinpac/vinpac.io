@@ -5,11 +5,13 @@ import {
   QuickOpen_OpenConfig,
   QuickOpenContextType,
 } from 'lib/quickOpen/context'
-import QuickOpen from 'components/QuickOpen'
 import { BuildSuggestionsListFn, Suggestion } from 'lib/quickOpen/types'
 import { useTheme } from 'lib/theme'
 import Router, { useRouter } from 'next/router'
 import queryString from 'querystring'
+import dynamic from 'next/dynamic'
+
+const QuickOpenDynamic = dynamic(() => import('components/QuickOpen'))
 
 const RE_ROUTE = /^\/q\?query=(.*)/
 
@@ -142,7 +144,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
           className="max-w-xl bg-accent search-dialog"
           aria-labelledby="Quick Open"
         >
-          <QuickOpen
+          <QuickOpenDynamic
             defaultText={defaultText}
             onSelectItem={handleSelectItem}
             onResultsChange={handleResultsChange}

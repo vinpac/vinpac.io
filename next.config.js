@@ -6,14 +6,30 @@ const LOCALE = process.env.LOCALE || 'pt-BR'
 
 // eslint-disable-next-line no-console
 console.log(`Locale: ${LOCALE}`)
-module.exports = withReactSvg({
-  include: path.resolve(__dirname, 'src/assets/svg'),
-  env: {
-    APP_CONFIG: JSON.stringify({
-      locale: LOCALE,
-      messages: loadAppMessages(LOCALE),
-      localeData: loadLocaleData(LOCALE),
-      defaultLocale: 'pt-BR',
-    }),
-  },
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 })
+
+module.exports = withBundleAnalyzer(
+  withReactSvg({
+    include: path.resolve(__dirname, 'src/assets/svg'),
+    env: {
+      APP_CONFIG: JSON.stringify({
+        locale: LOCALE,
+        messages: loadAppMessages(LOCALE),
+        localeData: loadLocaleData(LOCALE),
+        defaultLocale: 'pt-BR',
+      }),
+    },
+    webpack: (config) => {
+      const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
+      config.plugins.push(
+        new MomentLocalesPlugin({
+          localesToKeep: LOCALE === 'pt-BR' ? ['pt-br'] : [],
+        }),
+      )
+      return config
+    },
+  }),
+)

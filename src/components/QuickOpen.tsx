@@ -4,7 +4,6 @@ import { MdSearch } from 'react-icons/md'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { buildSearchRegex } from 'lib/quickOpen/suggestions'
 import QuickOpenSuggestion from 'components/QuickOpenSuggestion'
-import NatureForFunSVG from 'assets/svg/nature-for-fun.svg'
 import Router from 'next/router'
 import {
   BuildSuggestionsListFn,
@@ -163,7 +162,11 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       ))}
       {!isLoading && suggestions.length === 0 && (
         <div className="py-6 animated">
-          <NatureForFunSVG className="w-full h-24 mx-auto mb-3" />
+          <img
+            src="/assets/nature-for-fun.svg"
+            className="w-full h-24 mx-auto mb-3"
+            loading="lazy"
+          />
           <p className="text-theme-700 text-center font-medium fadeInUp-25 animated_faster">
             Infelizmente nada foi encontrado
           </p>

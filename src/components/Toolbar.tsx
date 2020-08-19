@@ -1,17 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
-import {
-  FaGithub,
-  FaTwitter,
-  FaDribbble,
-  FaAngleDown,
-  FaSun,
-  FaMoon,
-} from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaDribbble, FaSun, FaMoon } from 'react-icons/fa'
 import { isBreakpoint } from 'lib/theme'
 import { ColorName } from 'lib/theme'
-import { MdSearch, MdEdit } from 'react-icons/md'
+import { MdSearch, MdEdit, MdMenu } from 'react-icons/md'
 import ToolbarButton from 'components/ToolbarButton'
 import { useQuickOpen } from 'lib/quickOpen/hooks'
 import { useTheme } from 'lib/theme'
@@ -61,7 +54,10 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
   return (
     <div className={cx('flex flex-row relative', className)}>
       <Link href="/">
-        <a className="flex items-center mr-auto" onClick={handleLogoClick}>
+        <a
+          className="flex items-center mr-auto w-full md:w-auto"
+          onClick={handleLogoClick}
+        >
           <Logo
             alt="Vinicius.app"
             width="146px"
@@ -69,9 +65,9 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
             className={`text-${color}-700 hover:text-${color}-800`}
           />
           <Tooltip label="Status: Surfando">
-            <span className="text-2xl ml-3">🏄🏻‍♂️</span>
+            <span className="text-2xl ml-3 flex-grow">🏄🏻‍♂️</span>
           </Tooltip>
-          <FaAngleDown className="inline-block ml-2 text-xl md:hidden" />
+          <MdMenu size={36} className="block text-xl md:hidden ml-auto" />
         </a>
       </Link>
       <div className="hidden md:flex space-x-6 items-center px-6 text-lg">

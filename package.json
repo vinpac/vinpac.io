@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^9.5.2",
     "@reach/dialog": "^0.10.5",
     "@reach/tooltip": "^0.10.5",
     "@tailwindcss/typography": "^0.2.0",
@@ -73,6 +74,7 @@
     "jest": "^26.1.0",
     "jest-watch-typeahead": "^0.6.0",
     "lint-staged": "^10.2.11",
+    "moment-locales-webpack-plugin": "^1.2.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.6"
