@@ -1,6 +1,29 @@
 import { Suggestion } from 'lib/quickOpen/types'
 import { FaGithub, FaTwitter, FaMoon } from 'react-icons/fa'
 import { MdEdit, MdHome } from 'react-icons/md'
+import { defineMessages, FormattedMessage } from 'react-intl'
+import QuickOpenSuggestionThemeSwapTitle from 'components/QuickOpenSuggestionThemeSwapTitle'
+
+const messages = defineMessages({
+  myBlog: {
+    id: 'defaultSuggestions/myBlog',
+    defaultMessage: 'Meu blog',
+  },
+  home: {
+    id: 'defaultSuggestions/home',
+    defaultMessage: 'Início',
+  },
+})
+
+const formatedMessageComponent = (message: {
+  id: string
+  defaultMessage: string
+}): React.FC => {
+  const component: React.FC = () => <FormattedMessage {...message} />
+  component.displayName = `intlMessage(${message.id})`
+
+  return component
+}
 
 export const staticSuggestions: Suggestion[] = [
   {
@@ -8,8 +31,8 @@ export const staticSuggestions: Suggestion[] = [
     href: '/blog',
     nextHref: '/blog',
     icon: { type: 'component', component: MdEdit },
-    keywords: ['Blog', 'Meu blog'],
-    title: 'Meu Blog',
+    keywords: ['Blog'],
+    title: formatedMessageComponent(messages.myBlog),
     showDescription: false,
   },
   {
@@ -18,7 +41,7 @@ export const staticSuggestions: Suggestion[] = [
     nextHref: '/',
     icon: { type: 'component', component: MdHome },
     keywords: ['Home', 'Inicio'],
-    title: 'Início',
+    title: formatedMessageComponent(messages.home),
     showDescription: false,
   },
   {
@@ -41,8 +64,17 @@ export const staticSuggestions: Suggestion[] = [
     id: 'theme',
     as: 'button',
     icon: { type: 'component', component: FaMoon },
-    keywords: ['Dark', 'Tema', 'Ativar'],
-    title: 'Ativar modo Dark',
+    keywords: [
+      'Tema',
+      'Theme',
+      'Dark',
+      'Light',
+      'Claro',
+      'Escuro',
+      'Modo',
+      'Mode',
+    ],
+    title: QuickOpenSuggestionThemeSwapTitle,
     showDescription: false,
   },
 ]

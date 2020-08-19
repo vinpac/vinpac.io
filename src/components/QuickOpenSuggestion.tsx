@@ -82,7 +82,11 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
           <span
             className={`block font-medium text-base text-theme-900 truncate`}
           >
-            {highlightText(suggestion.title)}
+            {typeof suggestion.title === 'string' ? (
+              highlightText(suggestion.title)
+            ) : (
+              <suggestion.title />
+            )}
             {href && (
               <span
                 className={cx('text-sm truncate ml-2', {

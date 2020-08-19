@@ -40,19 +40,29 @@ export const getBlogIndex = async (): Promise<BlogIndex> => {
 
 export const getBlogPostBySlug = async (
   slug: string,
+  language?: string,
 ): Promise<BlogPostPageIndex> => {
-  const tableRows = await fetchTableFromNotion<BlogTableRow>(BLOG_INDEX_ID)
-  const selectedRow = tableRows.find((page) => page.Slug === slug)
+  const posts = await fetchTableFromNotion<BlogTableRow>(
+    BLOG_INDEX_ID,
+  ).then((rows) => rows.map(blogRowToPost))
+  const post = posts.find((post) => {
+    const isSameSlug = post.slug === slug
 
-  if (!selectedRow) {
+    if (language) {
+      return isSameSlug && post.language === language
+    }
+
+    return isSameSlug
+  })
+
+  if (!post) {
     throw new NotionPageNotFound(
-      `Blog post with slug "${slug}" not found`,
-      'slug',
-      slug,
+      `Blog post with slug "${slug}" and language "${language}" not found`,
+      'slug,language',
+      `${slug},${language}`,
     )
   }
 
-  const post = blogRowToPost(selectedRow)
   const notionBlockMap = await fetchPageFromNotion(post.id)
 
   return {

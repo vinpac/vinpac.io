@@ -78,7 +78,10 @@ export const buildSuggestionsList: BuildSuggestionsListFn = async (
       }
     })
 
-    if (searchRegex.test(suggestion.title)) {
+    if (
+      typeof suggestion.title === 'string' &&
+      searchRegex.test(suggestion.title)
+    ) {
       score += 1
     }
 

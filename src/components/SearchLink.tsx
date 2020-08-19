@@ -24,7 +24,7 @@ const SearchLink: React.FC<SearchLinkProps> = ({
   }
 
   if (passHref) {
-    props.href = `?search=${query}`
+    props.href = `/q?query=${escape(query)}`
   }
 
   const child = React.Children.only(children)

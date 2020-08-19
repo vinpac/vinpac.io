@@ -5,6 +5,8 @@ import { BlogPost } from 'lib/notion'
 import moment from 'moment'
 import ShadowColor from 'components/ShadowColor'
 import { FaClock, FaFolder } from 'react-icons/fa'
+import { getPostLinkHref } from 'lib/blog/browserHelpers'
+import LocaleLabel from 'components/LocaleLabel'
 
 export interface BlogPostGridItemProps {
   readonly post: BlogPost
@@ -19,9 +21,10 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
   post,
 }) => {
   const { color } = post
+  const { as, href } = getPostLinkHref(post.slug, post.language)
   return (
     <ShadowColor color={post.color} distance="2" className={shadowClassName}>
-      <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+      <Link href={href} as={as}>
         <a
           className={cx(
             'rounded-xl border-2 p-6 bg-theme shadow relative z-10 transform hover:-translate-y-1 duration-75',
@@ -44,22 +47,17 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
               </span>
             )}
             {post.date && (
-              <abbr title={moment(post.date).format('LL')}>
+              <abbr
+                title={moment(post.date).format('LL')}
+                className="border-0 no-underline"
+              >
                 <FaClock size={16} className="inline-block mr-2" />
                 {moment(post.date).fromNow()}
               </abbr>
             )}
-
-            <ul className="space-x-2 overflow-hidden truncate block md:inline-block align-middle">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-theme-500 hover:underline text-sm"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </ul>
+            <span>
+              {post.language && <LocaleLabel locale={post.language} />}
+            </span>
           </div>
         </a>
       </Link>

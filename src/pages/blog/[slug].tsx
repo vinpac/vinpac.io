@@ -10,6 +10,19 @@ import BlockPlaceholder from 'components/BlockPlaceholder'
 import PageDivider from 'components/PageDivider'
 import { FaClock, FaFolder } from 'react-icons/fa'
 import SearchLink from 'components/SearchLink'
+import moment from 'moment'
+import PostAuthorAvatarWithLink from 'components/PostAuthorAvatarWithLink'
+import ChangePostLanguageLink from 'components/ChangePostLanguageLink'
+import { defineMessages, useIntl } from 'react-intl'
+import { app } from 'static-constants'
+import LocaleLabel from 'components/LocaleLabel'
+
+const messages = defineMessages({
+  changeLanguage: {
+    id: 'pages/blog/[slug]/changeLanguage',
+    defaultMessage: 'Leia em:',
+  },
+})
 
 export interface BlogPostPageProps extends Partial<BlogPostPageIndex> {
   readonly className?: string
@@ -19,49 +32,51 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
   post,
   notionBlockMap,
 }) => {
+  const intl = useIntl()
   const color = post?.color || 'theme'
+
   return (
     <Layout
       heroClassName={`bg-theme text-${color}-900`}
       hero={
         <div className="container max-w-2xl py-8">
-          <h1 className="text-5xl font-bold mb-2">
+          <h1 className="text-5xl font-bold mb-4 leading-tight">
             {post?.name || <TextPlaceholder />}
           </h1>
+          <h2 className="text-xl font-normal mb-8">
+            {post?.description || <TextPlaceholder />}
+          </h2>
 
           {post && (
             <div className="md:flex space-y-4 md:space-y-0">
-              <div className="block md:flex mr-auto">
-                <SearchLink query="Notes/" passHref>
-                  <a
-                    className={`px-2 py-2 font-medium hover:bg-${color}-300 text-theme-600 rounded-md mr-2`}
+              <PostAuthorAvatarWithLink />
+              <div className="mr-auto"></div>
+              <div className="block md:flex">
+                {post.folder && (
+                  <SearchLink query={`${post.folder}/`} passHref>
+                    <a
+                      className={`px-2 py-2 font-medium hover:bg-${color}-200 text-theme-600 hover:text-${color}-700 rounded-md mr-2`}
+                    >
+                      <FaFolder
+                        size={14}
+                        className="inline-block mr-2 align-middle -mt-1"
+                      />
+                      {post.folder}
+                    </a>
+                  </SearchLink>
+                )}
+                {post.date && (
+                  <abbr
+                    title={moment(post.date).format('LL')}
+                    className={`py-2 text-theme-600`}
                   >
-                    <FaFolder
+                    <FaClock
                       size={14}
                       className="inline-block mr-2 align-middle -mt-1"
                     />
-                    Notes
-                  </a>
-                </SearchLink>
-                <span className={`py-2 font-medium text-theme-600`}>
-                  <FaClock
-                    size={14}
-                    className="inline-block mr-2 align-middle -mt-1"
-                  />
-                  há um mês
-                </span>
-              </div>
-              <div className="flex space-x-2">
-                <button
-                  className={`bg-${color}-200 text-${color}-600 rounded-md px-2 py-2 font-medium flex-grow`}
-                >
-                  🇺🇸 English
-                </button>
-                <button
-                  className={`bg-theme text-theme-800 text-white font-normal rounded-md px-2 py-2 flex-grow`}
-                >
-                  🇧🇷 Portuguese
-                </button>
+                    {moment(post.date).fromNow()}
+                  </abbr>
+                )}
               </div>
             </div>
           )}
@@ -74,8 +89,24 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
         title={!post ? 'Carregando...' : `${post.name} | Blog`}
         description={post?.description || '...'}
       />
-      <PageDivider color={post?.color || 'gray'} />
-      <div className="container max-w-2xl text-theme-800 prose prose-md py-8">
+      <PageDivider color={post?.color || 'theme'} />
+      <div className="container max-w-2xl text-theme-800 prose prose-md py-4">
+        {post && (
+          <div className="space-x-2 mb-4 flex">
+            <span className="text-theme-600">
+              {intl.formatMessage(messages.changeLanguage)}
+            </span>
+            <div className={`text-${color}-700 space-x-2`}>
+              <ChangePostLanguageLink post={post} locale="en-US">
+                <LocaleLabel locale="en-US" />
+              </ChangePostLanguageLink>
+
+              <ChangePostLanguageLink post={post} locale="pt-BR">
+                <LocaleLabel locale="pt-BR" />
+              </ChangePostLanguageLink>
+            </div>
+          </div>
+        )}
         {notionBlockMap && post && <NotionRenderer blockMap={notionBlockMap} />}
         {!post && (
           <>
@@ -98,12 +129,13 @@ BlogPostPage.displayName = 'BlogPostPage'
 
 export const getStaticProps: GetStaticProps = async (query) => {
   const slug = query.params?.slug
+  const locale = String(query.params?.locale || app.locale)
 
   if (typeof slug !== 'string') {
     throw new Error('Missing slug')
   }
 
-  const { post, notionBlockMap } = await getBlogPostBySlug(slug)
+  const { post, notionBlockMap } = await getBlogPostBySlug(slug, locale)
 
   return {
     props: {

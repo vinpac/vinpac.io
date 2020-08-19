@@ -6,7 +6,7 @@ export interface BuildSuggestionsListFn {
 
 export interface BaseSuggestion {
   id: string
-  title: string
+  title: string | React.ComponentType
   description?: string
   showDescription?: boolean
   keywords: Array<string | number>

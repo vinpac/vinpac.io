@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react'
+import React, { useMemo, useCallback, useState, useEffect, useRef } from 'react'
 import { Dialog } from '@reach/dialog'
 import {
   QuickOpenContext,
@@ -8,6 +8,10 @@ import {
 import QuickOpen from 'components/QuickOpen'
 import { BuildSuggestionsListFn, Suggestion } from 'lib/quickOpen/types'
 import { useTheme } from 'lib/theme'
+import Router, { useRouter } from 'next/router'
+import queryString from 'querystring'
+
+const RE_ROUTE = /^\/q\?query=(.*)/
 
 export interface QuickOpenProviderProps {
   buildSuggestionsList: BuildSuggestionsListFn
@@ -19,6 +23,8 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
 }) => {
   const [showDialog, setShowDialog] = useState<boolean>(false)
   const [defaultText, setDefaultText] = useState('')
+  const router = useRouter()
+  const initialRoute = useRef<{ pathname: string; asPath: string } | null>(null)
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent): void => {
@@ -34,17 +40,78 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
       window.document.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
+  useEffect(() => {
+    const matches = RE_ROUTE.exec(router.asPath)
+    if (matches || router.pathname === '/q' || router.asPath === '/q') {
+      const routerQueryStr = router.query.query && String(router.query.query)
+      const query = matches ? matches[1] : routerQueryStr || ''
 
-  const open = useCallback(
-    (openConfig: QuickOpen_OpenConfig) => {
+      const text = String(unescape(query))
+      if (text !== defaultText) {
+        setDefaultText(text)
+      }
+
       setShowDialog(true)
-      setDefaultText(openConfig.text)
+    } else if (showDialog) {
+      setShowDialog(false)
+    }
+  }, [
+    router.asPath,
+    router.pathname,
+    router.query?.query,
+    defaultText,
+    showDialog,
+  ])
+
+  const open = useCallback((openConfig: QuickOpen_OpenConfig) => {
+    setDefaultText(openConfig.text)
+    initialRoute.current = {
+      pathname: Router.pathname,
+      asPath: Router.asPath,
+    }
+
+    Router.push(
+      `${Router.pathname}?${queryString.stringify(Router.query)}`,
+      `/q?query=${escape(openConfig.text)}`,
+      { shallow: true },
+    )
+  }, [])
+  const replaceTimeoutRef = useRef<number | null>(null)
+  const handleResultsChange = useCallback(
+    (input: string) => {
+      if (replaceTimeoutRef.current !== null) {
+        clearTimeout(replaceTimeoutRef.current)
+        replaceTimeoutRef.current = null
+      }
+
+      if (!showDialog) {
+        return
+      }
+
+      replaceTimeoutRef.current = window.setTimeout(() => {
+        Router.replace(
+          `${Router.pathname}?${queryString.stringify(Router.query)}`,
+          `/q?query=${escape(input)}`,
+          { shallow: true },
+        )
+      }, 400)
     },
-    [setShowDialog],
+    [showDialog],
   )
   const close = useCallback(() => {
-    setShowDialog(false)
-  }, [setShowDialog])
+    if (replaceTimeoutRef.current !== null) {
+      clearTimeout(replaceTimeoutRef.current)
+      replaceTimeoutRef.current = null
+    }
+
+    if (initialRoute.current) {
+      Router.push(initialRoute.current.pathname, initialRoute.current.asPath, {
+        shallow: true,
+      })
+    } else {
+      Router.push('/')
+    }
+  }, [])
 
   const ctx = useMemo<QuickOpenContextType>(() => {
     return { open, close }
@@ -78,6 +145,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
           <QuickOpen
             defaultText={defaultText}
             onSelectItem={handleSelectItem}
+            onResultsChange={handleResultsChange}
             buildSuggestionsList={buildSuggestionsList}
           />
         </Dialog>

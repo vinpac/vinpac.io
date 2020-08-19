@@ -1,3 +1,4 @@
+import 'lib/i18n'
 import moment from 'moment'
 import '@reach/tooltip/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
@@ -12,10 +13,27 @@ import { DefaultSeo } from 'next-seo'
 import PageTransitionLoadingBar from 'components/PageTransitionLoadingBar'
 import { buildSuggestionsList } from 'lib/quickOpen/suggestions'
 import ThemeProvider from 'components/ThemeProvider'
+import { app } from 'static-constants'
+import { useSWRFetch } from 'lib/fetch/hooks'
+import { useEffect, useState } from 'react'
+import { IntlProvider } from 'react-intl'
 
-moment.locale('pt-br')
+moment.locale(app.locale)
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const [messages, setMessages] = useState(app.messages)
+
+  // This piece of code will be removed on production by minifier
+  if (process.env.NODE_ENV === 'development') {
+    /* eslint-disable react-hooks/rules-of-hooks */
+    const intlSWR = useSWRFetch(`/api/_dev/intl/${app.locale}/`)
+    useEffect(() => {
+      if (intlSWR.data) {
+        setMessages(intlSWR.data as any)
+      }
+    }, [intlSWR.data])
+    /* eslint-enable react-hooks/rules-of-hooks */
+  }
   return (
     <>
       <Head>
@@ -94,11 +112,17 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       />
 
       <ThemeProvider>
-        <PageTransitionLoadingBar />
+        <IntlProvider
+          messages={messages}
+          locale={app.locale}
+          defaultLocale={app.defaultLocale}
+        >
+          <PageTransitionLoadingBar />
 
-        <QuickOpenProvider buildSuggestionsList={buildSuggestionsList}>
-          <Component {...pageProps} />
-        </QuickOpenProvider>
+          <QuickOpenProvider buildSuggestionsList={buildSuggestionsList}>
+            <Component {...pageProps} />
+          </QuickOpenProvider>
+        </IntlProvider>
       </ThemeProvider>
     </>
   )

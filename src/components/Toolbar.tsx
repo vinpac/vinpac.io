@@ -17,6 +17,26 @@ import { useQuickOpen } from 'lib/quickOpen/hooks'
 import { useTheme } from 'lib/theme'
 import Logo from 'assets/svg/logo.svg'
 import Tooltip from '@reach/tooltip'
+import { defineMessages, useIntl } from 'react-intl'
+
+const messages = defineMessages({
+  navigate: {
+    id: 'Toolbar/navigate',
+    defaultMessage: 'Navegar',
+  },
+  blog: {
+    id: 'Toolbar/blog',
+    defaultMessage: 'Blog',
+  },
+  activeDarkMode: {
+    id: 'Toolbar/activeDarkMode',
+    defaultMessage: 'Ativar Modo Escuro',
+  },
+  disableDarkMode: {
+    id: 'Toolbar/disableDarkMode',
+    defaultMessage: 'Desativar Modo Escuro',
+  },
+})
 
 export interface ToolbarProps {
   readonly className?: string
@@ -24,6 +44,7 @@ export interface ToolbarProps {
 }
 
 const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
+  const intl = useIntl()
   const theme = useTheme()
   const quickOpen = useQuickOpen()
   const handleThemeChange = (): void => {
@@ -58,12 +79,16 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
           as="button"
           href="/"
           icon={MdSearch}
-          label="Navegar"
+          label={intl.formatMessage(messages.navigate)}
           color={color}
           onClick={() => quickOpen.open({ text: '' })}
         />
         <Link href="/blog" passHref>
-          <ToolbarButton icon={MdEdit} label="Blog" color={color} />
+          <ToolbarButton
+            icon={MdEdit}
+            label={intl.formatMessage(messages.blog)}
+            color={color}
+          />
         </Link>
         <ToolbarButton
           href="https://github.com/vinpac/"
@@ -71,7 +96,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
           label="GitHub"
           color={color}
         />
-        <div className="space-x-2">
+        <div className="space-x-2 flex">
           <ToolbarButton
             href="/"
             icon={FaTwitter}
@@ -87,11 +112,11 @@ const Toolbar: React.FC<ToolbarProps> = ({ className, color }) => {
             hideText
           />
           <Tooltip
-            label={
+            label={intl.formatMessage(
               theme.name === 'light'
-                ? 'Ativar modo dark'
-                : 'Desativar modo dark'
-            }
+                ? messages.activeDarkMode
+                : messages.disableDarkMode,
+            )}
           >
             <ToolbarButton
               as="button"

@@ -1,4 +1,5 @@
 import { ColorName } from 'lib/theme'
+import { ValidLocale } from 'lib/i18n'
 
 export interface BlogPost {
   id: string
@@ -9,6 +10,7 @@ export interface BlogPost {
   color: ColorName
   description: string | null
   tags: string[]
+  language: ValidLocale
   folder?: string
 }
 
@@ -30,6 +32,7 @@ export interface BlogTableRow {
   Page: string
   Published?: boolean
   Folder?: string
+  Lingua?: ValidLocale
 }
 
 export interface BlogPostPageIndex {

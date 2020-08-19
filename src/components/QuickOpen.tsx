@@ -16,6 +16,7 @@ export interface QuickOpenProps {
   readonly className?: string
   readonly defaultText?: string
   readonly onSelectItem?: (suggestion: Suggestion) => void
+  readonly onResultsChange?: (input: string, suggestion: Suggestion[]) => void
   readonly onTextChange?: (text: string) => void
   readonly buildSuggestionsList: BuildSuggestionsListFn
 }
@@ -26,6 +27,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   defaultText,
   onTextChange,
   buildSuggestionsList,
+  onResultsChange,
 }) => {
   const tip = 'Post [assunto]'
   const [text, setText] = useState(defaultText || '')
@@ -128,6 +130,11 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       clearTimeout(timeout)
     }
   }, [text, setSuggestions, buildSuggestionsList, setSelectionIndex])
+  useEffect(() => {
+    if (onResultsChange) {
+      onResultsChange(text, suggestions)
+    }
+  }, [text, suggestions, onResultsChange])
 
   return (
     <div className={cx(className, !isLoading && 'pb-3')}>

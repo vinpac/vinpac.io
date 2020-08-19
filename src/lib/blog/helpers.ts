@@ -11,5 +11,6 @@ export const blogRowToPost = (row: BlogTableRow): BlogPost => {
     tags: row.Tags || [],
     color: row.Color || 'gray',
     folder: row.Folder,
+    language: row.Lingua || 'en-US',
   }
 }
