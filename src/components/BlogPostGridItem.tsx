@@ -32,13 +32,15 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
             className,
           )}
         >
-          <h1 className="font-bold text-3xl text-theme-900">{post.name}</h1>
+          <h1 className="font-bold text-3xl text-theme-900 leading-tight mb-3">
+            {post.name}
+          </h1>
           <p className={`text-${color}-700 text-lg mb-2 flex-grow`}>
             {post.description}
           </p>
 
           <div
-            className={`space-y-2 md:space-y-0 md:space-x-2 text-sm text-theme-700 md:truncate md:whitespace-no-wrap`}
+            className={`space-x-2 text-sm text-theme-700 truncate whitespace-no-wrap`}
           >
             {post.folder && (
               <span className="mr-2">
