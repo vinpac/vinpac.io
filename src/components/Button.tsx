@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 import cx from 'classnames'
-import { ColorName } from 'lib/theme'
 
 export interface ButtonProps {
   readonly as?:
@@ -11,17 +10,21 @@ export interface ButtonProps {
       }>
     | string
   readonly className?: string
-  readonly color?: ColorName
-  readonly paddingClassName?: string
+  readonly colorSchema?: keyof typeof colorMapCx
+  readonly size?: keyof typeof sizeMapCx | null
 }
 
-const Button: React.FC<ButtonProps> = React.forwardRef<any, ButtonProps>(
+const Button = React.forwardRef<
+  any,
+  ButtonProps & DetailedHTMLProps<ButtonHTMLAttributes<'button'>, 'button'>
+>(
   (
     {
       as: Component = 'button',
       className,
-      paddingClassName,
-      color = 'primary',
+      colorSchema,
+      size = 'base',
+      children,
       ...props
     },
     ref,
@@ -31,17 +34,36 @@ const Button: React.FC<ButtonProps> = React.forwardRef<any, ButtonProps>(
         {...props}
         ref={ref}
         className={cx(
-          'hover:shadow-outline font-bold rounded-lg text-white',
-          `bg-${color}-500`,
-          paddingClassName,
+          'hover:shadow-outline text-center font-semibold focus:outline-none focus:ring-4 ring-opacity-30',
+          colorSchema && colorMapCx[colorSchema],
+          size && sizeMapCx[size],
           className,
         )}
-      />
+      >
+        {children}
+      </Component>
     )
   },
 )
 
 Button.displayName = 'Button'
+
+const colorMapCx = {
+  theme:
+    'bg-white dark:bg-gray-700 active:ring-primary-500 dark:hover:bg-gray-600 hover:ring-2 hover:ring-opacity-100 ring-primary-500 ',
+  primary: 'bg-primary-500 hover:bg-primary-600 text-white ring-primary-500',
+  gray:
+    'bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white ring-gray-400',
+} as const
+
+const sizeMapCx = {
+  xs: 'px-2 py-1 rounded text-xs',
+  sm: 'px-2 py-1 rounded-md text-sm',
+  base: 'px-3 py-2 rounded-md',
+  md: 'px-4 py-3 rounded-md',
+  lg: 'px-5 py-4 rounded-lg text-lg',
+  xl: 'px-6 py-5 rounded-lg text-xl',
+} as const
 
 export { Button }
 export default Button

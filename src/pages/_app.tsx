@@ -1,39 +1,41 @@
 import 'lib/i18n'
-import moment from 'moment'
 import '@reach/tooltip/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
 import '../css/tailwind.css'
 import '../css/animations.css'
 import '../css/notion.css'
 import '../css/themes.css'
+
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import QuickOpenProvider from 'components/QuickOpenProvider'
+import QuickOpenProvider from '@components/QuickOpenProvider'
 import { DefaultSeo } from 'next-seo'
-import PageTransitionLoadingBar from 'components/PageTransitionLoadingBar'
-import { buildSuggestionsList } from 'lib/quickOpen/suggestions'
-import ThemeProvider from 'components/ThemeProvider'
-import { app } from 'static-constants'
-import { useSWRFetch } from 'lib/fetch/hooks'
-import { useEffect, useState } from 'react'
+import PageTransitionLoadingBar from '@components/PageTransitionLoadingBar'
+import { buildSuggestionsList } from '@lib/quickOpen/suggestions'
+import { ThemeProvider } from '@lib/theme'
+import { app, DEFAULT_LOCALE, vinicius } from '@static-constants'
+import { useState } from 'react'
 import { IntlProvider } from 'react-intl'
-
-moment.locale(app.locale)
+import { useRouter } from 'next/router'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const [messages, setMessages] = useState(app.messages)
+  const router = useRouter()
+  const [messages] = useState(app.messages)
 
-  // This piece of code will be removed on production by minifier
-  if (process.env.NODE_ENV === 'development') {
-    /* eslint-disable react-hooks/rules-of-hooks */
-    const intlSWR = useSWRFetch(`/api/_dev/intl/${app.locale}/`)
-    useEffect(() => {
-      if (intlSWR.data) {
-        setMessages(intlSWR.data as any)
-      }
-    }, [intlSWR.data])
-    /* eslint-enable react-hooks/rules-of-hooks */
-  }
+  const locale = router.locale || DEFAULT_LOCALE
+
+  // // This piece of code will be removed on production by minifier
+  // if (process.env.NODE_ENV === 'development') {
+  //   /* eslint-disable react-hooks/rules-of-hooks */
+  //   const intlSWR = useSWRFetch(`/api/_dev/intl/${app.locale}/`)
+  //   useEffect(() => {
+  //     if (intlSWR.data) {
+  //       setMessages(intlSWR.data as any)
+  //     }
+  //   }, [intlSWR.data])
+  //   /* eslint-enable react-hooks/rules-of-hooks */
+  // }
+
   return (
     <>
       <Head>
@@ -77,6 +79,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           sizes="152x152"
           href="apple-touch-icon-152x152.png"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" type="image/svg" href="/assets/Favicon.svg" />
         <meta name="application-name" content="&nbsp;" />
         <meta name="msapplication-TileImage" content="mstile-144x144.png" />
@@ -97,16 +104,22 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#023373" />
       </Head>
       <DefaultSeo
-        titleTemplate="%s | Vinicius"
+        title="Vinicius Pacheco"
         openGraph={{
           type: 'website',
-          locale: 'pt_BR',
-          url: 'https://vinicius.app/',
-          site_name: 'Vinicius',
+          locale: locale === 'en' ? 'en_US' : 'pt_BR',
+          url: `https://${vinicius.site}`,
+          site_name: 'Vinicius Pacheco Portfolio',
         }}
+        languageAlternates={[
+          {
+            hrefLang: 'en-US',
+            href: `https://${vinicius.site}/en`,
+          },
+        ]}
         twitter={{
-          handle: '@vinpac98',
-          site: 'vinicius.app',
+          handle: vinicius.twitterHandle,
+          site: vinicius.site,
           cardType: 'summary_large_image',
         }}
       />
@@ -114,8 +127,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       <ThemeProvider>
         <IntlProvider
           messages={messages}
-          locale={app.locale}
-          defaultLocale={app.defaultLocale}
+          locale={locale}
+          defaultLocale={DEFAULT_LOCALE}
         >
           <PageTransitionLoadingBar />
 

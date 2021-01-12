@@ -3,11 +3,11 @@ import {
   BlogIndex,
   BlogTableRow,
   BlogPostPageIndex,
-} from 'lib/notion/types'
-import { fetchTableFromNotion, fetchPageFromNotion } from 'lib/notion/fetch'
-import { BLOG_INDEX_ID } from 'server-constants'
-import { NotionPageNotFound } from 'lib/notion/errors'
-import { blogRowToPost } from 'lib/blog/helpers'
+} from '@lib/notion/types'
+import { fetchTableFromNotion, fetchPageFromNotion } from '@lib/notion/fetch'
+import { BLOG_INDEX_ID } from '@server-constants'
+import { NotionPageNotFound } from '@lib/notion/errors'
+import { blogRowToPost } from '@lib/blog/helpers'
 
 export const getBlogIndex = async (): Promise<BlogIndex> => {
   const tableRows = await fetchTableFromNotion<BlogTableRow>(BLOG_INDEX_ID)

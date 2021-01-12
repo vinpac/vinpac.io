@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
-import TechStackCol from 'components/TechStackCol'
-import TechStackItem from 'components/TechStackItem'
+import TechStackCol from '@components/TechStackCol'
+import TechStackItem from '@components/TechStackItem'
 
 export interface FavoriteStackSectionProps {
   readonly className?: string

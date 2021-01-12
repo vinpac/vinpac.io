@@ -1,21 +1,20 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import React from 'react'
-import { getBlogPostBySlug } from 'lib/blog/server'
-import { BlogPostPageIndex } from 'lib/notion/types'
-import Layout from 'components/Layout'
+import { getBlogPostBySlug } from '@lib/blog/server'
+import { BlogPostPageIndex } from '@lib/notion/types'
+import Layout from '@components/Layout'
 import { NotionRenderer } from 'react-notion'
 import { NextSeo } from 'next-seo'
-import TextPlaceholder from 'components/TextPlaceholder'
-import BlockPlaceholder from 'components/BlockPlaceholder'
-import PageDivider from 'components/PageDivider'
+import TextPlaceholder from '@components/TextPlaceholder'
+import BlockPlaceholder from '@components/BlockPlaceholder'
+import PageDivider from '@components/PageDivider'
 import { FaClock, FaFolder } from 'react-icons/fa'
-import SearchLink from 'components/SearchLink'
+import SearchLink from '@components/SearchLink'
 import moment from 'moment'
-import PostAuthorAvatarWithLink from 'components/PostAuthorAvatarWithLink'
-import ChangePostLanguageLink from 'components/ChangePostLanguageLink'
+import PostAuthorAvatarWithLink from '@components/PostAuthorAvatarWithLink'
+import ChangePostLanguageLink from '@components/ChangePostLanguageLink'
 import { defineMessages, useIntl } from 'react-intl'
-import { app } from 'static-constants'
-import LocaleLabel from 'components/LocaleLabel'
+import LocaleLabel from '@components/LocaleLabel'
 
 const messages = defineMessages({
   changeLanguage: {
@@ -83,7 +82,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
           {!post && <BlockPlaceholder className="h-6 w-1/2" />}
         </div>
       }
-      color={color}
     >
       <NextSeo
         title={!post ? 'Carregando...' : `${post.name} | Blog`}
@@ -129,7 +127,7 @@ BlogPostPage.displayName = 'BlogPostPage'
 
 export const getStaticProps: GetStaticProps = async (query) => {
   const slug = query.params?.slug
-  const locale = String(query.params?.locale || app.locale)
+  const locale = String(query.params?.locale || 'pt-BR')
 
   if (typeof slug !== 'string') {
     throw new Error('Missing slug')

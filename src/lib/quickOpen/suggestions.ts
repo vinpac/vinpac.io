@@ -1,11 +1,10 @@
-import { staticSuggestions } from 'lib/quickOpen/defaultSuggestions'
-import { getBlogIndexInBrowser } from 'lib/blog/browser'
+import { staticSuggestions } from '@lib/quickOpen/defaultSuggestions'
 import {
   Suggestion,
   BuildSuggestionsListFn,
   LinkSuggestion,
-} from 'lib/quickOpen/types'
-import { escapeRegex } from 'lib/utils/regexp'
+} from '@lib/quickOpen/types'
+import { escapeRegex } from '@lib/utils/regexp'
 
 export const buildSearchRegex = (input: string): RegExp => {
   const trimmed = escapeRegex(input.trim())
@@ -24,47 +23,46 @@ const allSuggestions: Suggestion[] = [...staticSuggestions]
 allSuggestions.forEach((suggestion) => {
   suggestionsById[suggestion.id] = suggestion
 })
-let blogSuggestionsBuilt = false
 
-const buildBlogSuggestions = async (): Promise<void> => {
-  if (blogSuggestionsBuilt) {
-    return
-  }
-  blogSuggestionsBuilt = true
+// For now I will hide this code
+// let blogSuggestionsBuilt = false
+// const buildBlogSuggestions = async (): Promise<void> => {
+//   if (blogSuggestionsBuilt) {
+//     return
+//   }
+//   blogSuggestionsBuilt = true
 
-  const blogIndex = await getBlogIndexInBrowser()
-  blogIndex.posts.forEach((post) => {
-    const keywords: string[] = ['post', ...post.tags.map((tag) => `#${tag}`)]
+//   const blogIndex = await getBlogIndexInBrowser()
+//   blogIndex.posts.forEach((post) => {
+//     const keywords: string[] = ['post', ...post.tags.map((tag) => `#${tag}`)]
 
-    if (post.folder) {
-      keywords.push(`${post.folder}/`)
-    }
+//     if (post.folder) {
+//       keywords.push(`${post.folder}/`)
+//     }
 
-    allSuggestions.push({
-      id: `post/${post.id}`,
-      href: `/blog/${post.slug}`,
-      icon: { type: 'color', color: post.color },
-      keywords: keywords,
-      title: post.name,
-      nextHref: '/blog/[slug]',
-      description: post.description || '',
-    })
-    const suggestion = allSuggestions[allSuggestions.length - 1]
-    suggestionsById[suggestion.id] = suggestion
-  })
-}
+//     allSuggestions.push({
+//       id: `post/${post.id}`,
+//       href: `/blog/${post.slug}`,
+//       icon: { type: 'color', color: post.color },
+//       keywords: keywords,
+//       title: post.name,
+//       nextHref: '/blog/[slug]',
+//       description: post.description || '',
+//     })
+//     const suggestion = allSuggestions[allSuggestions.length - 1]
+//     suggestionsById[suggestion.id] = suggestion
+//   })
+// }
 
 export const buildSuggestionsList: BuildSuggestionsListFn = async (
   input: string,
 ) => {
   if (input.trim().replace(' ', '') === '') {
-    return ['home', 'blog', 'twitter', 'github', 'theme'].map(
-      (id) => suggestionsById[id],
-    )
+    return allSuggestions.filter((s) => s.useAsFallback)
   }
 
   const searchRegex = buildSearchRegex(input)
-  await buildBlogSuggestions()
+  // await buildBlogSuggestions()
 
   const scoreMap: { [id: string]: number } = {}
   const suggestions: Suggestion[] = []

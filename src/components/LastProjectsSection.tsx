@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { ProjectCompactDetailsButton } from 'components/ProjectCompactDetailsButton'
+import { ProjectCompactDetailsButton } from '@components/ProjectCompactDetailsButton'
 import { FormattedMessage } from 'react-intl'
 
 export interface LastProjectsSectionProps {

@@ -1,4 +1,4 @@
-import { BlogTableRow, BlogPost } from 'lib/notion'
+import { BlogTableRow, BlogPost } from '@lib/notion'
 
 export const blogRowToPost = (row: BlogTableRow): BlogPost => {
   return {

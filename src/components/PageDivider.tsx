@@ -1,5 +1,5 @@
 import React from 'react'
-import { ColorName } from 'lib/theme'
+import { ColorName } from '@lib/theme'
 
 export interface PageDividerProps {
   readonly color: ColorName

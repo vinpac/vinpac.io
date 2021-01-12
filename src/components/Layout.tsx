@@ -1,10 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
-import Toolbar from 'components/Toolbar'
-import { ColorName } from 'lib/theme'
+import Toolbar from '@components/Toolbar'
 
 export interface LayoutProps {
-  readonly color?: ColorName
   readonly toolbar?: React.ReactNode | null
   readonly toolbarClassName?: string
   readonly className?: string
@@ -19,26 +17,26 @@ const Layout: React.FC<LayoutProps> = ({
   toolbarClassName,
   hero,
   heroClassName,
-  color = 'theme' as ColorName,
 }) => {
   const Hero = hero ? 'div' : React.Fragment
   return (
     <div className={cx('layout', className)}>
       {toolbar !== null &&
         (hero ? (
-          <Hero
-            className={heroClassName || `bg-${color}-200 text-${color}-900`}
-          >
-            <div className={`container py-3 relative z-20`}>
-              {toolbar || (
-                <Toolbar className={toolbarClassName} color={color} />
-              )}
-            </div>
+          <Hero id="hero" className={heroClassName}>
+            {toolbar || (
+              <Toolbar
+                className={cx(
+                  toolbarClassName,
+                  'container py-10 relative z-20',
+                )}
+              />
+            )}
             {hero}
           </Hero>
         ) : (
           <div className={`container py-3 relative z-20`}>
-            {toolbar || <Toolbar className={toolbarClassName} color={color} />}
+            {toolbar || <Toolbar className={toolbarClassName} />}
           </div>
         ))}
       {children}

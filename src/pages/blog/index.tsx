@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Layout from 'components/Layout'
-import BlogPostGridItem from 'components/BlogPostGridItem'
-import FilterPostsByFolderButton from 'components/FilterPostsByFolderButton'
+import Layout from '@components/Layout'
+import BlogPostGridItem from '@components/BlogPostGridItem'
+import FilterPostsByFolderButton from '@components/FilterPostsByFolderButton'
 import { NextSeo } from 'next-seo'
-import BlockPlaceholder from 'components/BlockPlaceholder'
-import PageDivider from 'components/PageDivider'
-import { useBlogIndex } from 'lib/blog/hooks'
+import BlockPlaceholder from '@components/BlockPlaceholder'
+import PageDivider from '@components/PageDivider'
+import { useBlogIndex } from '@lib/blog/hooks'
 
 const BlogPage: React.FC = () => {
   const [view] = useState<'list' | 'grid'>('grid')

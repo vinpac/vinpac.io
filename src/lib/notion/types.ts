@@ -1,5 +1,5 @@
-import { ColorName } from 'lib/theme'
-import { ValidLocale } from 'lib/i18n'
+import { ColorName } from '@lib/theme'
+import { ValidLocale } from '@lib/i18n'
 
 export interface BlogPost {
   id: string

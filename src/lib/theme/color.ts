@@ -1,4 +1,4 @@
-import { ColorShade } from 'lib/theme/types'
+import { ColorShade } from '@lib/theme/types'
 
 export const screensWidth = {
   xs: 0,

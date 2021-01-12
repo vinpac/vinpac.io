@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { getBlogIndex } from 'lib/blog/server'
+import { getBlogIndex } from '@lib/blog/server'
 
 export default async (
   _: NextApiRequest,

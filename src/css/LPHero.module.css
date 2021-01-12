@@ -1,0 +1,9 @@
+.hero {
+  background-image: url(/assets/Light/Hero.svg);
+  background-size: 100% auto;
+}
+
+.picture {
+  width: 460px;
+  height: 460px;
+}

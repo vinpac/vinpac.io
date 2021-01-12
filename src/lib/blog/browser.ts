@@ -1,4 +1,4 @@
-import { BlogIndex } from 'lib/notion'
+import { BlogIndex } from '@lib/notion'
 
 let cachedBlogIndex: BlogIndex | undefined
 

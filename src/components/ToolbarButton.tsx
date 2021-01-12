@@ -1,29 +1,28 @@
 import React from 'react'
 import cx from 'classnames'
-import { ColorName } from 'lib/theme'
 
 export interface ToolbarButtonProps {
   readonly as?:
     | React.ComponentType<{ ref: any; title: string; className: string }>
     | string
-  readonly icon: React.ComponentType<{ size: number; className: string }>
-  readonly color?: ColorName
   readonly label: string
   readonly href?: string
-  readonly hideText?: boolean
   readonly onClick?: (event: React.MouseEvent) => void
+  readonly fallbackToLabel?: boolean
+  readonly children?: React.ReactNode
   readonly className?: string
+  readonly textClassName?: string
 }
 
 const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
   (
     {
       as: Component = 'a',
-      icon: Icon,
-      label,
       className,
-      color = 'theme',
-      hideText,
+      textClassName,
+      label,
+      fallbackToLabel = true,
+      children,
       ...props
     },
     ref,
@@ -33,22 +32,14 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
         ref={ref}
         title={label}
         className={cx(
-          'hover:underline leading-9 group',
-          `text-${color}-800`,
+          'hover:underline focus:outline-none leading-9 rounded-full',
+          textClassName ||
+            `text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white`,
           className,
         )}
         {...props}
       >
-        <div
-          className={cx(
-            'w-10 h-10 rounded-full inline-block align-top text-center text-white',
-            `bg-${color}-300 group-hover:bg-${color}-400`,
-            !hideText && 'mr-2',
-          )}
-        >
-          <Icon size={21} className={`inline-block text-${color}-900`} />
-        </div>
-        {!hideText && label}
+        {children || (fallbackToLabel && label)}
       </Component>
     )
   },

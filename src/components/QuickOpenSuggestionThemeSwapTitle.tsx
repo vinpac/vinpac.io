@@ -1,6 +1,7 @@
 import React from 'react'
-import { useThemeName } from 'lib/theme'
+import { useThemeName } from '@lib/theme'
 import { defineMessages, useIntl } from 'react-intl'
+import { PropsPassedToSuggestion } from '@lib/quickOpen/types'
 
 const messages = defineMessages({
   activeDarkMode: {
@@ -13,14 +14,18 @@ const messages = defineMessages({
   },
 })
 
-const QuickOpenSuggestionThemeSwapTitle: React.FC = () => {
+const QuickOpenSuggestionThemeSwapTitle: React.FC<PropsPassedToSuggestion> = ({
+  context: { highlightText },
+}) => {
   const theme = useThemeName()
   const intl = useIntl()
   return (
     <span>
-      {theme === 'light'
-        ? intl.formatMessage(messages.activeDarkMode)
-        : intl.formatMessage(messages.disableDarkMode)}
+      {highlightText(
+        theme === 'light'
+          ? intl.formatMessage(messages.activeDarkMode)
+          : intl.formatMessage(messages.disableDarkMode),
+      )}
     </span>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeName } from 'lib/theme/types'
+import { ThemeName } from '@lib/theme/types'
 
 export interface ThemeContextType {
   name: ThemeName

@@ -1,12 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
-import { BlogPost } from 'lib/notion'
+import { BlogPost } from '@lib/notion'
 import moment from 'moment'
-import ShadowColor from 'components/ShadowColor'
+import ShadowColor from '@components/ShadowColor'
 import { FaClock, FaFolder } from 'react-icons/fa'
-import { getPostLinkHref } from 'lib/blog/browserHelpers'
-import LocaleLabel from 'components/LocaleLabel'
+import { getPostLinkHref } from '@lib/blog/browserHelpers'
+import LocaleLabel from '@components/LocaleLabel'
 
 export interface BlogPostGridItemProps {
   readonly post: BlogPost

@@ -1,4 +1,4 @@
-import { ThemeName } from 'lib/theme/types'
+import { ThemeName } from '@lib/theme/types'
 
 const LOCAL_PREFERRED_THEME = '@theme/theme'
 

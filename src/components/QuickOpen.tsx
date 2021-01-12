@@ -2,14 +2,22 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import cx from 'classnames'
 import { MdSearch } from 'react-icons/md'
 import { useHotkeys } from 'react-hotkeys-hook'
-import { buildSearchRegex } from 'lib/quickOpen/suggestions'
-import QuickOpenSuggestion from 'components/QuickOpenSuggestion'
+import { buildSearchRegex } from '@lib/quickOpen/suggestions'
+import QuickOpenSuggestion from '@components/QuickOpenSuggestion'
 import Router from 'next/router'
 import {
   BuildSuggestionsListFn,
   Suggestion,
   LinkSuggestion,
-} from 'lib/quickOpen/types'
+} from '@lib/quickOpen/types'
+import { defineMessages, useIntl } from 'react-intl'
+
+const messages = defineMessages({
+  placeholder: {
+    id: 'components/QuickOpen/placeholder',
+    defaultMessage: 'Navegue / Busque / Se divirta',
+  },
+})
 
 export interface QuickOpenProps {
   readonly className?: string
@@ -28,13 +36,14 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   buildSuggestionsList,
   onResultsChange,
 }) => {
-  const tip = 'Post [assunto]'
+  const intl = useIntl()
   const [text, setText] = useState(defaultText || '')
   const [selectionIndex, setSelectionIndex] = useState(0)
   const [isLoading, setLoading] = useState(true)
   const [suggestions, setSuggestions] = useState<Suggestion[]>([])
-  const highlightRegex = useMemo<RegExp>(() => {
-    return buildSearchRegex(text)
+  const highlightRegex = useMemo<RegExp | undefined>(() => {
+    // Avoid empty highlights
+    return text.trim().length > 0 ? buildSearchRegex(text) : undefined
   }, [text])
 
   // Moves selection index
@@ -61,18 +70,20 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
 
   // Takes a suggestion and fires its event
   const handleSuggestionSelect = useCallback(
-    (suggestion: Suggestion) => {
-      if (suggestion) {
+    (suggestion: Suggestion, mimicEvent?: boolean) => {
+      if (mimicEvent) {
         const { nextHref, href } = suggestion as Partial<LinkSuggestion>
         if (nextHref) {
           Router.push(nextHref, href)
         } else if (href) {
-          window.open(href)
+          window.setTimeout(() => {
+            document.location.href = href
+          }, 1)
         }
+      }
 
-        if (onSelectItem) {
-          onSelectItem(suggestion)
-        }
+      if (onSelectItem) {
+        onSelectItem(suggestion)
       }
     },
     [onSelectItem],
@@ -82,12 +93,14 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.keyCode === 38 || event.keyCode === 40) {
+        event.preventDefault()
         moveSelection(event.keyCode === 38 ? 'up' : 'down')
       }
 
       if (event.keyCode === 13) {
+        event.preventDefault()
         const suggestion = suggestions[selectionIndex]
-        handleSuggestionSelect(suggestion)
+        handleSuggestionSelect(suggestion, true)
       }
     },
     [selectionIndex, suggestions, handleSuggestionSelect, moveSelection],
@@ -97,10 +110,11 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   // Listen for UP and DOWN arrow to move selection index
   useHotkeys(
     'enter, up, down',
-    (_, handler) => {
-      if (handler.key === 'enter') {
+    (event, handler) => {
+      if (handler.key === 'enter' && selectionIndex !== -1) {
+        event.preventDefault()
         const suggestion = suggestions[selectionIndex]
-        handleSuggestionSelect(suggestion)
+        handleSuggestionSelect(suggestion, true)
         return
       }
 
@@ -112,6 +126,9 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   // Build new suggestions on text change
   useEffect(() => {
     let timedout = false
+
+    // Put it in a timeout so we don't update before the user stops
+    // typing
     const timeout = window.setTimeout(async () => {
       const suggestionsList = await buildSuggestionsList(text)
 
@@ -136,12 +153,18 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
   }, [text, suggestions, onResultsChange])
 
   return (
-    <div className={cx(className, !isLoading && 'pb-3')}>
+    <div
+      className={cx(
+        'bg-white dark:bg-gray-800 rounded-lg',
+        !isLoading && 'pb-3',
+        className,
+      )}
+    >
       <div className="relative">
         <input
           type="text"
-          className="w-full pl-16 pr-4 pt-4 pb-3 rounded-lg outline-none text-xl bg-accent"
-          placeholder={`Tente digitar "${tip}"`}
+          className="w-full pl-16 pr-4 pt-4 pb-3 rounded-t-lg outline-none text-xl bg-transparent"
+          placeholder={intl.formatMessage(messages.placeholder)}
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
           value={text}
@@ -161,18 +184,20 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         />
       ))}
       {!isLoading && suggestions.length === 0 && (
-        <div className="py-6 animated">
+        <div className="py-6">
           <img
             src="/assets/nature-for-fun.svg"
             className="w-full h-24 mx-auto mb-3"
             loading="lazy"
           />
-          <p className="text-theme-700 text-center font-medium fadeInUp-25 animated_faster">
+          <p className="text-gray-700 dark:text-gray-300 text-center font-medium fadeInUp-25 animated_faster">
             Infelizmente nada foi encontrado
           </p>
         </div>
       )}
-      {isLoading && <div className="py-8 bg-theme-100 rounded-b-lg"></div>}
+      {isLoading && (
+        <div className="py-8 bg-gray-100 dark:bg-gray-900 rounded-b-lg"></div>
+      )}
     </div>
   )
 }

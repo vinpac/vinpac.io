@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import ShadowColor from 'components/ShadowColor'
+import ShadowColor from '@components/ShadowColor'
 
 export interface ProjectCompactDetailsButtonProps {
   readonly className?: string

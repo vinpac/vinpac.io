@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import BlockPlaceholder from 'components/BlockPlaceholder'
+import BlockPlaceholder from '@components/BlockPlaceholder'
 
 export interface TextPlaceholderProps {
   readonly className?: string

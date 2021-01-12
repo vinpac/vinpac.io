@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { useQuickOpen } from 'lib/quickOpen/hooks'
+import { useQuickOpen } from '@lib/quickOpen/hooks'
 
 export interface SearchLinkProps {
   readonly query: string

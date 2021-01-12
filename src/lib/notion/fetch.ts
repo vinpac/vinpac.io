@@ -1,4 +1,4 @@
-import { NotionPageBlockMap } from 'lib/notion/types'
+import { NotionPageBlockMap } from '@lib/notion/types'
 
 export const fetchTableFromNotion = async <Row>(
   pageId: string,

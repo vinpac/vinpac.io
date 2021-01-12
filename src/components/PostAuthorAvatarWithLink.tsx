@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { vinicius } from 'static-constants'
+import { vinicius } from '@static-constants'
 
 export interface PostAuthorAvatarWithLinkProps {
   readonly className?: string
@@ -17,8 +17,8 @@ const PostAuthorAvatarWithLink: React.FC<PostAuthorAvatarWithLinkProps> = ({
       />
       <div className="leading-5">
         <h4 className="font-medium text-theme-900">Vinicius Pacheco</h4>
-        <a href={vinicius.twitter.url} className="text-blue-500 text-sm">
-          @{vinicius.twitter.handle}
+        <a href={vinicius.twitterURL} className="text-blue-500 text-sm">
+          @{vinicius.twitterHandle}
         </a>
       </div>
     </div>

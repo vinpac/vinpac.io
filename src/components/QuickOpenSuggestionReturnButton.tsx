@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import { MdKeyboardReturn } from 'react-icons/md'
-import { useThemeName } from 'lib/theme'
 
 export interface QuickOpenSuggestionReturnButtonProps {
   readonly className?: string
@@ -10,15 +9,10 @@ export interface QuickOpenSuggestionReturnButtonProps {
 const QuickOpenSuggestionReturnButton: React.FC<QuickOpenSuggestionReturnButtonProps> = ({
   className,
 }) => {
-  const theme = useThemeName()
   return (
     <span
       className={cx(
-        '-mr-12 w-8 h-8 rounded-lg border-2 block float-right my-1 text-center leading-7',
-        {
-          'border-primary-500 text-primary-500': theme === 'light',
-          'border-white text-white': theme === 'dark',
-        },
+        '-mr-12 w-8 h-8 rounded-lg border-2 block float-right my-1 text-center leading-7 border-gray-700 text-gray-800 dark:border-white dark:text-white',
         className,
       )}
     >

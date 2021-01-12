@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
-import { BlogPost } from 'lib/notion'
-import { useTranslatedPost } from 'lib/blog/hooks'
+import { BlogPost } from '@lib/notion'
+import { useTranslatedPost } from '@lib/blog/hooks'
 import Link from 'next/link'
 import Tooltip from '@reach/tooltip'
-import { getPostLinkHref } from 'lib/blog/browserHelpers'
-import { ValidLocale } from 'lib/i18n'
+import { getPostLinkHref } from '@lib/blog/browserHelpers'
+import { ValidLocale } from '@lib/i18n'
 
 export interface ChangePostLanguageLinkProps {
   readonly post: BlogPost

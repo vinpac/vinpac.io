@@ -1,0 +1,39 @@
+<svg
+width="640"
+height="600"
+fill="none"
+viewBox="0 0 640 600"
+xmlns="http://www.w3.org/2000/svg"
+>
+<defs>
+<pattern
+    id="svg-pattern-squares-desktop"
+    x="118"
+    y="0"
+    width="20"
+    height="20"
+    patternUnits="userSpaceOnUse"
+>
+    <circle
+    cx="4"
+    cy="4"
+    r="2"
+    class="text-blue-800 dark:text-blue-200 opacity-25"
+    fill="currentColor"
+    ></circle>
+</pattern>
+</defs>
+<rect
+y="62"
+width="640"
+height="400"
+class="opacity-25"
+fill="currentColor"
+></rect>
+<rect
+x="100"
+width="404"
+height="600"
+fill="url(#svg-pattern-squares-desktop)"
+></rect>
+</svg>

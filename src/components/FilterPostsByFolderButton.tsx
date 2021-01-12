@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import SearchLink from 'components/SearchLink'
+import SearchLink from '@components/SearchLink'
 import { FaFolder } from 'react-icons/fa'
 
 export interface FilterPostsByFolderButtonProps {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import cx from 'classnames'
 import Router from 'next/router'
-import { useThemeName } from 'lib/theme'
+import { useThemeName } from '@lib/theme'
 
 export interface PageTransitionLoadingBarProps {
   readonly className?: string

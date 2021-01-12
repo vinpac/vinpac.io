@@ -1,4 +1,4 @@
-import { QuickOpenContextType, QuickOpenContext } from 'lib/quickOpen/context'
+import { QuickOpenContextType, QuickOpenContext } from '@lib/quickOpen/context'
 import { useContext } from 'react'
 
 export const useQuickOpen = (): QuickOpenContextType => {

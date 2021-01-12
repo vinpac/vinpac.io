@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { ColorName } from 'lib/theme'
+import { ColorName } from '@lib/theme'
 
 export interface ShadowColorProps {
   readonly color: ColorName

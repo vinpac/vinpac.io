@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react'
 import cx from 'classnames'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { FaArrowRight } from 'react-icons/fa'
-import { BestMomentsCarouselCurrentIndexIndication } from 'components/BestMomentsCarouselCurrentIndexIndication'
-import { ColorName } from 'lib/theme/types'
+import { BestMomentsCarouselCurrentIndexIndication } from '@components/BestMomentsCarouselCurrentIndexIndication'
+import { ColorName } from '@lib/theme/types'
 
 export interface BestMomentselProps {
   readonly className?: string

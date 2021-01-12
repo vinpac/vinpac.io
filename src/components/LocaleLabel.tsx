@@ -1,5 +1,5 @@
 import React from 'react'
-import { ValidLocale } from 'lib/i18n'
+import { ValidLocale } from '@lib/i18n'
 import { MdPublic } from 'react-icons/md'
 import { useIntl, defineMessages } from 'react-intl'
 

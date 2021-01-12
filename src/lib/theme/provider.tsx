@@ -5,13 +5,13 @@ import {
   ThemeContextType,
   getPreferredTheme,
   setPreferredTheme,
-} from 'lib/theme'
+} from '@lib/theme'
 
-export interface ThemeProviderProps {
+interface ThemeProviderProps {
   readonly className?: string
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [themeName, setTheme] = useState<ThemeName>('light')
   useEffect(() => {
     const prefferedTheme = getPreferredTheme()
@@ -22,7 +22,8 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }
 
     const html = document.getElementsByTagName('html')[0]
-    html.className = themeName === 'dark' ? 'theme-dark' : 'theme-light'
+    html.className =
+      themeName === 'dark' ? 'dark bg-gray-800 text-white' : 'light'
   }, [themeName])
   const setThemeAndSavePreference = useCallback(
     (value: ThemeName) => {
@@ -41,8 +42,3 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   return <ThemeContext.Provider value={ctx}>{children}</ThemeContext.Provider>
 }
-
-ThemeProvider.displayName = 'ThemeProvider'
-
-export { ThemeProvider }
-export default ThemeProvider
