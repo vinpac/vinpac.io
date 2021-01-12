@@ -4,6 +4,7 @@ module.exports = {
   darkMode: 'class',
   purge: {
     content: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
+    safelist: ['bg-gray-800'],
   },
   variants: {
     extend: {
