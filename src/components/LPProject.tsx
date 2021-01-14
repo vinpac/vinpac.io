@@ -70,9 +70,11 @@ const LPProject: React.FC<Props> = ({
               </span>
             )}
           </h1>
-          <p className="text-lg text-gray-400 mb-4 flex-grow">{description}</p>
+          <p className="text-lg text-gray-700 dark:text-gray-400 mb-4 flex-grow">
+            {description}
+          </p>
           {team && (
-            <div className="text-gray-400 mb-4 -mt-2 md:hidden">
+            <div className="text-gray-500 mb-4 -mt-2 md:hidden">
               {renderedTeam}
             </div>
           )}
@@ -94,7 +96,7 @@ const LPProject: React.FC<Props> = ({
             )}
 
             {actions && (
-              <div className="sm:ml-auto space-y-3 sm:space-x-3 flex flex-col w-full">
+              <div className="space-y-3 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-3 sm:ml-auto w-full sm:w-auto">
                 {actions.map((action) => {
                   const Icon = action.icon || FiExternalLink
 

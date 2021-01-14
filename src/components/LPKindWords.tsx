@@ -9,7 +9,7 @@ interface Props {
 }
 
 const LPKindWords: React.FC<Props> = ({ className }) => {
-  const patternOpacity = useThemeName() === 'dark' ? '.3' : '.15'
+  const patternOpacity = useThemeName() === 'dark' ? '.25' : '.15'
   return (
     <div
       id="kind-words"
