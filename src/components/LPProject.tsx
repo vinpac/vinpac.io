@@ -31,7 +31,13 @@ const LPProject: React.FC<Props> = ({
 }) => {
   const renderedTeam = team && (
     <>
-      <span className="font-medium">Time: </span>
+      <span className="font-medium">
+        <FormattedMessage
+          id="components/LPProject/team"
+          defaultMessage="Time"
+        />
+        {': '}
+      </span>
       {team.map((member, i) => (
         <React.Fragment key={member.profileURL}>
           <LPProjectTeamMember

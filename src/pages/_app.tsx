@@ -13,28 +13,14 @@ import { DefaultSeo } from 'next-seo'
 import PageTransitionLoadingBar from '@components/PageTransitionLoadingBar'
 import { buildSuggestionsList } from '@lib/quickOpen/suggestions'
 import { ThemeProvider } from '@lib/theme'
-import { app, DEFAULT_LOCALE, vinicius } from '@static-constants'
-import { useState } from 'react'
+import { DEFAULT_LOCALE, vinicius } from '@static-constants'
+import en from '@generated/lang/en.json'
 import { IntlProvider } from 'react-intl'
 import { useRouter } from 'next/router'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
-  const [messages] = useState(app.messages)
-
   const locale = router.locale || DEFAULT_LOCALE
-
-  // // This piece of code will be removed on production by minifier
-  // if (process.env.NODE_ENV === 'development') {
-  //   /* eslint-disable react-hooks/rules-of-hooks */
-  //   const intlSWR = useSWRFetch(`/api/_dev/intl/${app.locale}/`)
-  //   useEffect(() => {
-  //     if (intlSWR.data) {
-  //       setMessages(intlSWR.data as any)
-  //     }
-  //   }, [intlSWR.data])
-  //   /* eslint-enable react-hooks/rules-of-hooks */
-  // }
 
   return (
     <>
@@ -126,7 +112,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 
       <ThemeProvider>
         <IntlProvider
-          messages={messages}
+          messages={locale === 'en' ? (en as any) : {}}
           locale={locale}
           defaultLocale={DEFAULT_LOCALE}
         >

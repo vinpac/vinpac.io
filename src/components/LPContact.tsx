@@ -1,15 +1,35 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import cx from 'classnames'
 import ContactButton from './ContactButton'
 import { vinicius } from '@static-constants'
 import { useMyWhatsAppLink } from '@lib/whatsapp'
+
+const messages = defineMessages({
+  linkedinDesc: {
+    id: 'components/LPContact/linkedinDesc',
+    defaultMessage: 'Meu perfil profissional',
+  },
+  dribbbleDesc: {
+    id: 'components/LPContact/dribbbleDesc',
+    defaultMessage: 'Trabalhos em andamento',
+  },
+  githubDesc: {
+    id: 'components/LPContact/githubDesc',
+    defaultMessage: 'Muito código e estudo',
+  },
+  instagramDesc: {
+    id: 'components/LPContact/instagramDesc',
+    defaultMessage: 'Minha vida pessoal',
+  },
+})
 
 interface Props {
   className?: string
 }
 
 const LPContact: React.FC<Props> = ({ className }) => {
+  const intl = useIntl()
   const whatsAppLink = useMyWhatsAppLink()
 
   return (
@@ -32,21 +52,21 @@ const LPContact: React.FC<Props> = ({ className }) => {
             <ContactButton
               href={vinicius.linkedInURL}
               label="Linkedin"
-              description="Meu perfil profissional"
+              description={intl.formatMessage(messages.linkedinDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
               href={vinicius.dribbbleURL}
               label="Dribbble"
-              description="Trabalhos em andamento"
+              description={intl.formatMessage(messages.dribbbleDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
               href={vinicius.gitHubURL}
               label="GitHub"
-              description="Muito código e estudo"
+              description={intl.formatMessage(messages.githubDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
@@ -60,7 +80,7 @@ const LPContact: React.FC<Props> = ({ className }) => {
             <ContactButton
               href={vinicius.instagramURL}
               label="Instagram"
-              description="Minha vida pessoal"
+              description={intl.formatMessage(messages.instagramDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">

@@ -1,0 +1,396 @@
+{
+  "LocaleLabel/english": [
+    {
+      "type": 0,
+      "value": "English"
+    }
+  ],
+  "LocaleLabel/portuguese": [
+    {
+      "type": 0,
+      "value": "Portuguese"
+    }
+  ],
+  "QuickOpenSuggestionThemeSwapTitle/activeDarkMode": [
+    {
+      "type": 0,
+      "value": "Activate Dark Mode"
+    }
+  ],
+  "QuickOpenSuggestionThemeSwapTitle/disableDarkMode": [
+    {
+      "type": 0,
+      "value": "Disable Dark Mode"
+    }
+  ],
+  "Toolbar/activeDarkMode": [
+    {
+      "type": 0,
+      "value": "Activate Dark Mode"
+    }
+  ],
+  "Toolbar/blog": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "Toolbar/disableDarkMode": [
+    {
+      "type": 0,
+      "value": "Disable Dark Mode"
+    }
+  ],
+  "Toolbar/navigate": [
+    {
+      "type": 0,
+      "value": "Navigate ("
+    },
+    {
+      "type": 1,
+      "value": "shortcut"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "components/CurrentTimeAndCity/label": [
+    {
+      "type": 0,
+      "value": "Current city"
+    }
+  ],
+  "components/CurrentTimeAndCity/value": [
+    {
+      "type": 0,
+      "value": "São Paulo, SP "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " BR"
+    }
+  ],
+  "components/LPAboutContact/subtitle": [
+    {
+      "type": 0,
+      "value": "I'm not that hard to find, look:"
+    }
+  ],
+  "components/LPAboutContact/title": [
+    {
+      "type": 0,
+      "value": "Don't be shy. Let's talk!"
+    }
+  ],
+  "components/LPAboutMe/arrowMessage": [
+    {
+      "type": 0,
+      "value": "Liked it? Follow me on"
+    }
+  ],
+  "components/LPAboutMe/p/1": [
+    {
+      "type": 0,
+      "value": "My name is "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Vinicius Pacheco"
+        }
+      ],
+      "type": 8,
+      "value": "span"
+    },
+    {
+      "type": 0,
+      "value": " and I'm a FullStack developer and Designer with leadership experiences. I know how to combine design with my 5 years of experiencia coding to transform complex problemas into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, with some experience with Python and PHP. My greatest strength is my speed to learn and sensibility to hear. I always look for harmonizing functionality and elegancy."
+    }
+  ],
+  "components/LPAboutMe/p/2": [
+    {
+      "type": 0,
+      "value": "My job goes beyond creation because I've had the oportunity to lead a team of 4 developers a little more than 1 year. Our goal was to create really impactful tech in the social responsability market. Being used by companies like Samsung, Boticário and Via Varejo, our main product (a SASS web app) scaled for than 150k users. With this experiência my vision expanded beyond engineering, now including people manageament, production vision and data-driven decisions."
+    }
+  ],
+  "components/LPAboutMe/p/3": [
+    {
+      "type": 0,
+      "value": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal. Looking back I realize that I hardly felt heard. "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Was at coding that was able to express myself. To find my voice at 14"
+        }
+      ],
+      "type": 8,
+      "value": "span"
+    },
+    {
+      "type": 0,
+      "value": ". Later on, when I was 17, Atados contacted to freelance their first international plataform. They are from São Paulo. It dind't take long for me to move there, 286 miles from where I grew up."
+    }
+  ],
+  "components/LPAboutMe/p/4": [
+    {
+      "type": 0,
+      "value": "Here I met all kinds of people. Inside Atados I could form great friendships for life. There I met sensible people that not only had given me a space to create, but also tought me the value of a empathic, vulnerable and true relationship."
+    }
+  ],
+  "components/LPAboutMe/p/5": [
+    {
+      "type": 0,
+      "value": "Being able to learn how to be a better person helped me to create bridges and not walls. To listen, to feel, to comunicate and ask for help. I'm really happy to, even frightened, decided not go to college risk a dream moving here."
+    }
+  ],
+  "components/LPAboutMe/p/6": [
+    {
+      "type": 0,
+      "value": "I play cavaquinho, brazilian banjo and tambourine. So playing samba in the street is my jam, but my favorite place thing in the world is going to beach. Whenever it's possible I take my surfboard with me. To be honest there's little adventures that I wouldn't jump in. Specially those with boards. Skating? I got 2 - Let's do it!"
+    }
+  ],
+  "components/LPAboutMe/subtitle": [
+    {
+      "type": 0,
+      "value": "An artist from Brazil"
+    }
+  ],
+  "components/LPAboutMe/title": [
+    {
+      "type": 0,
+      "value": "About me"
+    }
+  ],
+  "components/LPAboutMe/title/1": [
+    {
+      "type": 0,
+      "value": "First, who I am:"
+    }
+  ],
+  "components/LPAboutMe/title/2": [
+    {
+      "type": 0,
+      "value": "How I opened my heart to listen"
+    }
+  ],
+  "components/LPAboutMe/title/3": [
+    {
+      "type": 0,
+      "value": "Oh, and I love to hangout"
+    }
+  ],
+  "components/LPContact/dribbbleDesc": [
+    {
+      "type": 0,
+      "value": "Ongoing projects"
+    }
+  ],
+  "components/LPContact/githubDesc": [
+    {
+      "type": 0,
+      "value": "Loads of code"
+    }
+  ],
+  "components/LPContact/instagramDesc": [
+    {
+      "type": 0,
+      "value": "Personal life with filters"
+    }
+  ],
+  "components/LPContact/linkedinDesc": [
+    {
+      "type": 0,
+      "value": "My professional life"
+    }
+  ],
+  "components/LPFooter/message": [
+    {
+      "type": 0,
+      "value": "I designed and developed this website in January 2021"
+    }
+  ],
+  "components/LPHero/headline": [
+    {
+      "type": 0,
+      "value": "For 5 years working to make the world a better place"
+    }
+  ],
+  "components/LPHero/subtitle": [
+    {
+      "type": 0,
+      "value": "Senior Dev. in love with art"
+    }
+  ],
+  "components/LPKindWords/subtitle": [
+    {
+      "type": 0,
+      "value": "From people that worked with me"
+    }
+  ],
+  "components/LPKindWords/title": [
+    {
+      "type": 0,
+      "value": "Kind messages"
+    }
+  ],
+  "components/LPProject/defaultAction": [
+    {
+      "type": 0,
+      "value": "Visit"
+    }
+  ],
+  "components/LPProject/team": [
+    {
+      "type": 0,
+      "value": "Team"
+    }
+  ],
+  "components/LPProject/years": [
+    {
+      "type": 1,
+      "value": "years"
+    },
+    {
+      "type": 0,
+      "value": " years"
+    }
+  ],
+  "components/LPProjects/openSourceTitle": [
+    {
+      "type": 0,
+      "value": "// I'm big fan of "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Open Source"
+        }
+      ],
+      "type": 8,
+      "value": "span"
+    }
+  ],
+  "components/LPProjects/projects": [
+    {
+      "type": 0,
+      "value": "Projects"
+    }
+  ],
+  "components/LPProjects/selectedProjects": [
+    {
+      "type": 0,
+      "value": "4 selected projects"
+    }
+  ],
+  "components/QuickOpen/placeholder": [
+    {
+      "type": 0,
+      "value": "Navigate / Search / Have fun"
+    }
+  ],
+  "defaultSuggestions/aboutMe": [
+    {
+      "type": 0,
+      "value": "About me"
+    }
+  ],
+  "defaultSuggestions/contact": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "defaultSuggestions/home": [
+    {
+      "type": 0,
+      "value": "Home"
+    }
+  ],
+  "defaultSuggestions/kindWords": [
+    {
+      "type": 0,
+      "value": "Kind words"
+    }
+  ],
+  "defaultSuggestions/myBlog": [
+    {
+      "type": 0,
+      "value": "My blog"
+    }
+  ],
+  "defaultSuggestions/projects": [
+    {
+      "type": 0,
+      "value": "Projects"
+    }
+  ],
+  "pages/blog/[slug]/changeLanguage": [
+    {
+      "type": 0,
+      "value": "Read in:"
+    }
+  ],
+  "pages/index/chico": [
+    {
+      "type": 0,
+      "value": "And Chico"
+    }
+  ],
+  "pages/index/contact": [
+    {
+      "type": 0,
+      "value": "Proposals, ideias and kind words are always welcomed :)"
+    }
+  ],
+  "pages/index/me": [
+    {
+      "type": 0,
+      "value": "That's me"
+    }
+  ],
+  "project/financas/description": [
+    {
+      "type": 0,
+      "value": "Control your own personal finances through an easy and clean interface. The challenge for me was always to put the efforting into registering my expenses. My inspiration here was to create and easy way to do it."
+    }
+  ],
+  "project/financas/title": [
+    {
+      "type": 0,
+      "value": "Prototype: App for managing personal finances"
+    }
+  ],
+  "project/nexusTypeORMPlugin/description": [
+    {
+      "type": 0,
+      "value": "This plugin automatically creates GraphQL types and resolvers transforming your TypeORM models into a GraphQL API"
+    }
+  ],
+  "project/pGraphQL/description": [
+    {
+      "type": 0,
+      "value": "Lexer, Parser and AST. A study to understand how languages are read and compiled."
+    }
+  ],
+  "project/pGraphQL/title": [
+    {
+      "type": 0,
+      "value": "Study: GraphQL Parser"
+    }
+  ],
+  "whatsapp/hello": [
+    {
+      "type": 0,
+      "value": "Hi - I came through your portfolio"
+    }
+  ]
+}

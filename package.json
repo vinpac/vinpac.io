@@ -8,7 +8,8 @@
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test",
-    "intl:extract": "formatjs extract 'src/**/*.ts*' --out-file src/lang/pt-BR.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'"
+    "intl:extract": "formatjs extract 'src/**/*.ts*' --out-file src/lang/pt-BR.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
+    "intl:compile": "formatjs compile src/lang/en.json --ast --out-file src/generated/lang/en.json"
   },
   "husky": {
     "hooks": {

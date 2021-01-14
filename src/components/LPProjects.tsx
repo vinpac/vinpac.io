@@ -37,6 +37,26 @@ const pGraphQL = defineMessages({
   },
 })
 
+const nexusTypeORMPlugin = defineMessages({
+  description: {
+    id: 'project/nexusTypeORMPlugin/description',
+    defaultMessage:
+      'Este plugin cria definições e resolvers automaticamente transformando modelos do TypeORM em uma API GraphQL',
+  },
+})
+
+const atados = defineMessages({
+  title: {
+    id: 'project/atados/title',
+    defaultMessage: 'Atados: Plataforma de voluntariado e liderança',
+  },
+  description: {
+    id: 'project/atados/description',
+    defaultMessage:
+      'Trabalhei desenvolvendo e liderando a equipe de desenvolvimento da plataforma, possibilitando a escala do produto internacionalmente. Além do site público, a plataforma é utilizada por empresas como Boticário, Via Varejo e Roche somando mais de 150 mil usuários. É a maior plataforma de voluntariado no Brasil.',
+  },
+})
+
 interface Props {
   className?: string
 }
@@ -73,8 +93,8 @@ const LPProjects: React.FC<Props> = ({ className }) => {
           <div className="space-y-8 -mx-4 sm:mx-0">
             <LPProject
               className="shadow-lg"
-              title="Atados: Plataforma de voluntariado e liderança"
-              description="Trabalhei desenvolvendo e liderando a equipe de desenvolvimento da plataforma, possibilitando a escala do produto internacionalmente. Além do site público, a plataforma é utilizada por empresas como Boticário, Via Varejo e Roche somando mais de 150 mil usuários. É a maior plataforma de voluntariado no Brasil."
+              title={intl.formatMessage(atados.title)}
+              description={intl.formatMessage(atados.description)}
               years="> 4"
               technologies={[
                 'Figma',
@@ -181,7 +201,9 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 <LPProject
                   className="shadow-md md:h-full"
                   title="nexus-typeorm-plugin"
-                  description="Este plugin cria definições e resolvers automaticamente transformando modelos do TypeORM em uma API GraphQL"
+                  description={intl.formatMessage(
+                    nexusTypeORMPlugin.description,
+                  )}
                   technologies={['Typescript']}
                   resources={[
                     {

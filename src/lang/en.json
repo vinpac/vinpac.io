@@ -1,155 +1,170 @@
 {
-    "LastProjectsSection/title": {
-      "defaultMessage": "O que eu fiz até hoje"
-    },
-    "LocaleLabel/english": {
-      "defaultMessage": "Inglês"
-    },
-    "LocaleLabel/portuguese": {
-      "defaultMessage": "Português"
-    },
-    "QuickOpenSuggestionThemeSwapTitle/activeDarkMode": {
-      "defaultMessage": "Ativar Modo Escuro"
-    },
-    "QuickOpenSuggestionThemeSwapTitle/disableDarkMode": {
-      "defaultMessage": "Desativar Modo Escuro"
-    },
-    "Toolbar/activeDarkMode": {
-      "defaultMessage": "Ativar Modo Escuro"
-    },
-    "Toolbar/blog": {
-      "defaultMessage": "Blog"
-    },
-    "Toolbar/disableDarkMode": {
-      "defaultMessage": "Desativar Modo Escuro"
-    },
-    "Toolbar/navigate": {
-      "defaultMessage": "Navegar ({shortcut})"
-    },
-    "components/CurrentTimeAndCity/label": {
-      "defaultMessage": "Cidade atual"
-    },
-    "components/CurrentTimeAndCity/value": {
-      "defaultMessage": "São Paulo, SP {time} BR"
-    },
-    "components/LPAboutContact/subtitle": {
-      "defaultMessage": "Eu não sou dificil de achar, seguinte:"
-    },
-    "components/LPAboutContact/title": {
-      "defaultMessage": "Bora conversar!"
-    },
-    "components/LPAboutMe/arrowMessage": {
-      "defaultMessage": "Curtiu? Segue lá no"
-    },
-    "components/LPAboutMe/p/1": {
-      "defaultMessage": "Eu me chamo <span>Vinicius Pacheco</span> e eu sou um Desenvolvedor FullStack e Designer com experiência em liderança. Sei combinar design com uma vasta experiência em programação transformar problemas complexos em soluções completas e elegantes. Tenho muita experiência com Node.js, React e Typescript, mas também consigo desenvolver em Python e PHP. Minha maior força é minha velocidade parar criar e sensibilidade para ouvir. Sempre busco harmonizar funcionalidade e elegância."
-    },
-    "components/LPAboutMe/p/2": {
-      "defaultMessage": "Meu trabalho vai para além da criação. Tive a oportunidade de liderar uma equipe de 4 pessoas por 1 ano com objetivo de criar soluções de impacto social para empresas como Samsung, Boticário e Via Varejo. Nesse periodo a minha visão se expandiu para além de engenharia, incluindo coordenação de pessoas, visão de produto e tomada de decisões baseadas em dados."
-    },
-    "components/LPAboutMe/p/3": {
-      "defaultMessage": "Eu cresci em uma família pequena no interior do Rio do Janeiro. As coisas não eram muito fáceis. A violência era normal no dia a dia. Olhando pra trás eu vejo que dificilmente eu me sentia ouvido. <span>Foi na programação que encontrei meu espaço de expressão aos 14 anos</span>. Aos 17 anos fui chamado para trabalhar em um projeto de São Paulo. Não demorou muito pra eu decidir em mudar pra lá. Fui pra mais de 450km da onde eu morava, sozinho, aos 19 anos."
-    },
-    "components/LPAboutMe/p/4": {
-      "defaultMessage": "Em São Paulo conheci todo tipo de gente. No Atados criei amigos pra vida. Pessoas sensíveis que não só me ofereceram um espaço para criar, mas também me mostraram o poder da empatia, da escuta e da vulnerabilidade."
-    },
-    "components/LPAboutMe/p/5": {
-      "defaultMessage": "Ter aprendido a ser uma pessoa melhor me ajudou a criar pontes e não muralhas. A ouvir, sentir, comunicar e pedir ajuda. Fico muito feliz de, mesmo com muito medo, ter decidido não fazer faculdade e arriscar uma vida em São Paulo."
-    },
-    "components/LPAboutMe/p/6": {
-      "defaultMessage": "Eu toco cavaquinho, banjo e pandeiro. Então um samba na rua é minha praia. Falando nisso, praia é um dos meus lugares favoritos. Sempre que dá carrego minha prancha pro mar. Pra falar a verdade não tem aventura que eu não tope. Principalmente se for com prancha. Skate? Tenho 2 - bora!"
-    },
-    "components/LPAboutMe/subtitle": {
-      "defaultMessage": "Um artista do Brasil"
-    },
-    "components/LPAboutMe/title": {
-      "defaultMessage": "Sobre mim"
-    },
-    "components/LPAboutMe/title/1": {
-      "defaultMessage": "Primeiro, quem sou eu:"
-    },
-    "components/LPAboutMe/title/2": {
-      "defaultMessage": "Como abri meu coração para ouvir"
-    },
-    "components/LPAboutMe/title/3": {
-      "defaultMessage": "Ah, e eu adoro sair!"
-    },
-    "components/LPFooter/message": {
-      "defaultMessage": "Eu desenhei e desenvolvi este site em Janeiro de 2021"
-    },
-    "components/LPHero/headline": {
-      "defaultMessage": "Há 5 anos trabalhando para tornar o mundo um lugar melhor"
-    },
-    "components/LPHero/subtitle": {
-      "defaultMessage": "Dev. Sênior apaixonado por arte"
-    },
-    "components/LPKindWords/subtitle": {
-      "defaultMessage": "Mensagens de quem trabalhou comigo"
-    },
-    "components/LPKindWords/title": {
-      "defaultMessage": "Espaço da gentileza"
-    },
-    "components/LPProject/defaultAction": {
-      "defaultMessage": "Visitar"
-    },
-    "components/LPProject/years": {
-      "defaultMessage": "{years} anos"
-    },
-    "components/LPProjects/openSourceTitle": {
-      "defaultMessage": "// Sou um grande fã de <span>Código aberto</span>"
-    },
-    "components/LPProjects/projects": {
-      "defaultMessage": "Projetos"
-    },
-    "components/LPProjects/selectedProjects": {
-      "defaultMessage": "4 projetos selecionados"
-    },
-    "components/QuickOpen/placeholder": {
-      "defaultMessage": "Navegue / Busque / Se divirta"
-    },
-    "defaultSuggestions/aboutMe": {
-      "defaultMessage": "Sobre Mim"
-    },
-    "defaultSuggestions/contact": {
-      "defaultMessage": "Contato"
-    },
-    "defaultSuggestions/home": {
-      "defaultMessage": "Início"
-    },
-    "defaultSuggestions/kindWords": {
-      "defaultMessage": "Espaço da gentileza"
-    },
-    "defaultSuggestions/myBlog": {
-      "defaultMessage": "Meu blog"
-    },
-    "defaultSuggestions/projects": {
-      "defaultMessage": "Projetos"
-    },
-    "pages/blog/[slug]/changeLanguage": {
-      "defaultMessage": "Leia em:"
-    },
-    "pages/index/chico": {
-      "defaultMessage": "E o Chico"
-    },
-    "pages/index/contact": {
-      "defaultMessage": "Eu adoro receber propostas, ideias e boas energias :)"
-    },
-    "pages/index/me": {
-      "defaultMessage": "Esse sou eu"
-    },
-    "project/financas/description": {
-      "defaultMessage": "Controle a finanças pessoais através de uma interface clara e direta. O desafio sempre foi ter vontade de registrar. Ser fácil é um grande primeiro passo."
-    },
-    "project/financas/title": {
-      "defaultMessage": "Protótipo: App para gerenciamente financeiro"
-    },
-    "project/pGraphQL/description": {
-      "defaultMessage": "Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas."
-    },
-    "project/pGraphQL/title": {
-      "defaultMessage": "Estudo: GraphQL Parser"
-    },
-    "whatsapp/hello": {
-      "defaultMessage": "Oi - Vim através do seu portfólio"
-    }
+  "LocaleLabel/english": {
+    "defaultMessage": "English"
+  },
+  "LocaleLabel/portuguese": {
+    "defaultMessage": "Portuguese"
+  },
+  "QuickOpenSuggestionThemeSwapTitle/activeDarkMode": {
+    "defaultMessage": "Activate Dark Mode"
+  },
+  "QuickOpenSuggestionThemeSwapTitle/disableDarkMode": {
+    "defaultMessage": "Disable Dark Mode"
+  },
+  "Toolbar/activeDarkMode": {
+    "defaultMessage": "Activate Dark Mode"
+  },
+  "Toolbar/blog": {
+    "defaultMessage": "Blog"
+  },
+  "Toolbar/disableDarkMode": {
+    "defaultMessage": "Disable Dark Mode"
+  },
+  "Toolbar/navigate": {
+    "defaultMessage": "Navigate ({shortcut})"
+  },
+  "components/CurrentTimeAndCity/label": {
+    "defaultMessage": "Current city"
+  },
+  "components/CurrentTimeAndCity/value": {
+    "defaultMessage": "São Paulo, SP {time} BR"
+  },
+  "components/LPAboutContact/subtitle": {
+    "defaultMessage": "I'm not that hard to find, look:"
+  },
+  "components/LPAboutContact/title": {
+    "defaultMessage": "Don't be shy. Let's talk!"
+  },
+  "components/LPAboutMe/arrowMessage": {
+    "defaultMessage": "Liked it? Follow me on"
+  },
+  "components/LPAboutMe/p/1": {
+    "defaultMessage": "My name is <span>Vinicius Pacheco</span> and I'm a FullStack developer and Designer with leadership experiences. I know how to combine design with my 5 years of experiencia coding to transform complex problemas into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, with some experience with Python and PHP. My greatest strength is my speed to learn and sensibility to hear. I always look for harmonizing functionality and elegancy."
+  },
+  "components/LPAboutMe/p/2": {
+    "defaultMessage": "My job goes beyond creation because I've had the oportunity to lead a team of 4 developers a little more than 1 year. Our goal was to create really impactful tech in the social responsability market. Being used by companies like Samsung, Boticário and Via Varejo, our main product (a SASS web app) scaled for than 150k users. With this experiência my vision expanded beyond engineering, now including people manageament, production vision and data-driven decisions."
+  },
+  "components/LPAboutMe/p/3": {
+    "defaultMessage": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal. Looking back I realize that I hardly felt heard. <span>Was at coding that was able to express myself. To find my voice at 14</span>. Later on, when I was 17, Atados contacted to freelance their first international plataform. They are from São Paulo. It dind't take long for me to move there, 286 miles from where I grew up."
+  },
+  "components/LPAboutMe/p/4": {
+    "defaultMessage": "Here I met all kinds of people. Inside Atados I could form great friendships for life. There I met sensible people that not only had given me a space to create, but also tought me the value of a empathic, vulnerable and true relationship."
+  },
+  "components/LPAboutMe/p/5": {
+    "defaultMessage": "Being able to learn how to be a better person helped me to create bridges and not walls. To listen, to feel, to comunicate and ask for help. I'm really happy to, even frightened, decided not go to college risk a dream moving here."
+  },
+  "components/LPAboutMe/p/6": {
+    "defaultMessage": "I play cavaquinho, brazilian banjo and tambourine. So playing samba in the street is my jam, but my favorite place thing in the world is going to beach. Whenever it's possible I take my surfboard with me. To be honest there's little adventures that I wouldn't jump in. Specially those with boards. Skating? I got 2 - Let's do it!"
+  },
+  "components/LPAboutMe/subtitle": {
+    "defaultMessage": "An artist from Brazil"
+  },
+  "components/LPAboutMe/title": {
+    "defaultMessage": "About me"
+  },
+  "components/LPAboutMe/title/1": {
+    "defaultMessage": "First, who I am:"
+  },
+  "components/LPAboutMe/title/2": {
+    "defaultMessage": "How I opened my heart to listen"
+  },
+  "components/LPAboutMe/title/3": {
+    "defaultMessage": "Oh, and I love to hangout"
+  },
+  "components/LPFooter/message": {
+    "defaultMessage": "I designed and developed this website in January 2021"
+  },
+  "components/LPHero/headline": {
+    "defaultMessage": "For 5 years working to make the world a better place"
+  },
+  "components/LPHero/subtitle": {
+    "defaultMessage": "Senior Dev. in love with art"
+  },
+  "components/LPKindWords/subtitle": {
+    "defaultMessage": "From people that worked with me"
+  },
+  "components/LPKindWords/title": {
+    "defaultMessage": "Kind messages"
+  },
+  "components/LPProject/defaultAction": {
+    "defaultMessage": "Visit"
+  },
+  "components/LPProject/years": {
+    "defaultMessage": "{years} years"
+  },
+  "components/LPProjects/openSourceTitle": {
+    "defaultMessage": "// I'm big fan of <span>Open Source</span>"
+  },
+  "components/LPProjects/projects": {
+    "defaultMessage": "Projects"
+  },
+  "components/LPProjects/selectedProjects": {
+    "defaultMessage": "4 selected projects"
+  },
+  "components/QuickOpen/placeholder": {
+    "defaultMessage": "Navigate / Search / Have fun"
+  },
+  "defaultSuggestions/aboutMe": {
+    "defaultMessage": "About me"
+  },
+  "defaultSuggestions/contact": {
+    "defaultMessage": "Contact"
+  },
+  "defaultSuggestions/home": {
+    "defaultMessage": "Home"
+  },
+  "defaultSuggestions/kindWords": {
+    "defaultMessage": "Kind words"
+  },
+  "defaultSuggestions/myBlog": {
+    "defaultMessage": "My blog"
+  },
+  "defaultSuggestions/projects": {
+    "defaultMessage": "Projects"
+  },
+  "pages/blog/[slug]/changeLanguage": {
+    "defaultMessage": "Read in:"
+  },
+  "pages/index/chico": {
+    "defaultMessage": "And Chico"
+  },
+  "pages/index/contact": {
+    "defaultMessage": "Proposals, ideias and kind words are always welcomed :)"
+  },
+  "pages/index/me": {
+    "defaultMessage": "That's me"
+  },
+  "project/financas/description": {
+    "defaultMessage": "Control your own personal finances through an easy and clean interface. The challenge for me was always to put the efforting into registering my expenses. My inspiration here was to create and easy way to do it."
+  },
+  "project/financas/title": {
+    "defaultMessage": "Prototype: App for managing personal finances"
+  },
+  "project/pGraphQL/description": {
+    "defaultMessage": "Lexer, Parser and AST. A study to understand how languages are read and compiled."
+  },
+  "project/pGraphQL/title": {
+    "defaultMessage": "Study: GraphQL Parser"
+  },
+  "whatsapp/hello": {
+    "defaultMessage": "Hi - I came through your portfolio"
+  },
+  "components/LPProject/team": {
+    "defaultMessage": "Team"
+  },
+  "project/nexusTypeORMPlugin/description": {
+    "defaultMessage": "This plugin automatically creates GraphQL types and resolvers transforming your TypeORM models into a GraphQL API"
+  },
+  "components/LPContact/dribbbleDesc": {
+    "defaultMessage": "Ongoing projects"
+  },
+  "components/LPContact/githubDesc": {
+    "defaultMessage": "Loads of code"
+  },
+  "components/LPContact/instagramDesc": {
+    "defaultMessage": "Personal life with filters"
+  },
+  "components/LPContact/linkedinDesc": {
+    "defaultMessage": "My professional life"
   }
+}
