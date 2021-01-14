@@ -3,7 +3,11 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   darkMode: 'class',
   purge: {
-    content: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
+    content: [
+      './src/components/**/*.tsx',
+      './src/assets/svg/*.svg',
+      './src/pages/**/*.tsx',
+    ],
     safelist: ['bg-gray-800'],
   },
   variants: {
