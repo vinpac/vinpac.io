@@ -87,7 +87,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           content="mstile-310x310.png"
         />
 
-        <meta name="theme-color" content="#023373" />
+        <meta name="theme-color" content="#fff" />
       </Head>
       <DefaultSeo
         title="Vinicius Pacheco"
@@ -95,6 +95,14 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           type: 'website',
           locale: locale === 'en' ? 'en_US' : 'pt_BR',
           url: `https://${vinicius.site}`,
+          images: [
+            {
+              url: 'https://pacheco.vercel.app/assets/Me.jpg',
+              width: 682,
+              height: 691,
+              alt: 'Vinicius Pacheco',
+            },
+          ],
           site_name: 'Vinicius Pacheco Portfolio',
         }}
         languageAlternates={[
