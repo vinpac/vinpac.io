@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import SearchLink from '@components/SearchLink'
-import { FaFolder } from 'react-icons/fa'
+import { FiFolder } from 'react-icons/fi'
 
 export interface FilterPostsByFolderButtonProps {
   readonly folder: string
@@ -21,7 +21,7 @@ const FilterPostsByFolderButton: React.FC<FilterPostsByFolderButtonProps> = ({
         )}
         title={`Filtrar pela por ${folder}`}
       >
-        <FaFolder size={14} className="inline-block mr-2 align-middle -mt-1" />
+        <FiFolder size={14} className="inline-block mr-2 align-middle -mt-1" />
         {folder}
       </a>
     </SearchLink>

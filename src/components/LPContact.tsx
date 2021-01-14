@@ -21,7 +21,7 @@ const LPContact: React.FC<Props> = ({ className }) => {
             defaultMessage="Bora conversar!"
           />
         </h1>
-        <p className="text-3xl font-medium text-gray-400 dark:text-gray-500 mb-12">
+        <p className="text-3xl font-medium text-gray-400 mb-12">
           <FormattedMessage
             id="components/LPAboutContact/subtitle"
             defaultMessage="Eu não sou dificil de achar, seguinte:"

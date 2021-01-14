@@ -104,6 +104,15 @@ module.exports = {
           900: 'var(--color-theme-900)',
         },
       },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '.4' },
+        },
+      },
+      animation: {
+        blink: 'blink 1s ease-in-out infinite',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

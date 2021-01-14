@@ -59,7 +59,7 @@ const colorMapCx = {
 const sizeMapCx = {
   xs: 'px-2 py-1 rounded text-xs',
   sm: 'px-2 py-1 rounded-md text-sm',
-  base: 'px-3 py-2 rounded-md',
+  base: 'px-3 py-2 rounded-md text-base',
   md: 'px-4 py-3 rounded-md',
   lg: 'px-5 py-4 rounded-lg text-lg',
   xl: 'px-6 py-5 rounded-lg text-xl',

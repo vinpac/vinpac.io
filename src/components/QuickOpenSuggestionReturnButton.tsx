@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { MdKeyboardReturn } from 'react-icons/md'
+import { FiCornerDownLeft } from 'react-icons/fi'
 
 export interface QuickOpenSuggestionReturnButtonProps {
   readonly className?: string
@@ -16,7 +16,7 @@ const QuickOpenSuggestionReturnButton: React.FC<QuickOpenSuggestionReturnButtonP
         className,
       )}
     >
-      <MdKeyboardReturn size={18} className="inline-block" />
+      <FiCornerDownLeft size={18} className="inline-block" />
     </span>
   )
 }

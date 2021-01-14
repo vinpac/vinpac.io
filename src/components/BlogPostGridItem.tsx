@@ -2,11 +2,12 @@ import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
 import { BlogPost } from '@lib/notion'
-import moment from 'moment'
 import ShadowColor from '@components/ShadowColor'
-import { FaClock, FaFolder } from 'react-icons/fa'
+import { FiClock, FiFolder } from 'react-icons/fi'
 import { getPostLinkHref } from '@lib/blog/browserHelpers'
 import LocaleLabel from '@components/LocaleLabel'
+import { format, formatDistanceToNow } from 'date-fns'
+import { useDateFNSLocale } from '@lib/date'
 
 export interface BlogPostGridItemProps {
   readonly post: BlogPost
@@ -22,6 +23,8 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
 }) => {
   const { color } = post
   const { as, href } = getPostLinkHref(post.slug, post.language)
+  const fnsLocale = useDateFNSLocale()
+
   return (
     <ShadowColor color={post.color} distance="2" className={shadowClassName}>
       <Link href={href} as={as}>
@@ -44,17 +47,19 @@ const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({
           >
             {post.folder && (
               <span className="mr-2">
-                <FaFolder size={16} className="inline-block mr-2" />
+                <FiFolder size={16} className="inline-block mr-2" />
                 {post.folder}
               </span>
             )}
             {post.date && (
               <abbr
-                title={moment(post.date).format('LL')}
+                title={format(new Date(post.date), 'LL')}
                 className="border-0 no-underline"
               >
-                <FaClock size={16} className="inline-block mr-2" />
-                {moment(post.date).fromNow()}
+                <FiClock size={16} className="inline-block mr-2" />
+                {formatDistanceToNow(new Date(post.date), {
+                  locale: fnsLocale,
+                })}
               </abbr>
             )}
             <span>

@@ -19,6 +19,7 @@ const LPProjectTeamMember: React.FC<Props> = ({
     <a
       href={profileURL}
       target="__blank"
+      rel="nofollow"
       className={cx('underline hover:text-primary-500 font-medium', className)}
     >
       {name}

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react'
 import cx from 'classnames'
-import { MdSearch } from 'react-icons/md'
+import { FiSearch } from 'react-icons/fi'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { buildSearchRegex } from '@lib/quickOpen/suggestions'
 import QuickOpenSuggestion from '@components/QuickOpenSuggestion'
@@ -169,7 +169,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
           onKeyDown={handleInputKeyDown}
           value={text}
         />
-        <MdSearch
+        <FiSearch
           size={28}
           className="absolute left-0 top-0 bottom-0 ml-5 mt-4 text-primary-600"
         />

@@ -7,3 +7,10 @@
   width: 460px;
   height: 460px;
 }
+
+/* md */
+@media (min-width: 768px) {
+  .headline {
+    line-height: 1.15;
+  }
+}

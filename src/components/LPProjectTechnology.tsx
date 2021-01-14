@@ -7,9 +7,10 @@ import IconTailwindCSS from '@assets/svg/Arrow/Vector-3.svg'
 import IconReact from '@assets/svg/Arrow/Vector-4.svg'
 import cx from 'classnames'
 import Tooltip from '@reach/tooltip'
+import { FaNodeJs, FaPython } from 'react-icons/fa'
 
 interface Props {
-  name: LPProjectTechName
+  label: LPProjectTechName | string
   className?: string
 }
 
@@ -20,21 +21,29 @@ const techToIcon = {
   GraphQL: IconGraphQL,
   TailwindCSS: IconTailwindCSS,
   React: IconReact,
+  'Node.js': FaNodeJs,
+  Python: FaPython,
 } as const
 
 export type LPProjectTechName = keyof typeof techToIcon
 
-const LPProjectTechnology: React.FC<Props> = ({ className, name }) => {
-  const Icon = techToIcon[name]
+const LPProjectTechnology: React.FC<Props> = ({
+  className,
+  label,
+  children,
+}) => {
+  const Icon = label && (techToIcon as any)[label]
+
   return (
-    <Tooltip label={name}>
+    <Tooltip label={label}>
       <span
         className={cx(
-          'w-8 h-8 relative block bg-gradient-to-b from-gray-400 to-gray-700  rounded-lg',
+          'w-8 h-8 p-1 relative block bg-gradient-to-b from-gray-400 to-gray-700  rounded-lg text-white',
           className,
         )}
       >
         {Icon && <Icon className="w-5 h-5 inset-0 absolute m-auto" />}
+        {children}
       </span>
     </Tooltip>
   )

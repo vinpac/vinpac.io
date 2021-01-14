@@ -1,6 +1,6 @@
 import React from 'react'
 import { ValidLocale } from '@lib/i18n'
-import { MdPublic } from 'react-icons/md'
+import { FiGlobe } from 'react-icons/fi'
 import { useIntl, defineMessages } from 'react-intl'
 
 const messages = defineMessages({
@@ -24,7 +24,7 @@ const LocaleLabel: React.FC<LocaleLabelProps> = ({ locale }) => {
     <>
       {locale === 'en-US' ? (
         <>
-          <MdPublic
+          <FiGlobe
             size={16}
             className="inline-block align-text-top text-theme-600"
           />{' '}

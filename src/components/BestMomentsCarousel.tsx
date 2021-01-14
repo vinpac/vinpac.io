@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import cx from 'classnames'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { FaArrowRight } from 'react-icons/fa'
+import { FiArrowRight } from 'react-icons/fi'
 import { BestMomentsCarouselCurrentIndexIndication } from '@components/BestMomentsCarouselCurrentIndexIndication'
 import { ColorName } from '@lib/theme/types'
 
@@ -92,7 +92,7 @@ const BestMomentsCarousel: React.FC<BestMomentselProps> = ({
                     className="w-10 h-10 bg-alpha-white-300 rounded-full absolute bottom-0 right-0 my-auto mb-5 mr-5 animated fadeIn animated_delay-1s"
                     title="Pular slide"
                   >
-                    <FaArrowRight className="mx-auto text-gray-900 transform rotate-45" />
+                    <FiArrowRight className="mx-auto text-gray-900 transform rotate-45" />
                   </button>
                 )}
               </div>

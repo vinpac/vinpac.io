@@ -10,11 +10,12 @@ import BlockPlaceholder from '@components/BlockPlaceholder'
 import PageDivider from '@components/PageDivider'
 import { FaClock, FaFolder } from 'react-icons/fa'
 import SearchLink from '@components/SearchLink'
-import moment from 'moment'
+import { format, formatDistanceToNow } from 'date-fns'
 import PostAuthorAvatarWithLink from '@components/PostAuthorAvatarWithLink'
 import ChangePostLanguageLink from '@components/ChangePostLanguageLink'
 import { defineMessages, useIntl } from 'react-intl'
 import LocaleLabel from '@components/LocaleLabel'
+import { useDateFNSLocale } from '@lib/date'
 
 const messages = defineMessages({
   changeLanguage: {
@@ -33,6 +34,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
 }) => {
   const intl = useIntl()
   const color = post?.color || 'theme'
+  const fnsLocale = useDateFNSLocale()
 
   return (
     <Layout
@@ -66,14 +68,18 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 )}
                 {post.date && (
                   <abbr
-                    title={moment(post.date).format('LL')}
+                    title={format(new Date(post.date), 'LLL', {
+                      locale: fnsLocale,
+                    })}
                     className={`py-2 text-theme-600`}
                   >
                     <FaClock
                       size={14}
                       className="inline-block mr-2 align-middle -mt-1"
                     />
-                    {moment(post.date).fromNow()}
+                    {formatDistanceToNow(new Date(post.date), {
+                      locale: fnsLocale,
+                    })}
                   </abbr>
                 )}
               </div>
