@@ -53,7 +53,7 @@ const atados = defineMessages({
   description: {
     id: 'project/atados/description',
     defaultMessage:
-      'Trabalhei desenvolvendo e liderando a equipe de desenvolvimento da plataforma, possibilitando a escala do produto internacionalmente. Além do site público, a plataforma é utilizada por empresas como Boticário, Via Varejo e Roche somando mais de 150 mil usuários. É a maior plataforma de voluntariado no Brasil.',
+      'Trabalhei desenvolvendo e liderando a equipe de desenvolvimento de projetos, possibilitando a escala do produto internacionalmente. Além do site público, a plataforma é utilizada por empresas como Boticário, Via Varejo e Roche somando mais de 150 mil usuários. É a maior plataforma de voluntariado no Brasil.',
   },
 })
 

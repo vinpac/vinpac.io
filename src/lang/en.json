@@ -39,10 +39,7 @@
     "defaultMessage": "Liked it? Follow me on"
   },
   "components/LPAboutMe/p/1": {
-    "defaultMessage": "My name is <span>Vinicius Pacheco</span> and I'm a FullStack developer and Designer with leadership experiences. I know how to combine design with my 5 years of experiencia coding to transform complex problemas into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, with some experience with Python and PHP. My greatest strength is my speed to learn and sensibility to hear. I always look for harmonizing functionality and elegancy."
-  },
-  "components/LPAboutMe/p/2": {
-    "defaultMessage": "My job goes beyond creation because I've had the oportunity to lead a team of 4 developers a little more than 1 year. Our goal was to create really impactful tech in the social responsability market. Being used by companies like Samsung, Boticário and Via Varejo, our main product (a SASS web app) scaled for than 150k users. With this experiência my vision expanded beyond engineering, now including people manageament, production vision and data-driven decisions."
+    "defaultMessage": "My name is <span>Vinicius Pacheco</span> and I'm a Full Stack developer and Designer with leadership experiences. I know how to combine design with my 5 years of experiencia coding to transform complex problemas into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, with some experience with Python and PHP. My greatest strength is my speed to learn and sensibility to hear. I always look for harmonizing functionality and elegancy."
   },
   "components/LPAboutMe/p/3": {
     "defaultMessage": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal. Looking back I realize that I hardly felt heard. <span>Was at coding that was able to express myself. To find my voice at 14</span>. Later on, when I was 17, Atados contacted to freelance their first international plataform. They are from São Paulo. It dind't take long for me to move there, 286 miles from where I grew up."
@@ -159,12 +156,30 @@
     "defaultMessage": "Ongoing projects"
   },
   "components/LPContact/githubDesc": {
-    "defaultMessage": "Loads of code"
+    "defaultMessage": "Beatiful Code"
   },
   "components/LPContact/instagramDesc": {
     "defaultMessage": "Personal life with filters"
   },
   "components/LPContact/linkedinDesc": {
     "defaultMessage": "My professional life"
+  },
+  "project/atados/title": {
+    "defaultMessage": "Atados: Volunteering platform"
+  },
+  "project/atados/description": {
+    "defaultMessage": "I worked as a Full Stack Developer, Designer and Tech Leader. There I lead a team of 4 developers for 1 year. Our goal was to create really impactful tech solutations in the social responsability market. Being used by companies like Samsung, Boticário and Via Varejo, our main product, a SASS web app, scaled to more than 150k users. It's the biggest independent website to volunteer in Brazil"
+  },
+  "components/LPKindWords/daniel": {
+    "id": "components/LPKindWords/daniel",
+    "defaultMessage": "Vini was responsible for building and scaling the website Atados (www.atados.com.br). He managed our team for some years and with him, besides the creation of our platform with an easy to use interface for non-profit organizations, we also built a smart and scalable manageament system that enabled the technology team to be self sustainable for the first time. I hope that we can build more projects together in the future"
+  },
+  "components/LPKindWords/marcos": {
+    "id": "components/LPKindWords/marcos",
+    "defaultMessage": "Vinicius surprises anyone with his technical and manageament skills, an excellent professional. Deals with new challenges and problems like everyday steps, it's a professional that every needs."
+  },
+  "components/LPKindWords/josias": {
+    "id": "components/LPKindWords/josias",
+    "defaultMessage": "Vinícius is simply one of those people that is completely out of the curve. His skills to manage and developer evolve in way that amazes anyone. Definitly one of the best professionals that I've had the pleasure to work with."
   }
 }

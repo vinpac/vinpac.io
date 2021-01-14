@@ -110,17 +110,6 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
               ),
             }}
           />
-          <p>
-            <FormattedMessage
-              id="components/LPAboutMe/p/2"
-              defaultMessage="Meu trabalho vai para além da criação. Tive a oportunidade de
-            liderar uma equipe de 4 pessoas por 1 ano com objetivo de criar
-            soluções de impacto social para empresas como Samsung, Boticário e
-            Via Varejo. Nesse periodo a minha visão se expandiu para além de
-            engenharia, incluindo coordenação de pessoas, visão de produto e
-            tomada de decisões baseadas em dados."
-            />
-          </p>
           <h2 className="text-2xl mb-4 font-medium mt-8 text-gray-800 dark:text-white">
             <FormattedMessage
               id="components/LPAboutMe/title/2"

@@ -1,14 +1,32 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import cx from 'classnames'
 import KindMessage from './KindMessage'
 import { useThemeName } from '@lib/theme'
+
+const messages = {
+  daniel: {
+    id: 'components/LPKindWords/daniel',
+    defaultMessage: `Vini foi o responsável por construir e escalar o site do Atados: www.atados.com.br
+    Gerenciou nossa equipe por alguns anos e com ele, além de criarmos uma plataforma com fácil usabilidade para ONGs, criamos um sistema de gerenciamento inteligente, escalável e que possibilitou a área ser auto-sustentável.
+    Espero que a gente possa criar mais projetos juntos no futuro`,
+  },
+  marcos: {
+    id: 'components/LPKindWords/marcos',
+    defaultMessage: `Vinicius surpreende a qualquer um pela capacidade técnica e de gestão, excelente profissional. Lida com novos desafios e problemas como degraus do dia a dia, é um profissional pra qualquer equipe.`,
+  },
+  josias: {
+    id: 'components/LPKindWords/josias',
+    defaultMessage: `O Vinícius é simplesmente uma daquelas pessoas que está completamente fora da curva. Sua capacidade técnica e gestora se desenvolvem de uma maneira que deixa qualquer um pasmo. definitivamente um dos melhores profissionais que já tive o prazer de trabalhar.`,
+  },
+}
 
 interface Props {
   className?: string
 }
 
 const LPKindWords: React.FC<Props> = ({ className }) => {
+  const intl = useIntl()
   const patternOpacity = useThemeName() === 'dark' ? '.15' : '.10'
   return (
     <div
@@ -35,12 +53,10 @@ const LPKindWords: React.FC<Props> = ({ className }) => {
           <div className="w-full md:w-1/2 sm:px-4 space-y-4 md:space-y-8 mb-4 md:mb-0">
             <KindMessage
               authorAvatarURL="/assets/kind-words-authors/ze.jpeg"
-              authorName="John Doe"
+              authorName="Daniel Morais de Assunção"
               authorRole="CEO"
               company="Atados"
-              message="Vini foi o responsável por construir e escalar o site do Atados: www.atados.com.br
-              Gerenciou nossa equipe por alguns anos e com ele, além de criarmos uma plataforma com fácil usabilidade para ONGs, criamos um sistema de gerenciamento inteligente, escalável e que possibilitou a área ser auto-sustentável.
-              Espero que a gente possa criar mais projetos juntos no futuro"
+              message={intl.formatMessage(messages.daniel)}
               takenFrom="LinkedIn"
             />
             {/* {<KindMessage
@@ -58,15 +74,15 @@ const LPKindWords: React.FC<Props> = ({ className }) => {
               authorName="Marcos Nunes"
               authorRole="Ex-CEO"
               company="FoxxTecnologia"
-              message="Vinicius surpreende a qualquer um pela capacidade técnica e de gestão, excelente profissional. Lida com novos desafios e problemas como degraus do dia a dia, é um profissional pra qualquer equipe."
+              message={intl.formatMessage(messages.marcos)}
               takenFrom="LinkedIn"
             />
             <KindMessage
               authorAvatarURL="/assets/kind-words-authors/josias.jpeg"
               authorName="Josias Furtado"
               company="Atados"
-              authorRole="CEO da Atados"
-              message="O Vinícius é simplesmente uma daquelas pessoas que está completamente fora da curva. Sua capacidade técnica e gestora se desenvolvem de uma maneira que deixa qualquer um pasmo. definitivamente um dos melhores profissionais que já tive o prazer de trabalhar."
+              authorRole="Front-End"
+              message={intl.formatMessage(messages.josias)}
               takenFrom="LinkedIn"
             />
           </div>
