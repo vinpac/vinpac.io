@@ -3,17 +3,20 @@
   background-size: 100% auto;
 }
 
-.picture {
-  width: 140px;
-  height: 140px;
-}
-
-/* md */
-@media (min-width: 768px) {
+/* lg */
+@media (min-width: 1024px) {
   .headline {
     line-height: 1.15;
   }
 
+  .picture {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
   .picture {
     width: 460px;
     height: 460px;

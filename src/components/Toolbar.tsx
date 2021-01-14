@@ -12,11 +12,12 @@ import { defineMessages, useIntl } from 'react-intl'
 import { vinicius } from '@static-constants'
 import SwapThemeIcon from '@components/SwapThemeIcon'
 import CurrentTimeAndCity from './CurrentTimeAndCity'
+import { useIsMac } from '@lib/browser'
 
 const messages = defineMessages({
   navigate: {
     id: 'Toolbar/navigate',
-    defaultMessage: 'Navegar ({key}+K)',
+    defaultMessage: 'Navegar ({shortcut})',
   },
   blog: {
     id: 'Toolbar/blog',
@@ -44,6 +45,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
   const themeToggleLabel = intl.formatMessage(
     theme.name === 'light' ? messages.activeDarkMode : messages.disableDarkMode,
   )
+  const isMac = useIsMac()
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>): void => {
     if (!isBreakpoint('lg')) {
       e.preventDefault()
@@ -71,7 +73,9 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
       <div className="hidden lg:flex space-x-6 items-center px-6 text-lg">
         <ToolbarButton
           as="button"
-          label={intl.formatMessage(messages.navigate, { key: '⌘' })}
+          label={intl.formatMessage(messages.navigate, {
+            shortcut: isMac ? '⌘+K' : 'ctrl+K',
+          })}
           onClick={() => quickOpen.open({ text: '' })}
         />
         <ToolbarButton label="GitHub" href={vinicius.gitHubURL} />

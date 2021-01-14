@@ -28,31 +28,20 @@ const LPHero: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden pb-36 md:pb-48">
-      <div className="container pt-2 z-10 relative">
+      <div className="container pt-5 md:pt-10 z-10 relative">
         <figure
-          className={`relative mb-8 md:mb-0 md:absolute rounded-xl md:-right-36 md:top-10 ${s.picture}`}
+          className={`absolute rounded-xl -right-36 top-10 hidden lg:block ${s.picture}`}
         >
           <ArrowMessage
             shape="2"
             message={intl.formatMessage(messages.me)}
-            className="hidden lg:flex absolute -left-64 -ml-4  -bottom-6 dark:text-gray-200 "
+            className="absolute -left-64 -ml-4  -bottom-6 dark:text-gray-200 "
             direction="right"
-          />
-
-          <ArrowMessage
-            shape="4"
-            message={intl.formatMessage(messages.me)}
-            className="md:hidden dark:text-gray-200 absolute left-40 top-0 transform whitespace-nowrap"
-          />
-          <ArrowMessage
-            shape="5"
-            message={intl.formatMessage(messages.chico)}
-            className="md:hidden dark:text-gray-200 absolute left-40 top-28 transform whitespace-nowrap"
           />
           <ArrowMessage
             shape="3"
             message={intl.formatMessage(messages.chico)}
-            className="hidden lg:flex absolute -bottom-24 -ml-4 right-36 dark:text-gray-200 "
+            className="absolute -bottom-24 -ml-4 right-36 dark:text-gray-200 "
             direction="right"
           />
           <img

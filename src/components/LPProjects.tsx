@@ -141,7 +141,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 />
               </div>
             </LPProject>
-            <h2 className="text-gray-500 dark:text-gray-300 items-center text-2xl">
+            <h2 className="text-gray-500 dark:text-gray-300 items-center text-2xl px-4 md:px-0">
               <span
                 dangerouslySetInnerHTML={{
                   __html: intl.formatMessage(messages.openSourceTitle, {

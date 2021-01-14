@@ -26,7 +26,7 @@ const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
   const initialRoute = useRef<{ pathname: string; asPath: string } | null>(null)
 
   // Enable hot keys to open QuickOpen
-  useHotkeys('ctrl+k, command+k', () => open({ text: '' }), [])
+  useHotkeys('ctrl+k, command+k, ctrl+p', () => open({ text: '' }), [])
 
   const open = useCallback((openConfig: QuickOpen_OpenConfig) => {
     setDefaultText(openConfig.text)
