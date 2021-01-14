@@ -8,7 +8,10 @@ module.exports = {
       './src/assets/svg/*.svg',
       './src/pages/**/*.tsx',
     ],
-    safelist: ['bg-gray-800'],
+    options: {
+      whitelist: ['bg-gray-800'],
+      safelist: ['bg-gray-800'],
+    },
   },
   variants: {
     extend: {
