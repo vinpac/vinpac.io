@@ -1,5 +1,7 @@
 const colors = require('tailwindcss/colors')
 
+const safelist = ['bg-gray-800']
+
 module.exports = {
   darkMode: 'class',
   purge: {
@@ -9,8 +11,8 @@ module.exports = {
       './src/pages/**/*.tsx',
     ],
     options: {
-      whitelist: ['bg-gray-800'],
-      safelist: ['bg-gray-800'],
+      whitelist: safelist,
+      safelist,
     },
   },
   variants: {

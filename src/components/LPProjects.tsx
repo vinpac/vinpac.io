@@ -57,14 +57,14 @@ const LPProjects: React.FC<Props> = ({ className }) => {
         <SVGProjectsPattern className="absolute inset-y-0 my-auto -left-80 top-2/4 text-indigo-100 dark:text-indigo-900" />
 
         <div className="relative z-10">
-          <h2 className="text-5xl md:text-7xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
             <FormattedMessage
               id="components/LPProjects/projects"
               defaultMessage="Projetos"
             />
           </h2>
 
-          <p className="text-2xl md:text-3xl font-medium text-gray-400 mb-12">
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 mb-12">
             <FormattedMessage
               id="components/LPProjects/selectedProjects"
               defaultMessage="4 projetos selecionados"
@@ -141,7 +141,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 />
               </div>
             </LPProject>
-            <h2 className="text-gray-500 dark:text-gray-300 items-center text-2xl px-4 md:px-0">
+            <h2 className="text-gray-700 dark:text-gray-300 items-center text-2xl px-4 md:px-0">
               <span
                 dangerouslySetInnerHTML={{
                   __html: intl.formatMessage(messages.openSourceTitle, {
@@ -152,7 +152,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                   }),
                 }}
               />
-              <span className="inline-block bg-opacity-50 ml-2 align-baseline w-4 h-8 bg-purple-800 dark:bg-purple-400 animate-blink"></span>
+              <span className="inline-block bg-opacity-50 ml-2 top-1 relative align-baseline w-4 h-8 bg-purple-800 dark:bg-purple-400 animate-blink"></span>
             </h2>
             <div className="md:flex -mx-4 space-y-8 md:space-y-0">
               <div className="w-full md:w-1/2 px-4">
@@ -180,13 +180,14 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               <div className="w-full md:w-1/2 px-4">
                 <LPProject
                   className="shadow-md md:h-full"
-                  title="TypeORM "
-                  description="Crie uma documentação a partir de arquivos .mdx"
+                  title="nexus-typeorm-plugin"
+                  description="Este plugin cria definições e resolvers automaticamente transformando modelos do TypeORM em uma API GraphQL"
                   technologies={['Typescript']}
                   resources={[
                     {
                       icon: FaGithub,
-                      url: 'https://github.com/vinpac/nexus-typeorm-plugin',
+                      url:
+                        'https://github.com/vinpac/nexus-typeorm-plugin#readme',
                     },
                   ]}
                 >

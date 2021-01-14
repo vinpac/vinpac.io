@@ -13,15 +13,15 @@ const LPContact: React.FC<Props> = ({ className }) => {
   const whatsAppLink = useMyWhatsAppLink()
 
   return (
-    <div id="contact" className={cx('py-32', className)}>
+    <div id="contact" className={cx('py-16 sm:py-24', className)}>
       <div className="container">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
           <FormattedMessage
             id="components/LPAboutContact/title"
             defaultMessage="Bora conversar!"
           />
         </h1>
-        <p className="text-2xl md:text-3xl font-medium text-gray-400 mb-12">
+        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 mb-12">
           <FormattedMessage
             id="components/LPAboutContact/subtitle"
             defaultMessage="Eu não sou dificil de achar, seguinte:"
@@ -53,7 +53,7 @@ const LPContact: React.FC<Props> = ({ className }) => {
             <ContactButton
               href={`mailto:${vinicius.email}`}
               label="Email"
-              description="vin175pacheco@gmail.com"
+              description={vinicius.email}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">

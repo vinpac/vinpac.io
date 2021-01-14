@@ -1,5 +1,5 @@
 import React from 'react'
-import { defineMessages, useIntl } from 'react-intl'
+import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import ArrowMessage from './ArrowMessage'
 import { FiMail, FiMessageCircle } from 'react-icons/fi'
 import s from '@css/LPHero.module.css'
@@ -53,12 +53,18 @@ const LPHero: React.FC = () => {
         </figure>
         <div className="lg:max-w-2xl">
           <h1
-            className={`text-5xl md:text-7xl text-gray-900 dark:text-white font-bold leading-tight mb-4 md:mb-8 ${s.headline}`}
+            className={`text-4xl sm:text-5xl md:text-7xl text-gray-900 dark:text-white font-bold leading-tight mb-4 md:mb-8 ${s.headline}`}
           >
-            Há 5 anos trabalhando para tornar o mundo um lugar melhor
+            <FormattedMessage
+              id="components/LPHero/headline"
+              defaultMessage="Há 5 anos trabalhando para tornar o mundo um lugar melhor"
+            />
           </h1>
-          <h4 className="text-2xl md:text-3xl font-medium text-gray-400 leading-tight mb-8">
-            Dev. Sênior apaixonado por arte
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 leading-tight mb-8">
+            <FormattedMessage
+              id="components/LPHero/subtitle"
+              defaultMessage="Dev. Sênior apaixonado por arte"
+            />
           </h4>
           <div className="space-y-4 sm:space-y-0 flex flex-col sm:flex-row sm:space-x-8 relative">
             <ButtonLink

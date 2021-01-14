@@ -4,8 +4,30 @@ import cx from 'classnames'
 import Head from 'next/head'
 import ArrowMessage from './ArrowMessage'
 import { FaDribbble } from 'react-icons/fa'
+import { intlRenderer } from '@lib/intl'
 
 const messages = defineMessages({
+  paragraph1: {
+    id: 'components/LPAboutMe/p/1',
+    defaultMessage: `Eu me chamo <span>Vinicius Pacheco</span> e eu
+    sou um Desenvolvedor FullStack e Designer com experiência em
+    liderança. Sei combinar design com uma vasta experiência em
+    programação transformar problemas complexos em soluções completas e
+    elegantes. Tenho muita experiência com Node.js, React e Typescript,
+    mas também consigo desenvolver em Python e PHP. Minha maior força é
+    minha velocidade parar criar e sensibilidade para ouvir. Sempre
+    busco harmonizar funcionalidade e elegância.`,
+  },
+  paragraph3: {
+    id: 'components/LPAboutMe/p/3',
+    defaultMessage: `Eu cresci em uma família pequena no interior do Rio do Janeiro. As
+    coisas não eram muito fáceis. A violência era normal no dia a dia.
+    Olhando pra trás eu vejo que dificilmente eu me sentia ouvido.
+    <span>Foi na programação que encontrei meu espaço de expressão aos 14 anos</span>.
+    Aos 17 anos fui chamado para trabalhar em um projeto de São Paulo.
+    Não demorou muito pra eu decidir em mudar pra lá. Fui pra mais de
+    450km da onde eu morava, sozinho, aos 19 anos.`,
+  },
   arrowMessage: {
     id: 'components/LPAboutMe/arrowMessage',
     defaultMessage: 'Curtiu? Segue lá no',
@@ -29,7 +51,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="py-36 container px-8 relative">
+      <div className="pt-36 pb-16 md:pb-36 container px-8 relative">
         <ArrowMessage
           shape="1"
           message={
@@ -41,7 +63,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
               <FaDribbble className="inline-block" />
             </a>
           }
-          className="bottom-72 absolute -right-16 text-gray-300 dark:text-gray-600 hidden lg:flex"
+          className="bottom-64 absolute -right-16 text-gray-300 dark:text-gray-600 hidden lg:flex"
         />
         <img
           src="/assets/Cavaco.svg"
@@ -62,63 +84,97 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
             defaultMessage="Sobre mim"
           />
         </h1>
-        <p className="text-2xl md:text-3xl font-medium text-green-700 dark:text-green-300 mb-12">
+        <p className="text-2xl md:text-3xl font-medium text-primary-700 dark:text-primary-300 mb-12">
           <FormattedMessage
             id="components/LPAboutMe/subtitle"
-            defaultMessage="Leia com atenção"
+            defaultMessage="Um artista do Brasil"
           />
         </p>
         <div className="text-lg max-w-3xl text-gray-700 dark:text-gray-300 leading-relaxed">
           <h2 className="text-2xl font-medium mb-4 text-gray-800 dark:text-white">
-            Pra além da programação
+            <FormattedMessage
+              id="components/LPAboutMe/title/1"
+              defaultMessage="Primeiro, quem sou eu:"
+            />
           </h2>
-          <p className="mb-4">
-            Eu me chamo <span className="font-medium">Vinicius Pacheco</span>,
-            um desenvolvedor que sabe combinar design com uma vasta experiência
-            em programação. Eu transformo problemas complexos em soluções
-            completas. Minha maior força é minha velocidade parar criar e
-            sensibilidade para ouvir. Seja criando APIs, websites, aplicativos
-            ou prototipos eu foco em harmonizar funcionalidade e elegância.
-          </p>
+          <p
+            className="mb-4"
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage(
+                messages.paragraph1,
+                intlRenderer({
+                  span: {
+                    class: 'font-medium text-primary-700 dark:text-primary-300',
+                  },
+                }),
+              ),
+            }}
+          />
           <p>
-            Meu trabalho vai para além da criação. Tive a oportunidade de
+            <FormattedMessage
+              id="components/LPAboutMe/p/2"
+              defaultMessage="Meu trabalho vai para além da criação. Tive a oportunidade de
             liderar uma equipe de 4 pessoas por 1 ano com objetivo de criar
             soluções de impacto social para empresas como Samsung, Boticário e
             Via Varejo. Nesse periodo a minha visão se expandiu para além de
-            engenharia, incluindo coordenação de pessoas, visão de produto e o
-            tomada de decisões baseadas em dados.
+            engenharia, incluindo coordenação de pessoas, visão de produto e
+            tomada de decisões baseadas em dados."
+            />
           </p>
           <h2 className="text-2xl mb-4 font-medium mt-8 text-gray-800 dark:text-white">
-            Como abri meu coração para ouvir
+            <FormattedMessage
+              id="components/LPAboutMe/title/2"
+              defaultMessage="Como abri meu coração para ouvir"
+            />
           </h2>
+          <p
+            className="mb-4"
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage(
+                messages.paragraph3,
+                intlRenderer({
+                  span: {
+                    class:
+                      'bg-green-300 dark:bg-green-700 bg-opacity-50 leading-loose md:leading-none  dark:text-white  py-1 rounded px-1',
+                  },
+                }),
+              ),
+            }}
+          />
+
           <p className="mb-4">
-            Vindo do interior, cresci em um ambiente aonde minha voz não tinha
-            valor. Volência e falta de empatia eram normais.{' '}
-            <span className="bg-gradient-to-r from-green-100 dark:to-green-600 dark:from-green-700 dark:text-white to-green-200 py-1 rounded px-1">
-              Foi na programação que encontrei meu espaço de expressão
-            </span>
-            . Aos 18 anos eu já amava o que fazia. Confiante e curioso, decidi
-            em não fazer faculdade. Eu confio no meu eram maiores do que minha
-            paciência para fazer faculdade, então eu decidi não fazer e confiar
-            em mim. Aos 16 eu já trabalhava e aos 19, com muita coragem (e um
-            buscado de ingenuidade de um garoto) mudei sozinho para São Paulo -
-            que é mais 450km de onde minha família está.
-          </p>
-          <p className="mb-4">
-            Em São Paulo conheci todo tipo de gente. No Atados criei amigos pra
+            <FormattedMessage
+              id="components/LPAboutMe/p/4"
+              defaultMessage="Em São Paulo conheci todo tipo de gente. No Atados criei amigos pra
             vida. Pessoas sensíveis que não só me ofereceram um espaço para
             criar, mas também me mostraram o poder da empatia, da escuta e da
-            vulnerabilidade.
+            vulnerabilidade."
+            />
+          </p>
+          <p className="mb-4">
+            <FormattedMessage
+              id="components/LPAboutMe/p/5"
+              defaultMessage="Ter aprendido a ser uma pessoa melhor me ajudou a criar pontes e não
+            muralhas. A ouvir, sentir, comunicar e pedir ajuda. Fico muito feliz
+            de, mesmo com muito medo, ter decidido não fazer faculdade e
+            arriscar uma vida em São Paulo."
+            />
           </p>
           <h2 className="text-2xl mb-4  font-medium text-gray-800 dark:text-white mt-8">
-            Ah, eu adoro sair!
+            <FormattedMessage
+              id="components/LPAboutMe/title/3"
+              defaultMessage="Ah, e eu adoro sair!"
+            />
           </h2>
           <p className="mb-4">
-            Tocar samba na rua? Dar um rolé de skate? Surfar um final de semana
-            inteiro? To muuito dentro! Pensa numa pessoa que gosta de dançar:
-            sou eu. Samba no pé, forró improvisado, funk requebrado. Eu gosto é
-            de mexer. Tem pouco coisa que eu não goste de fazer na real. Tenho 2
-            skates, 1 prancha de surf e muito amor por aventura.
+            <FormattedMessage
+              id="components/LPAboutMe/p/6"
+              defaultMessage="Eu toco cavaquinho, banjo e pandeiro. Então um samba na rua é minha
+            praia. Falando nisso, praia é um dos meus lugares favoritos. Sempre
+            que dá carrego minha prancha pro mar. Pra falar a verdade não tem
+            aventura que eu não tope. Principalmente se for com prancha. Skate?
+            Tenho 2 - bora!"
+            />
           </p>
         </div>
       </div>

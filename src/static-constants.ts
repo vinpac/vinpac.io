@@ -8,7 +8,7 @@ export const vinicius = {
   instagramURL: 'https://instagram.com/vin.pacheco',
   twitterURL: 'https://linkedin/in/sambacode',
   twitterHandle: 'sambacode',
-  linkedInURL: 'https://linkedin/in/vinpac',
+  linkedInURL: 'https://www.linkedin.com/in/vinpac/',
   dribbbleURL: 'https://dribbble.com/vinpac',
   gitHubURL: 'https://github.com/vinpac',
 } as const
