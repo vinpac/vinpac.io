@@ -15,13 +15,13 @@ const LPContact: React.FC<Props> = ({ className }) => {
   return (
     <div id="contact" className={cx('py-32', className)}>
       <div className="container">
-        <h1 className="text-7xl font-bold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
           <FormattedMessage
             id="components/LPAboutContact/title"
             defaultMessage="Bora conversar!"
           />
         </h1>
-        <p className="text-3xl font-medium text-gray-400 mb-12">
+        <p className="text-2xl md:text-3xl font-medium text-gray-400 mb-12">
           <FormattedMessage
             id="components/LPAboutContact/subtitle"
             defaultMessage="Eu não sou dificil de achar, seguinte:"

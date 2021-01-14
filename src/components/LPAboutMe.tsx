@@ -56,13 +56,13 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           alt=""
           className="transform rotate-45 -top-24 left-18 my-auto lg:-left-36 absolute z-20"
         />
-        <h1 className="text-7xl font-bold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
           <FormattedMessage
             id="components/LPAboutMe/title"
             defaultMessage="Sobre mim"
           />
         </h1>
-        <p className="text-3xl font-medium text-green-700 dark:text-green-300 mb-12">
+        <p className="text-2xl md:text-3xl font-medium text-green-700 dark:text-green-300 mb-12">
           <FormattedMessage
             id="components/LPAboutMe/subtitle"
             defaultMessage="Leia com atenção"

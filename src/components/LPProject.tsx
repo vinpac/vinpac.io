@@ -14,7 +14,7 @@ interface Props {
   team?: TeamMember[]
   children?: React.ReactNode
   resources?: Array<{ icon?: React.FC<any>; url: string; label?: string }>
-  divider?: null
+  divider?: boolean
   className?: string
 }
 
@@ -53,8 +53,8 @@ const LPProject: React.FC<Props> = ({
       )}
     >
       <div className="overflow-hidden rounded-t-lg">{children}</div>
-      <div className="px-8 pb-20">
-        {divider !== null && (
+      <div className="px-8 pb-8 sm:pb-20">
+        {divider && (
           <hr className="my-2 border-gray-200 dark:border-gray-700" />
         )}
         <div className="pt-4">
@@ -76,7 +76,7 @@ const LPProject: React.FC<Props> = ({
               {renderedTeam}
             </div>
           )}
-          <div className="flex items-center absolute bottom-8 inset-x-8">
+          <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:items-center sm:absolute bottom-8 inset-x-8">
             <div className="space-x-2 flex items-center mr-4">
               {technologies.slice(0, 4).map((tech) => (
                 <LPProjectTechnology key={tech} label={tech} />
@@ -94,7 +94,7 @@ const LPProject: React.FC<Props> = ({
             )}
 
             {actions && (
-              <div className="ml-auto space-x-3 flex">
+              <div className="sm:ml-auto space-y-3 sm:space-x-3 flex flex-col w-full">
                 {actions.map((action) => {
                   const Icon = action.icon || FiExternalLink
 
@@ -103,7 +103,7 @@ const LPProject: React.FC<Props> = ({
                       key={action.url}
                       href={action.url}
                       colorSchema="theme"
-                      className="shadow flex items-center"
+                      className="w-full shadow flex items-center justify-center"
                       size="md"
                       target="__blank"
                       rel="nofollow"

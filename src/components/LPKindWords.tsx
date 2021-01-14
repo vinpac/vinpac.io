@@ -19,20 +19,20 @@ const LPKindWords: React.FC<Props> = ({ className }) => {
       }}
     >
       <div className="container">
-        <h2 className="text-7xl font-bold mb-4 dark:text-white">
+        <h2 className="text-5xl md:text-7xl font-bold mb-4 dark:text-white">
           <FormattedMessage
             id="components/LPKindWords/title"
             defaultMessage="Espaço da gentileza"
           />
         </h2>
-        <p className="text-3xl font-medium text-green-600 mb-12">
+        <p className="text-2xl md:text-3xl font-medium text-green-600 mb-12">
           <FormattedMessage
             id="components/LPKindWords/subtitle"
             defaultMessage="Mensagens de quem trabalhou comigo"
           />
         </p>
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/2 px-4 space-y-8 mb-8 md:mb-0">
+          <div className="w-full md:w-1/2 sm:px-4 space-y-4 md:space-y-8 mb-4 md:mb-0">
             <KindMessage
               authorName="John Doe"
               authorRole="CEO"
@@ -50,7 +50,7 @@ const LPKindWords: React.FC<Props> = ({ className }) => {
               takenFrom="LinkedIn"
             />
           </div>
-          <div className="w-full md:w-1/2 px-4 space-y-8">
+          <div className="w-full md:w-1/2 sm:px-4 space-y-4 md:space-y-8">
             <KindMessage
               authorName="John Doe"
               company="Atados"

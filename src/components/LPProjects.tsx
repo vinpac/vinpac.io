@@ -57,20 +57,20 @@ const LPProjects: React.FC<Props> = ({ className }) => {
         <SVGProjectsPattern className="absolute inset-y-0 my-auto -left-80 top-2/4 text-indigo-100 dark:text-indigo-900" />
 
         <div className="relative z-10">
-          <h2 className="text-7xl font-bold mb-4">
+          <h2 className="text-5xl md:text-7xl font-bold mb-4">
             <FormattedMessage
               id="components/LPProjects/projects"
               defaultMessage="Projetos"
             />
           </h2>
 
-          <p className="text-3xl font-medium text-gray-400 mb-12">
+          <p className="text-2xl md:text-3xl font-medium text-gray-400 mb-12">
             <FormattedMessage
               id="components/LPProjects/selectedProjects"
               defaultMessage="4 projetos selecionados"
             />
           </p>
-          <div className="space-y-8">
+          <div className="space-y-8 -mx-4 sm:mx-0">
             <LPProject
               className="shadow-lg"
               title="Atados: Plataforma de voluntariado e liderança"
@@ -109,15 +109,14 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 },
               ]}
             >
-              <div className="py-32 m-4 mx-8 rounded-lg bg-blue-500">
-                <div className="h-64">_</div>
-              </div>
+              <div className="py-32 m-4 rounded-lg bg-blue-500"></div>
             </LPProject>
             <LPProject
               className="shadow-md"
               title={intl.formatMessage(financas.title)}
               description={intl.formatMessage(financas.description)}
               technologies={['Figma', 'GraphQL', 'React']}
+              divider
               resources={[
                 {
                   icon: FaDribbble,
@@ -142,7 +141,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 />
               </div>
             </LPProject>
-            <h2 className="text-gray-500 dark:text-gray-300 items-center whitespace-nowrap text-2xl">
+            <h2 className="text-gray-500 dark:text-gray-300 items-center text-2xl">
               <span
                 dangerouslySetInnerHTML={{
                   __html: intl.formatMessage(messages.openSourceTitle, {
@@ -153,12 +152,11 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                   }),
                 }}
               />
-              <span className="inline-block bg-opacity-50 ml-2 align-baseline w-4 h-8 bg-purple-800 dark:bg-purple-600 animate-blink"></span>
+              <span className="inline-block bg-opacity-50 ml-2 align-baseline w-4 h-8 bg-purple-800 dark:bg-purple-400 animate-blink"></span>
             </h2>
             <div className="md:flex -mx-4 space-y-8 md:space-y-0">
               <div className="w-full md:w-1/2 px-4">
                 <LPProject
-                  divider={null}
                   className="shadow-md md:h-full"
                   title={intl.formatMessage(pGraphQL.title)}
                   description={intl.formatMessage(pGraphQL.description)}
@@ -181,7 +179,6 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               </div>
               <div className="w-full md:w-1/2 px-4">
                 <LPProject
-                  divider={null}
                   className="shadow-md md:h-full"
                   title="TypeORM "
                   description="Crie uma documentação a partir de arquivos .mdx"
