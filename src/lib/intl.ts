@@ -19,3 +19,14 @@ export const intlRenderer = (
 
   return values
 }
+
+export const localizePathname = (
+  pathname: string,
+  locale: string | undefined,
+): string => {
+  if (locale && locale !== 'pt-BR') {
+    return `/${locale}${pathname}`
+  }
+
+  return pathname
+}

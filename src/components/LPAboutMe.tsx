@@ -11,8 +11,8 @@ const messages = defineMessages({
     id: 'components/LPAboutMe/p/1',
     defaultMessage: `Eu me chamo <span>Vinicius Pacheco</span> e eu
     sou um Desenvolvedor FullStack e Designer com experiência em
-    liderança. Sei combinar design com uma vasta experiência em
-    programação transformar problemas complexos em soluções completas e
+    liderança. Eu combino design com a minha experiência em
+    programação pra transformar problemas complexos em soluções completas e
     elegantes. Tenho muita experiência com Node.js, React e Typescript,
     mas também consigo desenvolver em Python e PHP. Minha maior força é
     minha velocidade parar criar e sensibilidade para ouvir. Sempre

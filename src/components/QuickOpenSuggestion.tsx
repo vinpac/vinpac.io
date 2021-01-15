@@ -5,6 +5,8 @@ import Link from 'next/link'
 import reactStringReplace from 'react-string-replace'
 import ShadowColor from '@components/ShadowColor'
 import QuickOpenSuggestionReturnButton from '@components/QuickOpenSuggestionReturnButton'
+import { useRouter } from 'next/router'
+import { localizePathname } from '@lib/intl'
 
 export interface QuickOpenSuggestionProps {
   readonly suggestion: Suggestion
@@ -21,6 +23,7 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
   className,
   onSelect,
 }) => {
+  const { locale } = useRouter()
   const { href, nextHref } = suggestion as Partial<LinkSuggestion>
   const highlightText = useCallback(
     (text: string) => {
@@ -45,11 +48,13 @@ const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({
   )
 
   const Component = href || nextHref ? 'a' : 'button'
+  const localizedHref =
+    href && suggestion.localize ? localizePathname(href, locale) : href
 
   const anchor = (
     <Component
       type={Component === 'button' ? 'button' : undefined}
-      href={Component === 'a' ? href : undefined}
+      href={Component === 'a' ? localizedHref : undefined}
       className={cx(
         'block px-4 py-2 leading-tight text-left w-full group',
         selected && 'bg-gray-300 dark:bg-gray-600 pr-16',

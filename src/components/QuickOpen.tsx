@@ -11,6 +11,7 @@ import {
   LinkSuggestion,
 } from '@lib/quickOpen/types'
 import { defineMessages, useIntl } from 'react-intl'
+import { localizePathname } from '@lib/intl'
 
 const messages = defineMessages({
   placeholder: {
@@ -74,10 +75,16 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
       if (mimicEvent) {
         const { nextHref, href } = suggestion as Partial<LinkSuggestion>
         if (nextHref) {
-          Router.push(nextHref, href)
+          Router.push(
+            nextHref,
+            href,
+            suggestion.localize ? { locale: intl.locale } : undefined,
+          )
         } else if (href) {
           window.setTimeout(() => {
-            document.location.href = href
+            document.location.href = suggestion.localize
+              ? localizePathname(href, intl.locale)
+              : href
           }, 1)
         }
       }
@@ -86,7 +93,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
         onSelectItem(suggestion)
       }
     },
-    [onSelectItem],
+    [onSelectItem, intl.locale],
   )
 
   // Handle ENTER, UP and DOWN when the text input is focused

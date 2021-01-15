@@ -48,7 +48,7 @@ const nexusTypeORMPlugin = defineMessages({
 const atados = defineMessages({
   title: {
     id: 'project/atados/title',
-    defaultMessage: 'Atados: Plataforma de voluntariado e liderança',
+    defaultMessage: 'Atados: Plataforma de voluntariado',
   },
   description: {
     id: 'project/atados/description',
@@ -129,7 +129,9 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                 },
               ]}
             >
-              <div className="py-32 m-4 rounded-lg bg-blue-500"></div>
+              <div className="p-4">
+                <img src="/assets/projects/Atados.svg" className="w-full" />
+              </div>
             </LPProject>
             <LPProject
               className="shadow-md"

@@ -68,6 +68,7 @@ export const staticSuggestions: Suggestion[] = [
   {
     id: 'home',
     href: '/#hero',
+    localize: true,
     nextHref: '/',
     icon: { type: 'component', component: FiHome },
     keywords: ['Home', 'Inicio'],
@@ -78,6 +79,7 @@ export const staticSuggestions: Suggestion[] = [
   {
     id: 'projects',
     href: '/#projects',
+    localize: true,
     icon: { type: 'component', component: FiPackage },
     keywords: ['Projetos', 'project'],
     title: formatedMessageComponent(messages.projects),
@@ -87,6 +89,7 @@ export const staticSuggestions: Suggestion[] = [
   {
     id: 'about-me',
     href: '/#about-me',
+    localize: true,
     icon: { type: 'component', component: FiUser },
     keywords: ['Sobre mim', 'About me'],
     title: formatedMessageComponent(messages.aboutMe),
@@ -96,6 +99,7 @@ export const staticSuggestions: Suggestion[] = [
   {
     id: 'kindWords',
     href: '/#kind-words',
+    localize: true,
     icon: { type: 'component', component: FiHeart },
     keywords: ['Mensagens de quem já trabalhou comigo'],
     title: formatedMessageComponent(messages.kindWords),
@@ -105,6 +109,7 @@ export const staticSuggestions: Suggestion[] = [
   {
     id: 'contact',
     href: '/#contact',
+    localize: true,
     icon: { type: 'component', component: FiMessageCircle },
     keywords: ['Text', 'message'],
     title: formatedMessageComponent(messages.contact),

@@ -17,6 +17,7 @@ export interface BaseSuggestion {
     | React.ComponentType<any>
     | React.ComponentType<PropsPassedToSuggestion>
   description?: string
+  localize?: boolean
   showDescription?: boolean
   keywords: Array<string | number>
   useAsFallback?: boolean

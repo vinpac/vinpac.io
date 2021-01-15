@@ -18,9 +18,18 @@ import en from '@generated/lang/en.json'
 import { IntlProvider } from 'react-intl'
 import { useRouter } from 'next/router'
 
+const defaultDescription = `Eu me chamo Vinicius Pacheco e eu
+sou um Desenvolvedor FullStack e Designer com experiência em
+liderança. Eu combino design com a minha experiência em
+programação pra transformar problemas complexos em soluções completas e
+elegantes`
+
+const enDescripton = `Hi, I'm Vinicius Pacheco, a Full Stack developer and Designer with leadership experiences. I combine design with my expertise in coding to transform complex problems into complete and elegant solutions`
+
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
   const locale = router.locale || DEFAULT_LOCALE
+  const metaDescription = locale === 'en' ? enDescripton : defaultDescription
 
   return (
     <>
@@ -91,8 +100,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo
         title="Vinicius Pacheco"
+        description={metaDescription}
         openGraph={{
           type: 'website',
+          description: metaDescription,
           locale: locale === 'en' ? 'en_US' : 'pt_BR',
           url: `https://${vinicius.site}`,
           images: [
