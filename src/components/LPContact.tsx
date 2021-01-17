@@ -22,6 +22,10 @@ const messages = defineMessages({
     id: 'components/LPContact/instagramDesc',
     defaultMessage: 'Minha vida pessoal',
   },
+  myEmail: {
+    id: 'components/LPContact/myEmail',
+    defaultMessage: 'Bora conversar, po!',
+  },
 })
 
 interface Props {
@@ -73,7 +77,7 @@ const LPContact: React.FC<Props> = ({ className }) => {
             <ContactButton
               href={`mailto:${vinicius.email}`}
               label="Email"
-              description={vinicius.email}
+              description={intl.formatMessage(messages.myEmail)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">

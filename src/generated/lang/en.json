@@ -205,6 +205,12 @@
       "value": "My professional life"
     }
   ],
+  "components/LPContact/myEmail": [
+    {
+      "type": 0,
+      "value": "Open to chat"
+    }
+  ],
   "components/LPFooter/message": [
     {
       "type": 0,
@@ -215,6 +221,12 @@
     {
       "type": 0,
       "value": "5 years working to make the world a better place"
+    }
+  ],
+  "components/LPHero/myemail": [
+    {
+      "type": 0,
+      "value": "Say Hi"
     }
   ],
   "components/LPHero/subtitle": [

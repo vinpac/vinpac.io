@@ -181,5 +181,13 @@
   "components/LPKindWords/josias": {
     "id": "components/LPKindWords/josias",
     "defaultMessage": "Vinícius is simply one of those people that is completely out of the curve. His skills to manage and developer evolve in way that amazes anyone. Definitly one of the best professionals that I've had the pleasure to work with."
+  },
+  "components/LPHero/myemail": {
+    "id": "components/LPHero/myemail",
+    "defaultMessage": "Say Hi"
+  },
+  "components/LPContact/myEmail": {
+    "id": "components/LPContact/myemail",
+    "defaultMessage": "Open to chat"
   }
 }
