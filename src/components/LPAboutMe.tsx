@@ -1,7 +1,6 @@
 import React from 'react'
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import cx from 'classnames'
-import Head from 'next/head'
 import ArrowMessage from './ArrowMessage'
 import { FaDribbble } from 'react-icons/fa'
 import { intlRenderer } from '@lib/intl'
@@ -45,12 +44,6 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
       id="about-me"
       className={cx('overflow-hidden dark:bg-gray-800 -mt-24 pt-24', className)}
     >
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <div className="pt-36 pb-16 md:pb-36 container px-8 relative">
         <ArrowMessage
           shape="1"

@@ -5,6 +5,7 @@ import LPProject from './LPProject'
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import { FiPlay } from 'react-icons/fi'
 import { FaDribbble, FaGithub } from 'react-icons/fa'
+import Image from 'next/image'
 
 const messages = defineMessages({
   openSourceTitle: {
@@ -130,7 +131,14 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               ]}
             >
               <div className="p-4">
-                <img src="/assets/projects/Atados.svg" className="w-full" />
+                <Image
+                  src="/assets/projects/Atados.png"
+                  alt="Atados plataform in 3 different colors"
+                  className="w-full"
+                  quality="100"
+                  width={1078}
+                  height={492}
+                />
               </div>
             </LPProject>
             <LPProject
@@ -156,10 +164,13 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               ]}
             >
               <div className="text-center px-8 py-4">
-                <img
+                <Image
                   src="/assets/projects/Financas.png"
-                  alt=""
+                  alt="5 screens of Financas app"
                   className="w-full leading-none"
+                  quality="100"
+                  width={1547}
+                  height={568}
                 />
               </div>
             </LPProject>

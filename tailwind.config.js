@@ -23,9 +23,6 @@ module.exports = {
     },
   },
   theme: {
-    fontFamily: {
-      serif: ['Bitter', 'ui-serif', 'Georgia', 'serif'],
-    },
     typography: (theme) => ({
       default: {
         css: {

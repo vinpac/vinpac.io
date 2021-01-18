@@ -62,10 +62,10 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           onClick={handleLogoClick}
         >
           <Logo
-            alt="Vinicius.app"
+            alt="Logo"
             width="146px"
             height="32px"
-            className="text-green-700 dark:text-green-200"
+            className="text-gray-900 dark:text-white"
           />
           <FiMenu size={36} className="block text-xl lg:hidden ml-auto" />
         </a>

@@ -5,6 +5,7 @@ import { FiMail, FiMessageCircle } from 'react-icons/fi'
 import s from '@css/LPHero.module.css'
 import { vinicius } from '@static-constants'
 import ButtonLink from './ButtonLink'
+import Image from 'next/image'
 import { useMyWhatsAppLink } from '@lib/whatsapp'
 
 const messages = defineMessages({
@@ -44,11 +45,15 @@ const LPHero: React.FC = () => {
             className="absolute -bottom-24 -ml-4 right-36 dark:text-gray-200 "
             direction="right"
           />
-          <img
-            src="/assets/Me.jpg"
-            alt=""
-            className="absolute inset-0 rounded-xl z-10"
-          />
+          <div className="absolute inset-0 z-10">
+            <Image
+              src="/assets/Me.jpg"
+              alt="Picture of me"
+              className="w-full rounded-xl"
+              width={682}
+              height={691}
+            />
+          </div>
           <div className="bg-gradient-to-b from-orange-200 to-orange-300 w-full h-full transform -rotate-12 rounded-xl"></div>
         </figure>
         <div className="lg:max-w-2xl">
