@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn intl:compile && next build",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write **/*.{js,ts,tsx}",
