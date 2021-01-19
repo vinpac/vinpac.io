@@ -36,22 +36,22 @@
     "defaultMessage": "Don't be shy. Let's talk!"
   },
   "components/LPAboutMe/arrowMessage": {
-    "defaultMessage": "Liked it? Follow me on"
+    "defaultMessage": "Like it? Follow me on"
   },
   "components/LPAboutMe/p/1": {
-    "defaultMessage": "My name is <span>Vinicius Pacheco</span> and I'm a Full Stack developer and Designer with leadership experiences. I combine design with my expertise in coding to transform complex problems into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, with some experience with Python and PHP. My greatest strength is my speed to learn and my sensibility to hear. I always look for harmonizing functionality and elegancy."
+    "defaultMessage": "My name is <span>Vinicius Pacheco</span> and I'm a Full Stack developer and Designer with leadership experience. I combine design with my expertise in coding to transform complex problems into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, and have some experience with Python and PHP. My greatest strengths are my learning speed and sensibility to hear. I always look for harmonizing functionality and elegancy."
   },
   "components/LPAboutMe/p/3": {
-    "defaultMessage": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal. Looking back I realize that I hardly felt heard. <span>Was at coding that was able to express myself. To find my voice at 14</span>. Later on, when I was 17, Atados contacted to freelance their first international plataform. They are from São Paulo. It dind't take long for me to move there, 286 miles from where I grew up."
+    "defaultMessage": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal and looking back I realize that I hardly felt heard. <span>It was through coding that was able to express myself</span> and find my voice at age 14. Later on, when I was 17, Atados contracted me as a freelancer to build their first international platform. So I moved to São Paulo, 286 miles from where I grew up."
   },
   "components/LPAboutMe/p/4": {
-    "defaultMessage": "Here I met all kinds of people. Inside Atados I could form great friendships for life. There I met sensible people that not only had given me a space to create, but also tought me the value of a empathic, vulnerable and true relationship."
+    "defaultMessage": "Inside Atados, I met all kinds of people. I formed great friendships for life, met sensible people that gave me the space to create and learnt the value of having empathic, vulnerable and true relationships."
   },
   "components/LPAboutMe/p/5": {
-    "defaultMessage": "Being able to learn how to be a better person helped me to create bridges and not walls. To listen, to feel, to comunicate and ask for help. I'm really happy to, even frightened, decided not go to college risk a dream moving here."
+    "defaultMessage": "Learning how to be a better person helped me to build bridges instead of walls, to listen, to feel, to communicate and ask for help. I'm really happy to have worked here."
   },
   "components/LPAboutMe/p/6": {
-    "defaultMessage": "I play cavaquinho, brazilian banjo and tambourine. So playing samba in the street is my jam, but my favorite place thing in the world is going to beach. Whenever it's possible I take my surfboard with me. To be honest there's little adventures that I wouldn't jump in. Specially those with boards. Skating? I got 2 - Let's do it!"
+    "defaultMessage": "I play cavaquinho, a Brazilian banjo, and tambourine. So playing samba in the street is my jam, but my favourite thing in the world is going to the beach. Whenever it's possible I take my surfboard with me. To be honest there are few adventures that I wouldn't jump into, especially those with boards. Skating? I got 2 - Let's do it!"
   },
   "components/LPAboutMe/subtitle": {
     "defaultMessage": "An artist from Brazil"
@@ -96,7 +96,7 @@
     "defaultMessage": "Projects"
   },
   "components/LPProjects/selectedProjects": {
-    "defaultMessage": "4 selected projects"
+    "defaultMessage": "4 of my projects"
   },
   "components/QuickOpen/placeholder": {
     "defaultMessage": "Navigate / Search / Have fun"
@@ -126,13 +126,13 @@
     "defaultMessage": "And Chico"
   },
   "pages/index/contact": {
-    "defaultMessage": "Proposals, ideias and kind words are always welcomed :)"
+    "defaultMessage": "Proposals, ideas and kind words are always welcome :)"
   },
   "pages/index/me": {
     "defaultMessage": "That's me"
   },
   "project/financas/description": {
-    "defaultMessage": "Control your own personal finances through an easy and clean interface. The challenge for me was always to put the efforting into registering my expenses. My inspiration here was to create and easy way to do it."
+    "defaultMessage": "Control your own personal finances through a simple, easy to use interface. For me, it was challenging to register and keeping track of all my personal expenses, so I decided to find an easier way to do it and prototyped this app."
   },
   "project/financas/title": {
     "defaultMessage": "Prototype: App for managing personal finances"
@@ -150,7 +150,7 @@
     "defaultMessage": "Team"
   },
   "project/nexusTypeORMPlugin/description": {
-    "defaultMessage": "This plugin automatically creates GraphQL types and resolvers transforming your TypeORM models into a GraphQL API"
+    "defaultMessage": "This plugin automatically creates GraphQL types and resolvers by transforming your TypeORM models into a GraphQL API"
   },
   "components/LPContact/dribbbleDesc": {
     "defaultMessage": "Ongoing projects"
@@ -168,7 +168,7 @@
     "defaultMessage": "Atados: Volunteering platform"
   },
   "project/atados/description": {
-    "defaultMessage": "I worked as a Full Stack Developer, Designer and Tech Leader. There I led a team of 4 developers for 1 year. Our goal was to create impactful tech solutions in the social responsibility market. Being used by companies like Samsung, Boticário and Via Varejo, our main product, a SASS web app, scaled to more than 150k users. It's the biggest independent volunteering platform in Brazil"
+    "defaultMessage": "I worked at Atados as a Full Stack Developer, Designer and Tech Leader. For 1 year, I led a team of 4 developers to create impactful tech solutions in the social responsibility market. Our products were used by companies such as Samsung, Boticário and Via Varejo and our main product, a SASS web app, scaled to more than 150k users. Atados is the biggest independent volunteering platform in Brazil."
   },
   "components/LPKindWords/daniel": {
     "id": "components/LPKindWords/daniel",
