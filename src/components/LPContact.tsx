@@ -39,7 +39,7 @@ const LPContact: React.FC<Props> = ({ className }) => {
   return (
     <div id="contact" className={cx('py-16 sm:py-24', className)}>
       <div className="container">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-gray-700 dark:text-white">
           <FormattedMessage
             id="components/LPAboutContact/title"
             defaultMessage="Bora conversar!"
