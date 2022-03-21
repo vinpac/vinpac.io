@@ -100,6 +100,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo
         title="Vinicius Pacheco"
+        keywords="vinpac, vinicius pacheco, vinicius, pacheco, dev, developer, js, react"
         description={metaDescription}
         openGraph={{
           type: 'website',
