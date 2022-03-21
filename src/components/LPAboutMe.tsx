@@ -49,6 +49,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           shape="1"
           message={
             <a
+              target="_blank"
               href="https://dribbble.com/vinpac"
               className="hover:underline text-gray-500 dark:text-gray-300 hover:text-blue-500 dark:hover:text-white"
             >
