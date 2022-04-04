@@ -2,8 +2,8 @@ export const DEFAULT_LOCALE = 'pt-br'
 
 export const vinicius = {
   image: '/assets/avatar.jpg',
-  site: 'vinpac.com',
-  email: 'oi@vinpac.com',
+  site: 'vinpac.io',
+  email: 'oi@vinpac.io',
   phone: '+55 11 976574407',
   instagramURL: 'https://instagram.com/vin.pacheco',
   twitterURL: 'https://linkedin/in/sambacode',
