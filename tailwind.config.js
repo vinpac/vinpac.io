@@ -1,20 +1,8 @@
 const colors = require('tailwindcss/colors')
 
-const safelist = ['bg-gray-800']
-
 module.exports = {
   darkMode: 'class',
-  purge: {
-    content: [
-      './src/components/**/*.tsx',
-      './src/assets/svg/*.svg',
-      './src/pages/**/*.tsx',
-    ],
-    options: {
-      whitelist: safelist,
-      safelist,
-    },
-  },
+  content: ['./src/**/*.tsx', './src/**/*.svg'],
   variants: {
     extend: {
       ringWidth: ['hover', 'active'],
@@ -26,56 +14,56 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
-          color: theme('colors.theme.700'),
+          color: theme('colors.gray.700'),
           '[class~="lead"]': {
-            color: theme('colors.theme.700'),
+            color: theme('colors.gray.700'),
           },
           a: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           strong: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           'ol > li::before': {
-            color: theme('colors.theme.600'),
+            color: theme('colors.gray.600'),
           },
           'ul > li::before': {
-            backgroundColor: theme('colors.theme.400'),
+            backgroundColor: theme('colors.gray.400'),
           },
           hr: {
-            borderColor: theme('colors.theme.300'),
+            borderColor: theme('colors.gray.300'),
           },
           blockquote: {
-            color: theme('colors.theme.900'),
-            borderLeftColor: theme('colors.theme.300'),
+            color: theme('colors.gray.900'),
+            borderLeftColor: theme('colors.gray.300'),
           },
           h1: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           h2: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           h3: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           h4: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           'figure figcaption': {
-            color: theme('colors.theme.600'),
+            color: theme('colors.gray.600'),
           },
           code: {
-            color: theme('colors.theme.900'),
+            color: theme('colors.gray.900'),
           },
           pre: {
             color: '#fff',
           },
           thead: {
-            color: theme('colors.theme.900'),
-            borderBottomColor: theme('colors.theme.400'),
+            color: theme('colors.gray.900'),
+            borderBottomColor: theme('colors.gray.400'),
           },
           'tbody tr': {
-            borderBottomColor: theme('colors.theme.300'),
+            borderBottomColor: theme('colors.gray.300'),
           },
         },
       },
@@ -92,7 +80,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        gray: colors.coolGray,
+        gray: colors.stone,
         primary: colors.green,
         orange: colors.orange,
       },

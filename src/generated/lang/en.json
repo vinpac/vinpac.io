@@ -184,13 +184,13 @@
   "components/LPContact/dribbbleDesc": [
     {
       "type": 0,
-      "value": "Ongoing projects"
+      "value": "Designing ideas"
     }
   ],
   "components/LPContact/githubDesc": [
     {
       "type": 0,
-      "value": "Beatiful Code"
+      "value": "Building the world"
     }
   ],
   "components/LPContact/instagramDesc": [
@@ -202,13 +202,13 @@
   "components/LPContact/linkedinDesc": [
     {
       "type": 0,
-      "value": "My professional life"
+      "value": "Work with me"
     }
   ],
   "components/LPContact/myEmail": [
     {
       "type": 0,
-      "value": "Open to chat"
+      "value": "Contact me"
     }
   ],
   "components/LPFooter/message": [

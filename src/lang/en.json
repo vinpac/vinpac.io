@@ -153,16 +153,16 @@
     "defaultMessage": "This plugin automatically creates GraphQL types and resolvers by transforming your TypeORM models into a GraphQL API"
   },
   "components/LPContact/dribbbleDesc": {
-    "defaultMessage": "Ongoing projects"
+    "defaultMessage": "Designing ideas"
   },
   "components/LPContact/githubDesc": {
-    "defaultMessage": "Beatiful Code"
+    "defaultMessage": "Building the world"
   },
   "components/LPContact/instagramDesc": {
     "defaultMessage": "Personal life with filters"
   },
   "components/LPContact/linkedinDesc": {
-    "defaultMessage": "My professional life"
+    "defaultMessage": "Work with me"
   },
   "project/atados/title": {
     "defaultMessage": "Atados: Volunteering platform"
@@ -188,6 +188,6 @@
   },
   "components/LPContact/myEmail": {
     "id": "components/LPContact/myemail",
-    "defaultMessage": "Open to chat"
+    "defaultMessage": "Contact me"
   }
 }

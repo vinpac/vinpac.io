@@ -4,7 +4,6 @@ import 'prismjs/themes/prism-tomorrow.css'
 import '../css/tailwind.css'
 import '../css/animations.css'
 import '../css/notion.css'
-import '../css/themes.css'
 
 import Head from 'next/head'
 import { AppProps } from 'next/app'
@@ -97,10 +96,14 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
 
         <meta name="theme-color" content="#fff" />
+        <meta
+          name="keywords"
+          content="vinpac, vinicius pacheco, vinicius, pacheco, dev, developer, js, react"
+        />
+        <meta name="author" content="Vinicius Pacheco" />
       </Head>
       <DefaultSeo
         title="Vinicius Pacheco"
-        keywords="vinpac, vinicius pacheco, vinicius, pacheco, dev, developer, js, react"
         description={metaDescription}
         openGraph={{
           type: 'website',
