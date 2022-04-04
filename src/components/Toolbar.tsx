@@ -61,12 +61,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           className="flex items-center mr-auto w-full lg:w-auto"
           onClick={handleLogoClick}
         >
-          <Logo
-            alt="Logo"
-            width="146px"
-            height="32px"
-            className="text-gray-900 dark:text-white"
-          />
+          <Logo alt="Logo" className="text-gray-900 dark:text-white mt-3" />
           <FiMenu size={36} className="block text-xl lg:hidden ml-auto" />
         </a>
       </Link>
