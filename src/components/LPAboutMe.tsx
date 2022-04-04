@@ -14,14 +14,13 @@ const messages = defineMessages({
     programação pra transformar problemas complexos em soluções completas e
     elegantes. Tenho muita experiência com Node.js, React e Typescript,
     mas também consigo desenvolver em Python e PHP. Minha maior força é
-    minha velocidade parar criar e sensibilidade para ouvir. Sempre
+    minha velocidade para criar e sensibilidade para ouvir. Sempre
     busco harmonizar funcionalidade e elegância.`,
   },
   paragraph3: {
     id: 'components/LPAboutMe/p/3',
     defaultMessage: `Eu cresci em uma família pequena no interior do Rio do Janeiro. As
-    coisas não eram muito fáceis. A violência era normal no dia a dia.
-    Olhando pra trás eu vejo que dificilmente eu me sentia ouvido.
+    coisas não eram muito fáceis.
     <span>Foi na programação que encontrei meu espaço de expressão aos 14 anos</span>.
     Aos 17 anos fui chamado para trabalhar em um projeto de São Paulo.
     Não demorou muito pra eu decidir em mudar pra lá. Fui pra mais de
@@ -50,6 +49,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           message={
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://dribbble.com/vinpac"
               className="hover:underline text-gray-500 dark:text-gray-300 hover:text-blue-500 dark:hover:text-white"
             >
@@ -78,19 +78,13 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
             defaultMessage="Sobre mim"
           />
         </h1>
-        <p className="text-2xl md:text-3xl font-medium text-primary-700 dark:text-primary-300 mb-12">
+        <p className="text-2xl md:text-3xl font-medium text-primary-700 dark:text-primary-300 mb-8">
           <FormattedMessage
             id="components/LPAboutMe/subtitle"
-            defaultMessage="Um artista do Brasil"
+            defaultMessage="De Petropólis para o mundo"
           />
         </p>
         <div className="text-lg max-w-3xl text-gray-700 dark:text-gray-300 leading-relaxed">
-          <h2 className="text-2xl font-medium mb-4 text-gray-800 dark:text-white">
-            <FormattedMessage
-              id="components/LPAboutMe/title/1"
-              defaultMessage="Primeiro, quem sou eu:"
-            />
-          </h2>
           <p
             className="mb-4"
             dangerouslySetInnerHTML={{
@@ -107,7 +101,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           <h2 className="text-2xl mb-4 font-medium mt-8 text-gray-800 dark:text-white">
             <FormattedMessage
               id="components/LPAboutMe/title/2"
-              defaultMessage="Como abri meu coração para ouvir"
+              defaultMessage="Programação como uma forma de expressão"
             />
           </h2>
           <p
@@ -128,8 +122,8 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           <p className="mb-4">
             <FormattedMessage
               id="components/LPAboutMe/p/4"
-              defaultMessage="Em São Paulo conheci todo tipo de gente. No Atados criei amigos pra
-            vida. Pessoas sensíveis que não só me ofereceram um espaço para
+              defaultMessage="Em São Paulo conheci todo tipo de gente. Na Atados criei amigos pra
+            vida. Conheci pessoas sensíveis que não só me ofereceram um espaço para
             criar, mas também me mostraram o poder da empatia, da escuta e da
             vulnerabilidade."
             />
@@ -137,26 +131,24 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           <p className="mb-4">
             <FormattedMessage
               id="components/LPAboutMe/p/5"
-              defaultMessage="Ter aprendido a ser uma pessoa melhor me ajudou a criar pontes e não
-            muralhas. A ouvir, sentir, comunicar e pedir ajuda. Fico muito feliz
-            de, mesmo com muito medo, ter decidido não fazer faculdade e
-            arriscar uma vida em São Paulo."
+              defaultMessage="Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que tomar a decisão de não fazer
+              faculdade e mudar pra São Paulo foi a melhor decisão que eu podia ter tomado."
             />
           </p>
           <h2 className="text-2xl mb-4  font-medium text-gray-800 dark:text-white mt-8">
             <FormattedMessage
               id="components/LPAboutMe/title/3"
-              defaultMessage="Ah, e eu adoro sair!"
+              defaultMessage="Não só de trabalho, eu vou vivendo..."
             />
           </h2>
           <p className="mb-4">
             <FormattedMessage
               id="components/LPAboutMe/p/6"
-              defaultMessage="Eu toco cavaquinho, banjo e pandeiro. Então um samba na rua é minha
-            praia. Falando nisso, praia é um dos meus lugares favoritos. Sempre
-            que dá carrego minha prancha pro mar. Pra falar a verdade não tem
-            aventura que eu não tope. Principalmente se for com prancha. Skate?
-            Tenho 2 - bora!"
+              defaultMessage="Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha
+            praia. Alias, me amarro numa boa praia. Sempre
+            que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma
+            aventura. Principalmente se for com prancha. Bora dar um rolé de Skate?
+            Tenho 2!"
             />
           </p>
         </div>
