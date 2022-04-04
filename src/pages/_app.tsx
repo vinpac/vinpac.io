@@ -1,6 +1,7 @@
 import 'lib/i18n'
 import '@reach/tooltip/styles.css'
-import 'prismjs/themes/prism-tomorrow.css'
+// Blog is currently deactivated
+// import 'prismjs/themes/prism-tomorrow.css'
 import '../css/tailwind.css'
 import '../css/animations.css'
 import '../css/notion.css'

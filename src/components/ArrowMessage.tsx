@@ -5,7 +5,6 @@ import Arrow3 from '@assets/svg/arrow-3.svg'
 import Arrow4 from '@assets/svg/arrow-4.svg'
 import Arrow5 from '@assets/svg/arrow-5.svg'
 import cx from 'classnames'
-import Head from 'next/head'
 
 const flipClassNames = (cx: string): string =>
   cx.replace(/(-)?(translate-[xy])/g, (_, negativeSymbol, baseClassName) => {

@@ -1,4 +1,4 @@
-import useSWR, { responseInterface, ConfigInterface } from 'swr'
+import useSWR, { SWRConfiguration, SWRResponse } from 'swr'
 
 const fetcher = <Data>(uri: string): Promise<Data> => {
   return fetch(uri).then((res) => (res.json() as any) as Data)
@@ -6,7 +6,7 @@ const fetcher = <Data>(uri: string): Promise<Data> => {
 
 export const useSWRFetch = <Data, Error = any>(
   uri: string,
-  config?: ConfigInterface<Data, Error>,
-): responseInterface<Data, Error> => {
+  config?: SWRConfiguration<Data, Error>,
+): SWRResponse<Data, Error> => {
   return useSWR<Data, Error>(uri, fetcher, config)
 }

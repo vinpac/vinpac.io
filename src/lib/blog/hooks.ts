@@ -2,10 +2,10 @@ import { BlogIndex, BlogPost } from '@lib/notion'
 import { useSWRFetch } from '@lib/fetch/hooks'
 import { useEffect, useMemo } from 'react'
 import { updateBlogIndexCacheInBrowser } from '@lib/blog/browser'
-import { responseInterface } from 'swr'
+import { SWRResponse } from 'swr'
 import { ValidLocale } from '@lib/i18n'
 
-export const useBlogIndex = (): responseInterface<BlogIndex, Error> => {
+export const useBlogIndex = (): SWRResponse<BlogIndex, Error> => {
   const result = useSWRFetch<BlogIndex>('/api/blog')
   useEffect(() => {
     if (result.data) {
