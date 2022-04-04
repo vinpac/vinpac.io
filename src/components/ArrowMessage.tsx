@@ -38,12 +38,6 @@ const ArrowMessage: React.FC<Props> = ({
   const arrowClassName = flip && 'transform rotate-180'
   return (
     <div className={cx('flex flex-row items-center space-x-6', className)}>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       {direction === 'left' && <Arrow className={arrowClassName} />}
       <p
         style={{ fontFamily: 'Nanum Pen Script, Georgia, serif' }}
