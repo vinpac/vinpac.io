@@ -1,12 +1,11 @@
 import React from 'react'
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import ArrowMessage from './ArrowMessage'
-import { FiMail, FiMessageCircle } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
 import s from '@css/components/LPHero.module.css'
 import { vinicius } from '@static-constants'
 import ButtonLink from './ButtonLink'
 import Image from 'next/image'
-import { useMyWhatsAppLink } from '@lib/whatsapp'
 
 const messages = defineMessages({
   me: {
@@ -25,7 +24,6 @@ const messages = defineMessages({
 
 const LPHero: React.FC = () => {
   const intl = useIntl()
-  const whatsAppLink = useMyWhatsAppLink()
 
   return (
     <div className="relative overflow-hidden pb-36 md:pb-48">
@@ -83,15 +81,6 @@ const LPHero: React.FC = () => {
                 id="components/LPHero/myemail"
                 defaultMessage="Manda um oi"
               />
-            </ButtonLink>
-            <ButtonLink
-              href={whatsAppLink}
-              className="shadow-md transform hover:-translate-y-1 transition-transform duration-75"
-              colorSchema="theme"
-              size="lg"
-            >
-              <FiMessageCircle size={24} className="inline-block mr-2" />
-              {vinicius.phone}
             </ButtonLink>
             <ArrowMessage
               shape="1"
