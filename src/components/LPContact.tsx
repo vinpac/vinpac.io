@@ -3,7 +3,6 @@ import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import cx from 'classnames'
 import ContactButton from './ContactButton'
 import { vinicius } from '@static-constants'
-import { useMyWhatsAppLink } from '@lib/whatsapp'
 
 const messages = defineMessages({
   linkedinDesc: {
@@ -34,7 +33,6 @@ interface Props {
 
 const LPContact: React.FC<Props> = ({ className }) => {
   const intl = useIntl()
-  const whatsAppLink = useMyWhatsAppLink()
 
   return (
     <div id="contact" className={cx('py-16 sm:py-24', className)}>
@@ -78,20 +76,6 @@ const LPContact: React.FC<Props> = ({ className }) => {
               href={`mailto:${vinicius.email}`}
               label="Email"
               description={intl.formatMessage(messages.myEmail)}
-            />
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-            <ContactButton
-              href={vinicius.instagramURL}
-              label="Instagram"
-              description={intl.formatMessage(messages.instagramDesc)}
-            />
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-            <ContactButton
-              href={whatsAppLink}
-              label="WhatsApp"
-              description="+55 11 976574407"
             />
           </div>
         </div>
