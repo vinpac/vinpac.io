@@ -45,7 +45,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
               <FaDribbble className="inline-block" />
             </a>
           }
-          className="bottom-64 absolute -right-16 text-gray-300 dark:text-gray-600 hidden lg:flex"
+          className="bottom-48 absolute -right-16 text-gray-300 dark:text-gray-600 hidden lg:flex"
         />
         <img
           src="/assets/Cavaco.svg"

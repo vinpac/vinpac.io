@@ -59,14 +59,15 @@ const LPHero: React.FC = () => {
             className={`text-4xl sm:text-5xl md:text-7xl text-gray-900 dark:text-white font-bold leading-tight mb-4 md:mb-8 ${s.headline}`}
           >
             <FormattedMessage
-              id="9/DcFj"
-              defaultMessage="Há 5 anos trabalhando para tornar o mundo um lugar melhor"
+              id="5u1Kg0"
+              defaultMessage="Há 7 anos trabalhando para tornar o mundo um lugar melhor"
             />
           </h1>
           <h4 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 leading-tight mb-8">
             <FormattedMessage
-              id="gniHKo"
-              defaultMessage="Dev. Sênior apaixonado por arte"
+              id="SR5Zcr"
+              defaultMessage="Desenvolver Full Stack em {city}"
+              values={{ city: 'São Paulo' }}
             />
           </h4>
           <div className="space-y-4 sm:space-y-0 flex flex-col sm:flex-row sm:space-x-8 relative">

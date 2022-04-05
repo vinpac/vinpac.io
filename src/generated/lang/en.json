@@ -11,12 +11,6 @@
       "value": "And Chico"
     }
   ],
-  "1BAiZz": [
-    {
-      "type": 0,
-      "value": "4 of my projects"
-    }
-  ],
   "3kNnP9": [
     {
       "type": 0,
@@ -41,6 +35,12 @@
     {
       "type": 0,
       "value": "My Professional Profile"
+    }
+  ],
+  "5u1Kg0": [
+    {
+      "type": 0,
+      "value": "7 years working to make the world a better place"
     }
   ],
   "6EqXIC": [
@@ -147,20 +147,6 @@
       "value": "Code as a form of expression"
     }
   ],
-  "MJx0vh": [
-    {
-      "type": 0,
-      "value": "São Paulo, SP "
-    },
-    {
-      "type": 1,
-      "value": "time"
-    },
-    {
-      "type": 0,
-      "value": " BR"
-    }
-  ],
   "N5DL11": [
     {
       "type": 0,
@@ -199,10 +185,14 @@
       "value": "In São Paulo I got to know a very diverse range of people. Working at Atados I made friends for life. I met sensitive people who gave me a space to create which strengthened my empathy, my listening skills, and vulnerable expression."
     }
   ],
-  "Rz2ayh": [
+  "SR5Zcr": [
     {
       "type": 0,
-      "value": "Say hi"
+      "value": "Full Stack Developer in "
+    },
+    {
+      "type": 1,
+      "value": "city"
     }
   ],
   "SgXTSK": [
@@ -279,12 +269,6 @@
     {
       "type": 0,
       "value": "Hi - I came through your portfolio"
-    }
-  ],
-  "gniHKo": [
-    {
-      "type": 0,
-      "value": "An artist from Brazil"
     }
   ],
   "h/PBBt": [
