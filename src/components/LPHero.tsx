@@ -77,7 +77,7 @@ const LPHero: React.FC = () => {
               href={`mailto:${vinicius.email}`}
             >
               <FiMail size={24} className="inline-block mr-2" />
-              <FormattedMessage id="Rz2ayh" defaultMessage="Manda um oi" />
+              <FormattedMessage id="bpZEeb" defaultMessage="Começar Conversa" />
             </ButtonLink>
             <ArrowMessage
               shape="1"

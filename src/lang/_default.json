@@ -5,8 +5,8 @@
   "/pJiee": {
     "defaultMessage": "E o Chico"
   },
-  "1BAiZz": {
-    "defaultMessage": "4 projetos selecionados"
+  "3kNnP9": {
+    "defaultMessage": "São Paulo, SP {time} 🇧🇷"
   },
   "46Cs0y": {
     "defaultMessage": "Eu não sou dificil de achar, seguinte:"
@@ -59,9 +59,6 @@
   "K5hD19": {
     "defaultMessage": "Programação como uma forma de expressão"
   },
-  "MJx0vh": {
-    "defaultMessage": "São Paulo, SP {time} BR"
-  },
   "N5DL11": {
     "defaultMessage": "De Petropólis para o mundo"
   },
@@ -76,9 +73,6 @@
   },
   "QpMbuR": {
     "defaultMessage": "Em São Paulo conheci uma gama muito diversificada de pessoas. Trabalhando na Atados fiz amigos para a vida. Conheci pessoas sensíveis que me deram um espaço para criar, o que fortaleceu minha empatia, minha capacidade de ouvir e minha expressão vulnerável."
-  },
-  "Rz2ayh": {
-    "defaultMessage": "Manda um oi"
   },
   "SgXTSK": {
     "defaultMessage": "Contato"
@@ -97,6 +91,9 @@
   },
   "XSO+lQ": {
     "defaultMessage": "Bora conversar!"
+  },
+  "bpZEeb": {
+    "defaultMessage": "Começar Conversa"
   },
   "d0RPmP": {
     "defaultMessage": "Desativar Modo Escuro"
@@ -118,6 +115,9 @@
   },
   "hqh7Hj": {
     "defaultMessage": "Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas."
+  },
+  "ifZxwY": {
+    "defaultMessage": "{count} projetos selecionados"
   },
   "k8PzCR": {
     "defaultMessage": "Olá, sou <span>Vinicius Pacheco</span> e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."

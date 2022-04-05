@@ -8,6 +8,9 @@
   "1BAiZz": {
     "defaultMessage": "4 of my projects"
   },
+  "3kNnP9": {
+    "defaultMessage": "São Paulo, SP {time} 🇧🇷"
+  },
   "46Cs0y": {
     "defaultMessage": "I'm not that hard to find, look:"
   },
@@ -98,6 +101,9 @@
   "XSO+lQ": {
     "defaultMessage": "Lets Talk"
   },
+  "bpZEeb": {
+    "defaultMessage": "Start Conversation"
+  },
   "d0RPmP": {
     "defaultMessage": "Disable Dark Mode"
   },
@@ -118,6 +124,9 @@
   },
   "hqh7Hj": {
     "defaultMessage": "Lexer, Parser and AST. A study to understand how languages are read and compiled."
+  },
+  "ifZxwY": {
+    "defaultMessage": "{count} selected projects"
   },
   "k8PzCR": {
     "defaultMessage": "Hi, I'm <span>Vinicius Pacheco</span> and  I'm a Full-stack developer with 7+ years of experience, specializing in React, Node.js, and TypeScript. With a unique combination of design and development experience, I build professional, pixel-perfect interfaces in a short amount of time. I excel at delivering smart solutions that enable seamless experiences."

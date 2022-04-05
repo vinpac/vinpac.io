@@ -87,8 +87,9 @@ const LPProjects: React.FC<Props> = ({ className }) => {
 
           <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 mb-12">
             <FormattedMessage
-              id="1BAiZz"
-              defaultMessage="4 projetos selecionados"
+              id="ifZxwY"
+              defaultMessage="{count} projetos selecionados"
+              values={{ count: 4 }}
             />
           </p>
           <div className="space-y-8 -mx-4 sm:mx-0">

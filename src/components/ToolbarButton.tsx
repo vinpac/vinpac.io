@@ -38,6 +38,7 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
           className,
         )}
         {...props}
+        aria-label={label}
       >
         {children || (fallbackToLabel && label)}
       </Component>

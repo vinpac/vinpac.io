@@ -1,11 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
-import { isBreakpoint, useToggleTheme } from '@lib/theme'
+import { isBreakpoint, useToggleTheme , useTheme } from '@lib/theme'
 import { FiMenu } from 'react-icons/fi'
 import ToolbarButton from '@components/ToolbarButton'
 import { useQuickOpen } from '@lib/quickOpen/hooks'
-import { useTheme } from '@lib/theme'
 import Logo from '@assets/svg/logo.svg'
 import Tooltip from '@reach/tooltip'
 import { defineMessages, useIntl } from 'react-intl'
@@ -13,6 +12,7 @@ import { vinicius } from '@static-constants'
 import SwapThemeIcon from '@components/SwapThemeIcon'
 import CurrentTimeAndCity from './CurrentTimeAndCity'
 import { useIsMac } from '@lib/browser'
+import { FaDribbble, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const messages = defineMessages({
   navigate: {
@@ -65,7 +65,7 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           <FiMenu size={36} className="block text-xl lg:hidden ml-auto" />
         </a>
       </Link>
-      <div className="hidden lg:flex space-x-6 items-center px-6 text-lg">
+      <div className="hidden lg:flex space-x-6 items-center px-4 text-lg">
         <ToolbarButton
           as="button"
           label={intl.formatMessage(messages.navigate, {
@@ -73,19 +73,28 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           })}
           onClick={() => quickOpen.open({ text: '' })}
         />
-        <ToolbarButton label="GitHub" href={vinicius.gitHubURL} />
-        <ToolbarButton label="Dribbble" href={vinicius.dribbbleURL} />
-        <ToolbarButton label="LinkedIn" href={vinicius.linkedInURL} />
-
-        <Tooltip label={themeToggleLabel}>
-          <ToolbarButton
-            as="button"
-            onClick={handleThemeChange}
-            label={themeToggleLabel}
-          >
-            <SwapThemeIcon size={40} />
+        <div className="flex space-x-4 text-2xl border-l pl-4 border-gray-300 dark:border-gray-700">
+          <ToolbarButton label="GitHub" href={vinicius.gitHubURL}>
+            <FaGithub />
           </ToolbarButton>
-        </Tooltip>
+          <ToolbarButton label="Dribbble" href={vinicius.dribbbleURL}>
+            <FaDribbble />
+          </ToolbarButton>
+          <ToolbarButton label="LinkedIn" href={vinicius.linkedInURL}>
+            <FaLinkedin />
+          </ToolbarButton>
+          <Tooltip label={themeToggleLabel}>
+            <ToolbarButton
+              as="button"
+              onClick={handleThemeChange}
+              label={themeToggleLabel}
+              textClassName="text-primary-500"
+            >
+              <SwapThemeIcon className="fill-primary-200 dark:fill-primary-800" />
+            </ToolbarButton>
+          </Tooltip>
+        </div>
+
         <CurrentTimeAndCity />
       </div>
     </div>

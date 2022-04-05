@@ -17,6 +17,20 @@
       "value": "4 of my projects"
     }
   ],
+  "3kNnP9": [
+    {
+      "type": 0,
+      "value": "São Paulo, SP "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " 🇧🇷"
+    }
+  ],
   "46Cs0y": [
     {
       "type": 0,
@@ -227,6 +241,12 @@
       "value": "Lets Talk"
     }
   ],
+  "bpZEeb": [
+    {
+      "type": 0,
+      "value": "Start Conversation"
+    }
+  ],
   "d0RPmP": [
     {
       "type": 0,
@@ -277,6 +297,16 @@
     {
       "type": 0,
       "value": "Lexer, Parser and AST. A study to understand how languages are read and compiled."
+    }
+  ],
+  "ifZxwY": [
+    {
+      "type": 1,
+      "value": "count"
+    },
+    {
+      "type": 0,
+      "value": " selected projects"
     }
   ],
   "k8PzCR": [

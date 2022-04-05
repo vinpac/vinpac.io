@@ -15,13 +15,13 @@ const CurrentTimeAndCity: React.FC<Props> = ({ className }) => {
 
   return (
     <div className={cx('', className)}>
-      <h5 className="text-gray-400 uppercase text-sm font-medium">
+      <h5 className="text-gray-400 uppercase text-xs font-semibold">
         <FormattedMessage id="Equvau" defaultMessage="Cidade atual" />
       </h5>
       <p>
         <FormattedMessage
-          id="MJx0vh"
-          defaultMessage="São Paulo, SP {time} BR"
+          id="3kNnP9"
+          defaultMessage="São Paulo, SP {time} 🇧🇷"
           values={{ time: intl.formatTime(now) }}
         />
       </p>
