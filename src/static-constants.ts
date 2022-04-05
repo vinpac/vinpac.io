@@ -1,8 +1,8 @@
 export const DEFAULT_LOCALE = 'pt-br'
 
-export const vinicius = {
+export const vini = {
   image: '/assets/avatar.jpg',
-  site: 'vinpac.io',
+  site: 'https://vinpac.io',
   email: 'oi@vinpac.io',
   phone: '+55 11 976574407',
   instagramURL: 'https://instagram.com/vin.pacheco',

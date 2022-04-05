@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { vinicius } from '@static-constants'
+import { vini } from '@static-constants'
 
 export interface PostAuthorAvatarWithLinkProps {
   className?: string
@@ -12,13 +12,13 @@ const PostAuthorAvatarWithLink: React.FC<PostAuthorAvatarWithLinkProps> = ({
   return (
     <div className={cx('flex', className)}>
       <img
-        src={vinicius.image}
+        src={vini.image}
         className="w-10 h-10 bg-theme-200 rounded-lg mr-3"
       />
       <div className="leading-5">
         <h4 className="font-medium text-theme-900">Vinicius Pacheco</h4>
-        <a href={vinicius.twitterURL} className="text-blue-500 text-sm">
-          @{vinicius.twitterHandle}
+        <a href={vini.twitterURL} className="text-blue-500 text-sm">
+          @{vini.twitterHandle}
         </a>
       </div>
     </div>

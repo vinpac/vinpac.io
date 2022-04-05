@@ -3,7 +3,7 @@ import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import ArrowMessage from './ArrowMessage'
 import { FiMail } from 'react-icons/fi'
 import s from '@css/components/LPHero.module.css'
-import { vinicius } from '@static-constants'
+import { vini } from '@static-constants'
 import ButtonLink from './ButtonLink'
 import Image from 'next/image'
 
@@ -74,7 +74,7 @@ const LPHero: React.FC = () => {
               className="shadow-md transform hover:-translate-y-1 transition-transform duration-75"
               colorSchema="theme"
               size="lg"
-              href={`mailto:${vinicius.email}`}
+              href={`mailto:${vini.email}`}
             >
               <FiMail size={24} className="inline-block mr-2" />
               <FormattedMessage id="bpZEeb" defaultMessage="Começar Conversa" />

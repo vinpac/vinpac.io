@@ -2,7 +2,7 @@ import React from 'react'
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import cx from 'classnames'
 import ContactButton from './ContactButton'
-import { vinicius } from '@static-constants'
+import { vini } from '@static-constants'
 
 const messages = defineMessages({
   linkedinDesc: {
@@ -45,28 +45,28 @@ const LPContact: React.FC<Props> = ({ className }) => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
-              href={vinicius.linkedInURL}
+              href={vini.linkedInURL}
               label="Linkedin"
               description={intl.formatMessage(messages.linkedinDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
-              href={vinicius.dribbbleURL}
+              href={vini.dribbbleURL}
               label="Dribbble"
               description={intl.formatMessage(messages.dribbbleDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
-              href={vinicius.gitHubURL}
+              href={vini.gitHubURL}
               label="GitHub"
               description={intl.formatMessage(messages.githubDesc)}
             />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
             <ContactButton
-              href={`mailto:${vinicius.email}`}
+              href={`mailto:${vini.email}`}
               label="Email"
               description={intl.formatMessage(messages.myEmail)}
             />

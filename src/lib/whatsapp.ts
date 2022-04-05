@@ -1,4 +1,4 @@
-import { vinicius } from '@static-constants'
+import { vini } from '@static-constants'
 import { defineMessages, useIntl } from 'react-intl'
 
 const messages = defineMessages({
@@ -11,7 +11,7 @@ const messages = defineMessages({
 export const useMyWhatsAppLink = (): string => {
   const intl = useIntl()
   const text = escape(intl.formatMessage(messages.hello))
-  const phone = vinicius.phone.replace(' ', '')
+  const phone = vini.phone.replace(' ', '')
 
   return `https://api.whatsapp.com/send?phone=${phone}&text=${text}`
 }

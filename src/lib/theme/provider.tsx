@@ -6,6 +6,7 @@ import {
   getPreferredTheme,
   setPreferredTheme,
 } from '@lib/theme'
+import Head from 'next/head'
 
 interface ThemeProviderProps {
   className?: string
@@ -40,5 +41,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     [themeName, setThemeAndSavePreference],
   )
 
-  return <ThemeContext.Provider value={ctx}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={ctx}>
+      <Head>
+        <link
+          rel="icon"
+          href={themeName === 'dark' ? '/favicon.ico' : '/favicon-light.ico'}
+          type="image/x-icon"
+        />
+      </Head>
+      {children}
+    </ThemeContext.Provider>
+  )
 }

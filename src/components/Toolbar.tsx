@@ -8,7 +8,7 @@ import { useQuickOpen } from '@lib/quickOpen/hooks'
 import Logo from '@assets/svg/logo.svg'
 import Tooltip from '@reach/tooltip'
 import { defineMessages, useIntl } from 'react-intl'
-import { vinicius } from '@static-constants'
+import { vini } from '@static-constants'
 import SwapThemeIcon from '@components/SwapThemeIcon'
 import CurrentTimeAndCity from './CurrentTimeAndCity'
 import { useIsMac } from '@lib/browser'
@@ -74,21 +74,13 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           onClick={() => quickOpen.open({ text: '' })}
         />
         <div className="flex space-x-4 text-2xl border-l pl-4 border-gray-300 dark:border-gray-700">
-          <ToolbarButton label="GitHub" href={vinicius.gitHubURL} isExternal>
+          <ToolbarButton label="GitHub" href={vini.gitHubURL} isExternal>
             <FaGithub />
           </ToolbarButton>
-          <ToolbarButton
-            label="Dribbble"
-            href={vinicius.dribbbleURL}
-            isExternal
-          >
+          <ToolbarButton label="Dribbble" href={vini.dribbbleURL} isExternal>
             <FaDribbble />
           </ToolbarButton>
-          <ToolbarButton
-            label="LinkedIn"
-            href={vinicius.linkedInURL}
-            isExternal
-          >
+          <ToolbarButton label="LinkedIn" href={vini.linkedInURL} isExternal>
             <FaLinkedin />
           </ToolbarButton>
           <Tooltip label={themeToggleLabel}>
