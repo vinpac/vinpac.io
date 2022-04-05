@@ -13,8 +13,8 @@ const messages = defineMessages({
     defaultMessage: 'Esse sou eu',
   },
   contact: {
-    id: 'VZSoaa',
-    defaultMessage: 'Eu adoro receber propostas, ideias e boas energias :)',
+    id: '+Br3Cr',
+    defaultMessage: 'Aberto a receber propostas, ideias e memes :)',
   },
   chico: {
     id: '/pJiee',
@@ -26,7 +26,10 @@ const LPHero: React.FC = () => {
   const intl = useIntl()
 
   return (
-    <div className="relative overflow-hidden pb-36 md:pb-48">
+    <div
+      className="relative overflow-hidden pb-36 md:pb-48"
+      style={{ backgroundImage: '/assets/globe.svg' }}
+    >
       <div className="container pt-5 md:pt-10 z-10 relative">
         <figure
           className={`absolute rounded-xl -right-36 top-10 hidden lg:block ${s.picture}`}

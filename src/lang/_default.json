@@ -1,4 +1,7 @@
 {
+  "+Br3Cr": {
+    "defaultMessage": "Aberto a receber propostas, ideias e memes :)"
+  },
   "+j0BYY": {
     "defaultMessage": "Atados: Plataforma de voluntariado"
   },
@@ -85,9 +88,6 @@
   },
   "VOTlCZ": {
     "defaultMessage": "Uma Plataforma Web em React que capacita projetos sociais. Gerentes de Projetos o usam para encontrar e gerenciar voluntários, além receber doações por meio de uma integração de pagamentos. Por outro lado, os voluntários podem encontrar projetos e começar sua jornada voluntária. Fui o principal desenvolvedor Front-End e me comunicava diretamente com o desenvolvedor Back-End para integração a API Django em nosso produto principal e em plataformas específicas do cliente. Para a integração de pagamentos, trabalhei como desenvolvedor Back-End, onde criei Funções Lambda para servir como nossa ponte de integração. Isso nos permitiu receber mais de R$ 200.000 (200 mil reais) em março de 2020. Também trabalhei como desenvolvedor Back-End para habilitar a funcionalidade White-Label. Nesta função, criei um sistema onde uma plataforma para um cliente poderia substituir facilmente partes do nosso aplicativo para funcionar de acordo com as necessidades do cliente. Para melhorar a experiência de desenvolvimento, criei integrações contínuas para melhorar o processo de deploy. A integração validava a nova versão, fazia a publicação de previews e garantia que todos as plataformas dos clientes estivessem atualizadas com o núcleo do aplicativo."
-  },
-  "VZSoaa": {
-    "defaultMessage": "Eu adoro receber propostas, ideias e boas energias :)"
   },
   "WK/SgI": {
     "defaultMessage": "Não só de trabalho, eu vou vivendo..."
