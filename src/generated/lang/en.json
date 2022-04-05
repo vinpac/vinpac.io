@@ -1,4 +1,10 @@
 {
+  "+Br3Cr": [
+    {
+      "type": 0,
+      "value": "Open to receive proposals, ideas and memes :)"
+    }
+  ],
   "+j0BYY": [
     {
       "type": 0,
@@ -79,12 +85,6 @@
     {
       "type": 0,
       "value": "English"
-    }
-  ],
-  "9/DcFj": [
-    {
-      "type": 0,
-      "value": "I code and design to make the world a better place"
     }
   ],
   "AOsrhY": [
@@ -211,12 +211,6 @@
     {
       "type": 0,
       "value": "A React-based web app to empower social projects. Project creators used it to find and manage volunteers and receive donations through a payment integration. On the other side, volunteers could match themselves with projects and follow a volunteer path.\n\nI was the main front-end developer and liaised with the back-end developer to integrate with our API on our main product and in client-specific platforms. For the payment integration, I worked as the back-end developer, where I created Lambda functions to serve as our integration bridge. It allowed us to receive R$200,000+ (Brazilian real) in March of 2020. I also worked as a back-end developer to enable our white-label features. In this role, I created a system where a platform for a client could easily overwrite parts of our app to function according to the client's needs.\n\nTo improve the development experience, I added continuous integration to improve the deployment process. The integration validated the new app version, deployed previews, and guaranteed that every client was up to date with the app core."
-    }
-  ],
-  "VZSoaa": [
-    {
-      "type": 0,
-      "value": "Open to receive proposals, ideas and kind words :)"
     }
   ],
   "WK/SgI": [

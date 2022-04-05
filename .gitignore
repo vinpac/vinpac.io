@@ -117,3 +117,6 @@ dist
 
 # Misc
 .DS_Store
+
+# Generated
+src/generated
