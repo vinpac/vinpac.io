@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 
 export interface FooterProps {
-  readonly className?: string
+  className?: string
 }
 
 const Footer: React.FC<FooterProps> = ({ className }) => {

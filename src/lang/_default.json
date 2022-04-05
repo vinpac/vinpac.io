@@ -1,0 +1,158 @@
+{
+  "+j0BYY": {
+    "defaultMessage": "Atados: Plataforma de voluntariado"
+  },
+  "/pJiee": {
+    "defaultMessage": "E o Chico"
+  },
+  "1BAiZz": {
+    "defaultMessage": "4 projetos selecionados"
+  },
+  "46Cs0y": {
+    "defaultMessage": "Eu não sou dificil de achar, seguinte:"
+  },
+  "502GV5": {
+    "defaultMessage": "Meu Perfil Profissional"
+  },
+  "6EqXIC": {
+    "defaultMessage": "Projetos"
+  },
+  "71KGgl": {
+    "defaultMessage": "Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha praia. Alias, me amarro numa boa praia. Sempre que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma aventura. Principalmente se for com prancha. Bora dar um rolé de Skate? Tenho 2!"
+  },
+  "7xYPxA": {
+    "defaultMessage": "Cresci em Petrópolis, uma pequena cidade do Rio de Janeiro. As coisas não eram tão fáceis. <span>Com 14 anos, eu conheci na programação a minha forma de expressão</span>. Alguns anos e projetos depois, aos 17, a Atados me contratou como freelancer para construir sua primeira plataforma internacional. Eles me convidaram para mudar pra São Paulo, a 400 quilômetros dali. Aceitei o convite e me aventurei numa cidade nova aos 19."
+  },
+  "8yLSUZ": {
+    "defaultMessage": "Inglês"
+  },
+  "9/DcFj": {
+    "defaultMessage": "Há 5 anos trabalhando para tornar o mundo um lugar melhor"
+  },
+  "AOsrhY": {
+    "defaultMessage": "Protótipo: App para gerenciamente financeiro"
+  },
+  "CIe6I3": {
+    "defaultMessage": "Estudo: GraphQL Parser"
+  },
+  "Equvau": {
+    "defaultMessage": "Cidade atual"
+  },
+  "FOsGM9": {
+    "defaultMessage": "Este plugin cria definições e resolvers automaticamente transformando modelos do TypeORM em uma API GraphQL"
+  },
+  "FWkoiv": {
+    "defaultMessage": "Navegue / Busque / Se divirta"
+  },
+  "GOfudF": {
+    "defaultMessage": "Português"
+  },
+  "IPAhkW": {
+    "defaultMessage": "Meu blog"
+  },
+  "JflVZj": {
+    "defaultMessage": "Controle a finanças pessoais através de uma interface clara e direta. O desafio sempre foi ter vontade de registrar. Ser fácil é um grande primeiro passo."
+  },
+  "K0PYjV": {
+    "defaultMessage": "Protótipos e Designs"
+  },
+  "K5hD19": {
+    "defaultMessage": "Programação como uma forma de expressão"
+  },
+  "MJx0vh": {
+    "defaultMessage": "São Paulo, SP {time} BR"
+  },
+  "N5DL11": {
+    "defaultMessage": "De Petropólis para o mundo"
+  },
+  "PBh2Pr": {
+    "defaultMessage": "Navegar ({shortcut})"
+  },
+  "PZVEAt": {
+    "defaultMessage": "Visitar"
+  },
+  "PscvAo": {
+    "defaultMessage": "Sobre mim"
+  },
+  "QpMbuR": {
+    "defaultMessage": "Em São Paulo conheci uma gama muito diversificada de pessoas. Trabalhando na Atados fiz amigos para a vida. Conheci pessoas sensíveis que me deram um espaço para criar, o que fortaleceu minha empatia, minha capacidade de ouvir e minha expressão vulnerável."
+  },
+  "Rz2ayh": {
+    "defaultMessage": "Manda um oi"
+  },
+  "SgXTSK": {
+    "defaultMessage": "Contato"
+  },
+  "SxE3ly": {
+    "defaultMessage": "Esse sou eu"
+  },
+  "VOTlCZ": {
+    "defaultMessage": "Uma Plataforma Web em React que capacita projetos sociais. Gerentes de Projetos o usam para encontrar e gerenciar voluntários, além receber doações por meio de uma integração de pagamentos. Por outro lado, os voluntários podem encontrar projetos e começar sua jornada voluntária. Fui o principal desenvolvedor Front-End e me comunicava diretamente com o desenvolvedor Back-End para integração a API Django em nosso produto principal e em plataformas específicas do cliente. Para a integração de pagamentos, trabalhei como desenvolvedor Back-End, onde criei Funções Lambda para servir como nossa ponte de integração. Isso nos permitiu receber mais de R$ 200.000 (200 mil reais) em março de 2020. Também trabalhei como desenvolvedor Back-End para habilitar a funcionalidade White-Label. Nesta função, criei um sistema onde uma plataforma para um cliente poderia substituir facilmente partes do nosso aplicativo para funcionar de acordo com as necessidades do cliente. Para melhorar a experiência de desenvolvimento, criei integrações contínuas para melhorar o processo de deploy. A integração validava a nova versão, fazia a publicação de previews e garantia que todos as plataformas dos clientes estivessem atualizadas com o núcleo do aplicativo."
+  },
+  "VZSoaa": {
+    "defaultMessage": "Eu adoro receber propostas, ideias e boas energias :)"
+  },
+  "WK/SgI": {
+    "defaultMessage": "Não só de trabalho, eu vou vivendo..."
+  },
+  "XSO+lQ": {
+    "defaultMessage": "Bora conversar!"
+  },
+  "d0RPmP": {
+    "defaultMessage": "Desativar Modo Escuro"
+  },
+  "dkTf+d": {
+    "defaultMessage": "Tempo"
+  },
+  "eL0Zgf": {
+    "defaultMessage": "// Sou um grande fã de <span>Código aberto</span>"
+  },
+  "gFe2rH": {
+    "defaultMessage": "Oi - Vim através do seu portfólio"
+  },
+  "gniHKo": {
+    "defaultMessage": "Dev. Sênior apaixonado por arte"
+  },
+  "h/PBBt": {
+    "defaultMessage": "Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que decidir não fazer faculdade e mudar pra São Paulo para trabalhar foi a melhor decisão que eu podia ter tomado. Foi aprendendo na prática que eu criei meu próprio caminho."
+  },
+  "hqh7Hj": {
+    "defaultMessage": "Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas."
+  },
+  "k8PzCR": {
+    "defaultMessage": "Olá, sou <span>Vinicius Pacheco</span> e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."
+  },
+  "kUEOEk": {
+    "defaultMessage": "{years} anos"
+  },
+  "m42V4+": {
+    "defaultMessage": "Início"
+  },
+  "n5pgGm": {
+    "defaultMessage": "Fale comigo"
+  },
+  "nYqYhT": {
+    "defaultMessage": "Ativar Modo Escuro"
+  },
+  "nhjJTT": {
+    "defaultMessage": "Espaço da gentileza"
+  },
+  "oNYXnh": {
+    "defaultMessage": "Veja todas meus desenhos no"
+  },
+  "rTpk4S": {
+    "defaultMessage": "Open Source e Estudos"
+  },
+  "tc4VSe": {
+    "defaultMessage": "Eu desenhei e desenvolvi este site em Janeiro de 2021"
+  },
+  "tv5FG3": {
+    "defaultMessage": "Blog"
+  },
+  "xbP7qa": {
+    "defaultMessage": "Sobre Mim"
+  },
+  "yt94QM": {
+    "defaultMessage": "Mensagens de quem trabalhou comigo"
+  }
+}

@@ -2,16 +2,16 @@ import React from 'react'
 import cx from 'classnames'
 
 export interface ToolbarButtonProps {
-  readonly as?:
+  as?:
     | React.ComponentType<{ ref: any; title: string; className: string }>
     | string
-  readonly label: string
-  readonly href?: string
-  readonly onClick?: (event: React.MouseEvent) => void
-  readonly fallbackToLabel?: boolean
-  readonly children?: React.ReactNode
-  readonly className?: string
-  readonly textClassName?: string
+  label: string
+  href?: string
+  onClick?: (event: React.MouseEvent) => void
+  fallbackToLabel?: boolean
+  children?: React.ReactNode
+  className?: string
+  textClassName?: string
 }
 
 const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(

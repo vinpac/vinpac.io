@@ -6,9 +6,9 @@ import { BestMomentsCarouselCurrentIndexIndication } from '@components/BestMomen
 import { ColorName } from '@lib/theme/types'
 
 export interface BestMomentselProps {
-  readonly className?: string
-  readonly color?: ColorName
-  readonly positionClassName?: string
+  className?: string
+  color?: ColorName
+  positionClassName?: string
 }
 
 const TIMEOUT = 10000

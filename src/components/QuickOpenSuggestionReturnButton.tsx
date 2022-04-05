@@ -3,12 +3,12 @@ import cx from 'classnames'
 import { FiCornerDownLeft } from 'react-icons/fi'
 
 export interface QuickOpenSuggestionReturnButtonProps {
-  readonly className?: string
+  className?: string
 }
 
-const QuickOpenSuggestionReturnButton: React.FC<QuickOpenSuggestionReturnButtonProps> = ({
-  className,
-}) => {
+const QuickOpenSuggestionReturnButton: React.FC<
+  QuickOpenSuggestionReturnButtonProps
+> = ({ className }) => {
   return (
     <span
       className={cx(

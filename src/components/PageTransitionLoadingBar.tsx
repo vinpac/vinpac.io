@@ -4,7 +4,7 @@ import Router from 'next/router'
 import { useThemeName } from '@lib/theme'
 
 export interface PageTransitionLoadingBarProps {
-  readonly className?: string
+  className?: string
 }
 
 const PageTransitionLoadingBar: React.FC<PageTransitionLoadingBarProps> = ({

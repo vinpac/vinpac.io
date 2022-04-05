@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Tooltip } from '@reach/tooltip'
 
 export interface TechStackItemProps {
-  readonly name:
+  name:
     | 'Figma'
     | 'React'
     | 'Next.js'
@@ -11,7 +11,7 @@ export interface TechStackItemProps {
     | 'TailwindCSS'
     | 'Node.js'
     | 'React Native'
-  readonly className?: string
+  className?: string
 }
 
 const nameToTechLogoSrc: { [name in TechStackItemProps['name']]: string } = {

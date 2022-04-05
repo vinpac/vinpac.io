@@ -3,7 +3,7 @@ import cx from 'classnames'
 import BlockPlaceholder from '@components/BlockPlaceholder'
 
 export interface TextPlaceholderProps {
-  readonly className?: string
+  className?: string
 }
 
 const TextPlaceholder: React.FC<TextPlaceholderProps> = ({ className }) => {

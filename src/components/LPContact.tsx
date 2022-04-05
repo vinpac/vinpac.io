@@ -6,24 +6,20 @@ import { vinicius } from '@static-constants'
 
 const messages = defineMessages({
   linkedinDesc: {
-    id: 'components/LPContact/linkedinDesc',
-    defaultMessage: 'Meu perfil profissional',
+    id: '502GV5',
+    defaultMessage: 'Meu Perfil Profissional',
   },
   dribbbleDesc: {
-    id: 'components/LPContact/dribbbleDesc',
-    defaultMessage: 'Trabalhos em andamento',
+    id: 'K0PYjV',
+    defaultMessage: 'Protótipos e Designs',
   },
   githubDesc: {
-    id: 'components/LPContact/githubDesc',
-    defaultMessage: 'Muito código e estudo',
-  },
-  instagramDesc: {
-    id: 'components/LPContact/instagramDesc',
-    defaultMessage: 'Minha vida pessoal',
+    id: 'rTpk4S',
+    defaultMessage: 'Open Source e Estudos',
   },
   myEmail: {
-    id: 'components/LPContact/myEmail',
-    defaultMessage: 'Bora conversar, po!',
+    id: 'n5pgGm',
+    defaultMessage: 'Fale comigo',
   },
 })
 
@@ -38,14 +34,11 @@ const LPContact: React.FC<Props> = ({ className }) => {
     <div id="contact" className={cx('py-16 sm:py-24', className)}>
       <div className="container">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-gray-700 dark:text-white">
-          <FormattedMessage
-            id="components/LPAboutContact/title"
-            defaultMessage="Bora conversar!"
-          />
+          <FormattedMessage id="XSO+lQ" defaultMessage="Bora conversar!" />
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 mb-12">
           <FormattedMessage
-            id="components/LPAboutContact/subtitle"
+            id="46Cs0y"
             defaultMessage="Eu não sou dificil de achar, seguinte:"
           />
         </p>

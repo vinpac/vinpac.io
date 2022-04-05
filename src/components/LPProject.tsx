@@ -32,10 +32,7 @@ const LPProject: React.FC<Props> = ({
   const renderedTeam = team && (
     <>
       <span className="font-medium">
-        <FormattedMessage
-          id="components/LPProject/team"
-          defaultMessage="Time"
-        />
+        <FormattedMessage id="dkTf+d" defaultMessage="Tempo" />
         {': '}
       </span>
       {team.map((member, i) => (
@@ -68,7 +65,7 @@ const LPProject: React.FC<Props> = ({
           {years && (
             <span className="font-normal text-lg ml-3 text-green-500">
               <FormattedMessage
-                id="components/LPProject/years"
+                id="kUEOEk"
                 defaultMessage="{years} anos"
                 values={{ years }}
               />
@@ -120,10 +117,7 @@ const LPProject: React.FC<Props> = ({
                       size={18}
                     />
                     {action.label || (
-                      <FormattedMessage
-                        id="components/LPProject/defaultAction"
-                        defaultMessage="Visitar"
-                      />
+                      <FormattedMessage id="PZVEAt" defaultMessage="Visitar" />
                     )}
                   </ButtonLink>
                 )

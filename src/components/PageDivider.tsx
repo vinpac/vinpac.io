@@ -2,7 +2,7 @@ import React from 'react'
 import { ColorName } from '@lib/theme'
 
 export interface PageDividerProps {
-  readonly color: ColorName
+  color: ColorName
 }
 
 const PageDivider: React.FC<PageDividerProps> = ({ color }) => {

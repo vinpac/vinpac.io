@@ -5,11 +5,11 @@ import { PropsPassedToSuggestion } from '@lib/quickOpen/types'
 
 const messages = defineMessages({
   activeDarkMode: {
-    id: 'QuickOpenSuggestionThemeSwapTitle/activeDarkMode',
+    id: 'nYqYhT',
     defaultMessage: 'Ativar Modo Escuro',
   },
   disableDarkMode: {
-    id: 'QuickOpenSuggestionThemeSwapTitle/disableDarkMode',
+    id: 'd0RPmP',
     defaultMessage: 'Desativar Modo Escuro',
   },
 })

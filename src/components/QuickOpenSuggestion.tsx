@@ -9,11 +9,11 @@ import { useRouter } from 'next/router'
 import { localizePathname } from '@lib/intl'
 
 export interface QuickOpenSuggestionProps {
-  readonly suggestion: Suggestion
-  readonly highlightRegex?: RegExp
-  readonly className?: string
-  readonly selected?: boolean
-  readonly onSelect: (suggestion: Suggestion) => void
+  suggestion: Suggestion
+  highlightRegex?: RegExp
+  className?: string
+  selected?: boolean
+  onSelect: (suggestion: Suggestion) => void
 }
 
 const QuickOpenSuggestion: React.FC<QuickOpenSuggestionProps> = ({

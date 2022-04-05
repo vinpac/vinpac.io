@@ -3,19 +3,17 @@ import cx from 'classnames'
 import ShadowColor from '@components/ShadowColor'
 
 export interface ProjectCompactDetailsButtonProps {
-  readonly className?: string
-  readonly href: string
-  readonly name: string
-  readonly description: string
-  readonly logoSrc: string
-  readonly active?: boolean
+  className?: string
+  href: string
+  name: string
+  description: string
+  logoSrc: string
+  active?: boolean
 }
 
-const ProjectCompactDetailsButton: React.FC<ProjectCompactDetailsButtonProps> = ({
-  className,
-  name,
-  logoSrc,
-}) => {
+const ProjectCompactDetailsButton: React.FC<
+  ProjectCompactDetailsButtonProps
+> = ({ className, name, logoSrc }) => {
   return (
     <div className={cx(className)}>
       <div className="pl-32">

@@ -15,18 +15,18 @@ import { localizePathname } from '@lib/intl'
 
 const messages = defineMessages({
   placeholder: {
-    id: 'components/QuickOpen/placeholder',
+    id: 'FWkoiv',
     defaultMessage: 'Navegue / Busque / Se divirta',
   },
 })
 
 export interface QuickOpenProps {
-  readonly className?: string
-  readonly defaultText?: string
-  readonly onSelectItem?: (suggestion: Suggestion) => void
-  readonly onResultsChange?: (input: string, suggestion: Suggestion[]) => void
-  readonly onTextChange?: (text: string) => void
-  readonly buildSuggestionsList: BuildSuggestionsListFn
+  className?: string
+  defaultText?: string
+  onSelectItem?: (suggestion: Suggestion) => void
+  onResultsChange?: (input: string, suggestion: Suggestion[]) => void
+  onTextChange?: (text: string) => void
+  buildSuggestionsList: BuildSuggestionsListFn
 }
 
 const QuickOpen: React.FC<QuickOpenProps> = ({

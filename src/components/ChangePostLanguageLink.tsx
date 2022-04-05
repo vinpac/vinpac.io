@@ -8,9 +8,9 @@ import { getPostLinkHref } from '@lib/blog/browserHelpers'
 import { ValidLocale } from '@lib/i18n'
 
 export interface ChangePostLanguageLinkProps {
-  readonly post: BlogPost
-  readonly locale: ValidLocale
-  readonly className?: string
+  post: BlogPost
+  locale: ValidLocale
+  className?: string
 }
 
 const ChangePostLanguageLink: React.FC<ChangePostLanguageLinkProps> = ({

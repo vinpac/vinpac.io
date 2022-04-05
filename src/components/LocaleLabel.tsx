@@ -5,17 +5,17 @@ import { useIntl, defineMessages } from 'react-intl'
 
 const messages = defineMessages({
   'en-US': {
-    id: 'LocaleLabel/english',
+    id: '8yLSUZ',
     defaultMessage: 'Inglês',
   },
   'pt-BR': {
-    id: 'LocaleLabel/portuguese',
+    id: 'GOfudF',
     defaultMessage: 'Português',
   },
 })
 
 export interface LocaleLabelProps {
-  readonly locale: ValidLocale
+  locale: ValidLocale
 }
 
 const LocaleLabel: React.FC<LocaleLabelProps> = ({ locale }) => {

@@ -1,67 +1,139 @@
 {
-  "LocaleLabel/english": [
+  "+j0BYY": [
+    {
+      "type": 0,
+      "value": "Atados: "
+    }
+  ],
+  "/pJiee": [
+    {
+      "type": 0,
+      "value": "And Chico"
+    }
+  ],
+  "1BAiZz": [
+    {
+      "type": 0,
+      "value": "4 of my projects"
+    }
+  ],
+  "46Cs0y": [
+    {
+      "type": 0,
+      "value": "I'm not that hard to find, look:"
+    }
+  ],
+  "502GV5": [
+    {
+      "type": 0,
+      "value": "My Professional Profile"
+    }
+  ],
+  "6EqXIC": [
+    {
+      "type": 0,
+      "value": "Projects"
+    }
+  ],
+  "71KGgl": [
+    {
+      "type": 0,
+      "value": "I love to play music. I play cavaquinho, banjo and tambourine. Playing samba on the street is my vibe. If going to the beach is possible, I'm easily there. Whenever I can, I carry my surfboard to the sea. I love a good adventure. Especially if it's on a board. Let's take a skate ride? I have 2!"
+    }
+  ],
+  "7xYPxA": [
+    {
+      "type": 0,
+      "value": "I grew up in Petrópolis, a small town in Rio de Janeiro. Things weren't so easy. "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "At the age of 14, I discovered my form of expression in programming"
+        }
+      ],
+      "type": 8,
+      "value": "span"
+    },
+    {
+      "type": 0,
+      "value": ". A few years and projects later, at 17, Atados hired me as a freelancer to build their first international platform. They invited me to move to São Paulo, 400 kilometers away. I accepted the invitation and ventured into a new city at age 19"
+    }
+  ],
+  "8yLSUZ": [
     {
       "type": 0,
       "value": "English"
     }
   ],
-  "LocaleLabel/portuguese": [
+  "9/DcFj": [
     {
       "type": 0,
-      "value": "Portuguese"
+      "value": "I code and design to make the world a better place"
     }
   ],
-  "QuickOpenSuggestionThemeSwapTitle/activeDarkMode": [
+  "AOsrhY": [
     {
       "type": 0,
-      "value": "Activate Dark Mode"
+      "value": "Prototype: App for managing personal finances"
     }
   ],
-  "QuickOpenSuggestionThemeSwapTitle/disableDarkMode": [
+  "CIe6I3": [
     {
       "type": 0,
-      "value": "Disable Dark Mode"
+      "value": "Study: GraphQL Parser"
     }
   ],
-  "Toolbar/activeDarkMode": [
-    {
-      "type": 0,
-      "value": "Activate Dark Mode"
-    }
-  ],
-  "Toolbar/blog": [
-    {
-      "type": 0,
-      "value": "Blog"
-    }
-  ],
-  "Toolbar/disableDarkMode": [
-    {
-      "type": 0,
-      "value": "Disable Dark Mode"
-    }
-  ],
-  "Toolbar/navigate": [
-    {
-      "type": 0,
-      "value": "Navigate ("
-    },
-    {
-      "type": 1,
-      "value": "shortcut"
-    },
-    {
-      "type": 0,
-      "value": ")"
-    }
-  ],
-  "components/CurrentTimeAndCity/label": [
+  "Equvau": [
     {
       "type": 0,
       "value": "Current city"
     }
   ],
-  "components/CurrentTimeAndCity/value": [
+  "FOsGM9": [
+    {
+      "type": 0,
+      "value": "This plugin automatically creates GraphQL types and resolvers by transforming your TypeORM models into a GraphQL API"
+    }
+  ],
+  "FWkoiv": [
+    {
+      "type": 0,
+      "value": "Navigate / Search / Have fun"
+    }
+  ],
+  "GOfudF": [
+    {
+      "type": 0,
+      "value": "Portuguese"
+    }
+  ],
+  "IPAhkW": [
+    {
+      "type": 0,
+      "value": "My Blog"
+    }
+  ],
+  "JflVZj": [
+    {
+      "type": 0,
+      "value": "Control your own personal finances through a simple, easy to use interface. For me, it was challenging to register and keeping track of all my personal expenses, so I decided to find an easier way to do it and prototyped this app."
+    }
+  ],
+  "K0PYjV": [
+    {
+      "type": 0,
+      "value": "Prototypes and Designs"
+    }
+  ],
+  "K5hD19": [
+    {
+      "type": 0,
+      "value": "Code as a form of expression"
+    }
+  ],
+  "MJx0vh": [
     {
       "type": 0,
       "value": "São Paulo, SP "
@@ -75,219 +147,99 @@
       "value": " BR"
     }
   ],
-  "components/LPAboutContact/subtitle": [
+  "N5DL11": [
     {
       "type": 0,
-      "value": "I'm not that hard to find, look:"
+      "value": "From Petrópolis to the world"
     }
   ],
-  "components/LPAboutContact/title": [
+  "PBh2Pr": [
     {
       "type": 0,
-      "value": "Don't be shy. Let's talk!"
-    }
-  ],
-  "components/LPAboutMe/arrowMessage": [
-    {
-      "type": 0,
-      "value": "Like it? Follow me on"
-    }
-  ],
-  "components/LPAboutMe/p/1": [
-    {
-      "type": 0,
-      "value": "My name is "
+      "value": "Navigate ("
     },
     {
-      "children": [
-        {
-          "type": 0,
-          "value": "Vinicius Pacheco"
-        }
-      ],
-      "type": 8,
-      "value": "span"
+      "type": 1,
+      "value": "shortcut"
     },
     {
       "type": 0,
-      "value": " and I'm a Full Stack developer and Designer with leadership experience. I combine design with my expertise in coding to transform complex problems into complete and elegant solutions. I'm fluent with Node.js, React and Typescript, and have some experience with Python and PHP. My greatest strengths are my learning speed and sensibility to hear. I always look for harmonizing functionality and elegancy."
+      "value": ")"
     }
   ],
-  "components/LPAboutMe/p/3": [
-    {
-      "type": 0,
-      "value": "I grew up in Petrópolis, a small city in Rio de Janeiro. Things weren't so easy. Violence was normal and looking back I realize that I hardly felt heard. "
-    },
-    {
-      "children": [
-        {
-          "type": 0,
-          "value": "It was through coding that was able to express myself"
-        }
-      ],
-      "type": 8,
-      "value": "span"
-    },
-    {
-      "type": 0,
-      "value": " and find my voice at age 14. Later on, when I was 17, Atados contracted me as a freelancer to build their first international platform. So I moved to São Paulo, 286 miles from where I grew up."
-    }
-  ],
-  "components/LPAboutMe/p/4": [
-    {
-      "type": 0,
-      "value": "Inside Atados, I met all kinds of people. I formed great friendships for life, met sensible people that gave me the space to create and learnt the value of having empathic, vulnerable and true relationships."
-    }
-  ],
-  "components/LPAboutMe/p/5": [
-    {
-      "type": 0,
-      "value": "Learning how to be a better person helped me to build bridges instead of walls, to listen, to feel, to communicate and ask for help. I'm really happy to have worked here."
-    }
-  ],
-  "components/LPAboutMe/p/6": [
-    {
-      "type": 0,
-      "value": "I play cavaquinho, a Brazilian banjo, and tambourine. So playing samba in the street is my jam, but my favourite thing in the world is going to the beach. Whenever it's possible I take my surfboard with me. To be honest there are few adventures that I wouldn't jump into, especially those with boards. Skating? I got 2 - Let's do it!"
-    }
-  ],
-  "components/LPAboutMe/subtitle": [
-    {
-      "type": 0,
-      "value": "An artist from Brazil"
-    }
-  ],
-  "components/LPAboutMe/title": [
-    {
-      "type": 0,
-      "value": "About me"
-    }
-  ],
-  "components/LPAboutMe/title/1": [
-    {
-      "type": 0,
-      "value": "First, who I am:"
-    }
-  ],
-  "components/LPAboutMe/title/2": [
-    {
-      "type": 0,
-      "value": "How I opened my heart to listen"
-    }
-  ],
-  "components/LPAboutMe/title/3": [
-    {
-      "type": 0,
-      "value": "Oh, and I love to hangout"
-    }
-  ],
-  "components/LPContact/dribbbleDesc": [
-    {
-      "type": 0,
-      "value": "Designing ideas"
-    }
-  ],
-  "components/LPContact/githubDesc": [
-    {
-      "type": 0,
-      "value": "Building the world"
-    }
-  ],
-  "components/LPContact/instagramDesc": [
-    {
-      "type": 0,
-      "value": "Personal life with filters"
-    }
-  ],
-  "components/LPContact/linkedinDesc": [
-    {
-      "type": 0,
-      "value": "Work with me"
-    }
-  ],
-  "components/LPContact/myEmail": [
-    {
-      "type": 0,
-      "value": "Contact me"
-    }
-  ],
-  "components/LPFooter/message": [
-    {
-      "type": 0,
-      "value": "I designed and developed this website in January 2021"
-    }
-  ],
-  "components/LPHero/headline": [
-    {
-      "type": 0,
-      "value": "I code and design to make the world a better place"
-    }
-  ],
-  "components/LPHero/myemail": [
-    {
-      "type": 0,
-      "value": "Say Hi"
-    }
-  ],
-  "components/LPHero/subtitle": [
-    {
-      "type": 0,
-      "value": "Senior Dev. in love with art"
-    }
-  ],
-  "components/LPKindWords/daniel": [
-    {
-      "type": 0,
-      "value": "Vini was responsible for building and scaling the website Atados (www.atados.com.br). He managed our team for some years and with him, besides the creation of our platform with an easy to use interface for non-profit organizations, we also built a smart and scalable manageament system that enabled the technology team to be self sustainable for the first time. I hope that we can build more projects together in the future"
-    }
-  ],
-  "components/LPKindWords/josias": [
-    {
-      "type": 0,
-      "value": "Vinícius is simply one of those people that is completely out of the curve. His skills to manage and developer evolve in way that amazes anyone. Definitly one of the best professionals that I've had the pleasure to work with."
-    }
-  ],
-  "components/LPKindWords/marcos": [
-    {
-      "type": 0,
-      "value": "Vinicius surprises anyone with his technical and manageament skills, an excellent professional. Deals with new challenges and problems like everyday steps, it's a professional that every needs."
-    }
-  ],
-  "components/LPKindWords/subtitle": [
-    {
-      "type": 0,
-      "value": "From people that worked with me"
-    }
-  ],
-  "components/LPKindWords/title": [
-    {
-      "type": 0,
-      "value": "Kind messages"
-    }
-  ],
-  "components/LPProject/defaultAction": [
+  "PZVEAt": [
     {
       "type": 0,
       "value": "Visit"
     }
   ],
-  "components/LPProject/team": [
+  "PscvAo": [
     {
       "type": 0,
-      "value": "Team"
+      "value": "About me"
     }
   ],
-  "components/LPProject/years": [
-    {
-      "type": 1,
-      "value": "years"
-    },
+  "QpMbuR": [
     {
       "type": 0,
-      "value": " years"
+      "value": "In São Paulo I got to know a very diverse range of people. Working at Atados I made friends for life. I met sensitive people who gave me a space to create which strengthened my empathy, my listening skills, and vulnerable expression."
     }
   ],
-  "components/LPProjects/openSourceTitle": [
+  "Rz2ayh": [
+    {
+      "type": 0,
+      "value": "Say hi"
+    }
+  ],
+  "SgXTSK": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "SxE3ly": [
+    {
+      "type": 0,
+      "value": "This is Me"
+    }
+  ],
+  "VOTlCZ": [
+    {
+      "type": 0,
+      "value": "A React-based web app to empower social projects. Project creators used it to find and manage volunteers and receive donations through a payment integration. On the other side, volunteers could match themselves with projects and follow a volunteer path.\n\nI was the main front-end developer and liaised with the back-end developer to integrate with our API on our main product and in client-specific platforms. For the payment integration, I worked as the back-end developer, where I created Lambda functions to serve as our integration bridge. It allowed us to receive R$200,000+ (Brazilian real) in March of 2020. I also worked as a back-end developer to enable our white-label features. In this role, I created a system where a platform for a client could easily overwrite parts of our app to function according to the client's needs.\n\nTo improve the development experience, I added continuous integration to improve the deployment process. The integration validated the new app version, deployed previews, and guaranteed that every client was up to date with the app core."
+    }
+  ],
+  "VZSoaa": [
+    {
+      "type": 0,
+      "value": "Open to receive proposals, ideas and kind words :)"
+    }
+  ],
+  "WK/SgI": [
+    {
+      "type": 0,
+      "value": "It's not all about work all the time"
+    }
+  ],
+  "XSO+lQ": [
+    {
+      "type": 0,
+      "value": "Lets Talk"
+    }
+  ],
+  "d0RPmP": [
+    {
+      "type": 0,
+      "value": "Disable Dark Mode"
+    }
+  ],
+  "dkTf+d": [
+    {
+      "type": 0,
+      "value": "Time"
+    }
+  ],
+  "eL0Zgf": [
     {
       "type": 0,
       "value": "// I'm big fan of "
@@ -303,130 +255,118 @@
       "value": "span"
     }
   ],
-  "components/LPProjects/projects": [
+  "gFe2rH": [
     {
       "type": 0,
-      "value": "Projects"
+      "value": "Hi - I came through your portfolio"
     }
   ],
-  "components/LPProjects/selectedProjects": [
+  "gniHKo": [
     {
       "type": 0,
-      "value": "4 of my projects"
+      "value": "An artist from Brazil"
     }
   ],
-  "components/QuickOpen/placeholder": [
+  "h/PBBt": [
     {
       "type": 0,
-      "value": "Navigate / Search / Have fun"
+      "value": "I learned to listen, feel, communicate and ask for help. Looking back, I see that deciding not to go to college and moving to São Paulo to work was the best decision I could have made. It was through learning in practice that I created my own path."
     }
   ],
-  "defaultSuggestions/aboutMe": [
-    {
-      "type": 0,
-      "value": "About me"
-    }
-  ],
-  "defaultSuggestions/contact": [
-    {
-      "type": 0,
-      "value": "Contact"
-    }
-  ],
-  "defaultSuggestions/home": [
-    {
-      "type": 0,
-      "value": "Home"
-    }
-  ],
-  "defaultSuggestions/kindWords": [
-    {
-      "type": 0,
-      "value": "Kind words"
-    }
-  ],
-  "defaultSuggestions/myBlog": [
-    {
-      "type": 0,
-      "value": "My blog"
-    }
-  ],
-  "defaultSuggestions/projects": [
-    {
-      "type": 0,
-      "value": "Projects"
-    }
-  ],
-  "pages/blog/[slug]/changeLanguage": [
-    {
-      "type": 0,
-      "value": "Read in:"
-    }
-  ],
-  "pages/index/chico": [
-    {
-      "type": 0,
-      "value": "And Chico"
-    }
-  ],
-  "pages/index/contact": [
-    {
-      "type": 0,
-      "value": "Proposals, ideas and kind words are always welcome :)"
-    }
-  ],
-  "pages/index/me": [
-    {
-      "type": 0,
-      "value": "That's me"
-    }
-  ],
-  "project/atados/description": [
-    {
-      "type": 0,
-      "value": "I worked at Atados as a Full Stack Developer, Designer and Tech Leader. For 1 year, I led a team of 4 developers to create impactful tech solutions in the social responsibility market. Our products were used by companies such as Samsung, Boticário and Via Varejo and our main product, a SASS web app, scaled to more than 150k users. Atados is the biggest independent volunteering platform in Brazil."
-    }
-  ],
-  "project/atados/title": [
-    {
-      "type": 0,
-      "value": "Atados: Volunteering platform"
-    }
-  ],
-  "project/financas/description": [
-    {
-      "type": 0,
-      "value": "Control your own personal finances through a simple, easy to use interface. For me, it was challenging to register and keeping track of all my personal expenses, so I decided to find an easier way to do it and prototyped this app."
-    }
-  ],
-  "project/financas/title": [
-    {
-      "type": 0,
-      "value": "Prototype: App for managing personal finances"
-    }
-  ],
-  "project/nexusTypeORMPlugin/description": [
-    {
-      "type": 0,
-      "value": "This plugin automatically creates GraphQL types and resolvers by transforming your TypeORM models into a GraphQL API"
-    }
-  ],
-  "project/pGraphQL/description": [
+  "hqh7Hj": [
     {
       "type": 0,
       "value": "Lexer, Parser and AST. A study to understand how languages are read and compiled."
     }
   ],
-  "project/pGraphQL/title": [
+  "k8PzCR": [
     {
       "type": 0,
-      "value": "Study: GraphQL Parser"
+      "value": "Hi, I'm "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Vinicius Pacheco"
+        }
+      ],
+      "type": 8,
+      "value": "span"
+    },
+    {
+      "type": 0,
+      "value": " and  I'm a Full-stack developer with 7+ years of experience, specializing in React, Node.js, and TypeScript. With a unique combination of design and development experience, I build professional, pixel-perfect interfaces in a short amount of time. I excel at delivering smart solutions that enable seamless experiences."
     }
   ],
-  "whatsapp/hello": [
+  "kUEOEk": [
+    {
+      "type": 1,
+      "value": "years"
+    },
     {
       "type": 0,
-      "value": "Hi - I came through your portfolio"
+      "value": " years"
+    }
+  ],
+  "m42V4+": [
+    {
+      "type": 0,
+      "value": "Home"
+    }
+  ],
+  "n5pgGm": [
+    {
+      "type": 0,
+      "value": "Talk to me"
+    }
+  ],
+  "nYqYhT": [
+    {
+      "type": 0,
+      "value": "Enable Dark Mode"
+    }
+  ],
+  "nhjJTT": [
+    {
+      "type": 0,
+      "value": "Kind words"
+    }
+  ],
+  "oNYXnh": [
+    {
+      "type": 0,
+      "value": "Check all my designs on"
+    }
+  ],
+  "rTpk4S": [
+    {
+      "type": 0,
+      "value": "Open Source and Studies"
+    }
+  ],
+  "tc4VSe": [
+    {
+      "type": 0,
+      "value": "II designed and developed this website in January 2021"
+    }
+  ],
+  "tv5FG3": [
+    {
+      "type": 0,
+      "value": "Blog"
+    }
+  ],
+  "xbP7qa": [
+    {
+      "type": 0,
+      "value": "About Me"
+    }
+  ],
+  "yt94QM": [
+    {
+      "type": 0,
+      "value": "Messages from who worked with me"
     }
   ]
 }

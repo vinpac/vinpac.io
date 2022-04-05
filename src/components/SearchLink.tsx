@@ -2,8 +2,8 @@ import React, { useCallback } from 'react'
 import { useQuickOpen } from '@lib/quickOpen/hooks'
 
 export interface SearchLinkProps {
-  readonly query: string
-  readonly passHref?: boolean
+  query: string
+  passHref?: boolean
 }
 
 const SearchLink: React.FC<SearchLinkProps> = ({

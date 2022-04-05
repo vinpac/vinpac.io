@@ -8,7 +8,7 @@ import {
 } from '@lib/theme'
 
 interface ThemeProviderProps {
-  readonly className?: string
+  className?: string
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {

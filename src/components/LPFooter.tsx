@@ -11,7 +11,7 @@ const LPFooter: React.FC<Props> = ({ className }) => {
     <div className={cx('container', className)}>
       <p className="border-t-2 dark:border-gray-700 py-12 text-center text-lg font-medium text-gray-500">
         <FormattedMessage
-          id="components/LPFooter/message"
+          id="tc4VSe"
           defaultMessage="Eu desenhei e desenvolvi este site em Janeiro de 2021"
         />
       </p>

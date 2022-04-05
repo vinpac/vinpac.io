@@ -3,10 +3,10 @@ import cx from 'classnames'
 import { ColorName } from '@lib/theme'
 
 export interface TagProps {
-  readonly className?: string
-  readonly bgClassName?: string
-  readonly color?: ColorName
-  readonly children?: React.ReactNode
+  className?: string
+  bgClassName?: string
+  color?: ColorName
+  children?: React.ReactNode
 }
 
 const Tag: React.FC<TagProps> = ({

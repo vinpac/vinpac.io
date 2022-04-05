@@ -2,7 +2,7 @@ import React from 'react'
 import IphoneMockup from '@components/IphoneMockup'
 
 export interface ProjectShowcaseOnMockupsProps {
-  readonly className?: string
+  className?: string
 }
 
 const ProjectShowcaseOnMockups: React.FC<ProjectShowcaseOnMockupsProps> = ({

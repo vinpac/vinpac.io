@@ -36,14 +36,11 @@ const LPKindWords: React.FC<Props> = ({ className }) => {
     >
       <div className="container">
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 dark:text-white">
-          <FormattedMessage
-            id="components/LPKindWords/title"
-            defaultMessage="Espaço da gentileza"
-          />
+          <FormattedMessage id="nhjJTT" defaultMessage="Espaço da gentileza" />
         </h2>
         <p className="text-xl sm:text-2xl md:text-3xl font-medium text-yellow-500 mb-12">
           <FormattedMessage
-            id="components/LPKindWords/subtitle"
+            id="yt94QM"
             defaultMessage="Mensagens de quem trabalhou comigo"
           />
         </p>

@@ -9,15 +9,15 @@ import Image from 'next/image'
 
 const messages = defineMessages({
   me: {
-    id: 'pages/index/me',
+    id: 'SxE3ly',
     defaultMessage: 'Esse sou eu',
   },
   contact: {
-    id: 'pages/index/contact',
+    id: 'VZSoaa',
     defaultMessage: 'Eu adoro receber propostas, ideias e boas energias :)',
   },
   chico: {
-    id: 'pages/index/chico',
+    id: '/pJiee',
     defaultMessage: 'E o Chico',
   },
 })
@@ -59,13 +59,13 @@ const LPHero: React.FC = () => {
             className={`text-4xl sm:text-5xl md:text-7xl text-gray-900 dark:text-white font-bold leading-tight mb-4 md:mb-8 ${s.headline}`}
           >
             <FormattedMessage
-              id="components/LPHero/headline"
+              id="9/DcFj"
               defaultMessage="Há 5 anos trabalhando para tornar o mundo um lugar melhor"
             />
           </h1>
           <h4 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 leading-tight mb-8">
             <FormattedMessage
-              id="components/LPHero/subtitle"
+              id="gniHKo"
               defaultMessage="Dev. Sênior apaixonado por arte"
             />
           </h4>
@@ -77,10 +77,7 @@ const LPHero: React.FC = () => {
               href={`mailto:${vinicius.email}`}
             >
               <FiMail size={24} className="inline-block mr-2" />
-              <FormattedMessage
-                id="components/LPHero/myemail"
-                defaultMessage="Manda um oi"
-              />
+              <FormattedMessage id="Rz2ayh" defaultMessage="Manda um oi" />
             </ButtonLink>
             <ArrowMessage
               shape="1"

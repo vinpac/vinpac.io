@@ -3,10 +3,10 @@ import cx from 'classnames'
 import { ColorName } from '@lib/theme'
 
 export interface ShadowColorProps {
-  readonly color: ColorName
-  readonly distance: '1' | '2' | '3' | '4'
-  readonly className?: string
-  readonly shadowClassName?: string
+  color: ColorName
+  distance: '1' | '2' | '3' | '4'
+  className?: string
+  shadowClassName?: string
 }
 
 const ShadowColor: React.FC<ShadowColorProps> = ({

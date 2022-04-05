@@ -14,28 +14,28 @@ import SwapThemeIcon from '@components/SwapThemeIcon'
 
 const messages = defineMessages({
   myBlog: {
-    id: 'defaultSuggestions/myBlog',
     defaultMessage: 'Meu blog',
+    id: 'IPAhkW',
   },
   home: {
-    id: 'defaultSuggestions/home',
     defaultMessage: 'Início',
+    id: 'm42V4+',
   },
   projects: {
-    id: 'defaultSuggestions/projects',
     defaultMessage: 'Projetos',
+    id: '6EqXIC',
   },
   aboutMe: {
-    id: 'defaultSuggestions/aboutMe',
     defaultMessage: 'Sobre Mim',
+    id: 'xbP7qa',
   },
   kindWords: {
-    id: 'defaultSuggestions/kindWords',
     defaultMessage: 'Espaço da gentileza',
+    id: 'nhjJTT',
   },
   contact: {
-    id: 'defaultSuggestions/contact',
     defaultMessage: 'Contato',
+    id: 'SgXTSK',
   },
 })
 

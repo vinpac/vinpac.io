@@ -2,8 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 
 export interface BrowserMockupProps {
-  readonly className?: string
-  readonly screenClassName?: string
+  className?: string
+  screenClassName?: string
 }
 
 const BrowserMockup: React.FC<BrowserMockupProps> = ({

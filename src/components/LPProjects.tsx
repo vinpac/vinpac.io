@@ -9,18 +9,18 @@ import Image from 'next/image'
 
 const messages = defineMessages({
   openSourceTitle: {
-    id: 'components/LPProjects/openSourceTitle',
+    id: 'eL0Zgf',
     defaultMessage: '// Sou um grande fã de <span>Código aberto</span>',
   },
 })
 
 const financas = defineMessages({
   title: {
-    id: 'project/financas/title',
+    id: 'AOsrhY',
     defaultMessage: 'Protótipo: App para gerenciamente financeiro',
   },
   description: {
-    id: 'project/financas/description',
+    id: 'JflVZj',
     defaultMessage:
       'Controle a finanças pessoais através de uma interface clara e direta. O desafio sempre foi ter vontade de registrar. Ser fácil é um grande primeiro passo.',
   },
@@ -28,11 +28,11 @@ const financas = defineMessages({
 
 const pGraphQL = defineMessages({
   title: {
-    id: 'project/pGraphQL/title',
+    id: 'CIe6I3',
     defaultMessage: 'Estudo: GraphQL Parser',
   },
   description: {
-    id: 'project/pGraphQL/description',
+    id: 'hqh7Hj',
     defaultMessage:
       'Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas.',
   },
@@ -40,7 +40,7 @@ const pGraphQL = defineMessages({
 
 const nexusTypeORMPlugin = defineMessages({
   description: {
-    id: 'project/nexusTypeORMPlugin/description',
+    id: 'FOsGM9',
     defaultMessage:
       'Este plugin cria definições e resolvers automaticamente transformando modelos do TypeORM em uma API GraphQL',
   },
@@ -48,13 +48,16 @@ const nexusTypeORMPlugin = defineMessages({
 
 const atados = defineMessages({
   title: {
-    id: 'project/atados/title',
+    id: '+j0BYY',
     defaultMessage: 'Atados: Plataforma de voluntariado',
   },
   description: {
-    id: 'project/atados/description',
-    defaultMessage:
-      'Trabalhei desenvolvendo e liderando a equipe de desenvolvimento de projetos, possibilitando a escala do produto internacionalmente. Além do site público, a plataforma é utilizada por empresas como Boticário, Via Varejo e Roche somando mais de 150 mil usuários. É a maior plataforma de voluntariado no Brasil.',
+    id: 'VOTlCZ',
+    defaultMessage: `Uma Plataforma Web em React que capacita projetos sociais. Gerentes de Projetos o usam para encontrar e gerenciar voluntários, além receber doações por meio de uma integração de pagamentos. Por outro lado, os voluntários podem encontrar projetos e começar sua jornada voluntária.
+
+      Fui o principal desenvolvedor Front-End e me comunicava diretamente com o desenvolvedor Back-End para integração a API Django em nosso produto principal e em plataformas específicas do cliente. Para a integração de pagamentos, trabalhei como desenvolvedor Back-End, onde criei Funções Lambda para servir como nossa ponte de integração. Isso nos permitiu receber mais de R$ 200.000 (200 mil reais) em março de 2020. Também trabalhei como desenvolvedor Back-End para habilitar a funcionalidade White-Label. Nesta função, criei um sistema onde uma plataforma para um cliente poderia substituir facilmente partes do nosso aplicativo para funcionar de acordo com as necessidades do cliente.
+      
+      Para melhorar a experiência de desenvolvimento, criei integrações contínuas para melhorar o processo de deploy. A integração validava a nova versão, fazia a publicação de previews e garantia que todos as plataformas dos clientes estivessem atualizadas com o núcleo do aplicativo.`,
   },
 })
 
@@ -79,15 +82,12 @@ const LPProjects: React.FC<Props> = ({ className }) => {
 
         <div className="relative z-10">
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
-            <FormattedMessage
-              id="components/LPProjects/projects"
-              defaultMessage="Projetos"
-            />
+            <FormattedMessage id="6EqXIC" defaultMessage="Projetos" />
           </h2>
 
           <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-400 mb-12">
             <FormattedMessage
-              id="components/LPProjects/selectedProjects"
+              id="1BAiZz"
               defaultMessage="4 projetos selecionados"
             />
           </p>
@@ -125,8 +125,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               ]}
               resources={[
                 {
-                  url:
-                    'https://www.figma.com/proto/JTRzWcqeUbG6znVyQ37Zyr/Finan%C3%A7as?node-id=482%3A1031&viewport=359%2C216%2C0.3740769326686859&scaling=scale-down',
+                  url: 'https://www.figma.com/proto/JTRzWcqeUbG6znVyQ37Zyr/Finan%C3%A7as?node-id=482%3A1031&viewport=359%2C216%2C0.3740769326686859&scaling=scale-down',
                 },
               ]}
             >
@@ -150,16 +149,14 @@ const LPProjects: React.FC<Props> = ({ className }) => {
               resources={[
                 {
                   icon: FaDribbble,
-                  url:
-                    'https://dribbble.com/shots/14885485-Finances-management-app',
+                  url: 'https://dribbble.com/shots/14885485-Finances-management-app',
                   label: 'Dribbble',
                 },
 
                 {
                   icon: FiPlay,
                   label: 'Play',
-                  url:
-                    'https://www.figma.com/proto/JTRzWcqeUbG6znVyQ37Zyr/Finan%C3%A7as?node-id=482%3A1031&viewport=359%2C216%2C0.3740769326686859&scaling=scale-down',
+                  url: 'https://www.figma.com/proto/JTRzWcqeUbG6znVyQ37Zyr/Finan%C3%A7as?node-id=482%3A1031&viewport=359%2C216%2C0.3740769326686859&scaling=scale-down',
                 },
               ]}
             >
@@ -221,8 +218,7 @@ const LPProjects: React.FC<Props> = ({ className }) => {
                   resources={[
                     {
                       icon: FaGithub,
-                      url:
-                        'https://github.com/vinpac/nexus-typeorm-plugin#readme',
+                      url: 'https://github.com/vinpac/nexus-typeorm-plugin#readme',
                     },
                   ]}
                 >

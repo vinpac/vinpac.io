@@ -16,25 +16,25 @@ import { useIsMac } from '@lib/browser'
 
 const messages = defineMessages({
   navigate: {
-    id: 'Toolbar/navigate',
+    id: 'PBh2Pr',
     defaultMessage: 'Navegar ({shortcut})',
   },
   blog: {
-    id: 'Toolbar/blog',
+    id: 'tv5FG3',
     defaultMessage: 'Blog',
   },
   activeDarkMode: {
-    id: 'Toolbar/activeDarkMode',
+    id: 'nYqYhT',
     defaultMessage: 'Ativar Modo Escuro',
   },
   disableDarkMode: {
-    id: 'Toolbar/disableDarkMode',
+    id: 'd0RPmP',
     defaultMessage: 'Desativar Modo Escuro',
   },
 })
 
 export interface ToolbarProps {
-  readonly className?: string
+  className?: string
 }
 
 const Toolbar: React.FC<ToolbarProps> = ({ className }) => {

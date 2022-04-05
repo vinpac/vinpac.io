@@ -4,7 +4,7 @@ import TechStackCol from '@components/TechStackCol'
 import TechStackItem from '@components/TechStackItem'
 
 export interface FavoriteStackSectionProps {
-  readonly className?: string
+  className?: string
 }
 
 const FavoriteStackSection: React.FC<FavoriteStackSectionProps> = ({

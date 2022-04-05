@@ -3,11 +3,11 @@ import cx from 'classnames'
 import Toolbar from '@components/Toolbar'
 
 export interface LayoutProps {
-  readonly toolbar?: React.ReactNode | null
-  readonly toolbarClassName?: string
-  readonly className?: string
-  readonly hero?: React.ReactNode
-  readonly heroClassName?: string
+  toolbar?: React.ReactNode | null
+  toolbarClassName?: string
+  className?: string
+  hero?: React.ReactNode
+  heroClassName?: string
 }
 
 const Layout: React.FC<LayoutProps> = ({

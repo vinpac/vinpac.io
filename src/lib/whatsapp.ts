@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl'
 
 const messages = defineMessages({
   hello: {
-    id: 'whatsapp/hello',
+    id: 'gFe2rH',
     defaultMessage: 'Oi - Vim através do seu portfólio',
   },
 })

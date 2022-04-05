@@ -10,10 +10,10 @@ import { format, formatDistanceToNow } from 'date-fns'
 import { useDateFNSLocale } from '@lib/date'
 
 export interface BlogPostGridItemProps {
-  readonly post: BlogPost
-  readonly compact?: boolean
-  readonly className?: string
-  readonly shadowClassName?: string
+  post: BlogPost
+  compact?: boolean
+  className?: string
+  shadowClassName?: string
 }
 
 const BlogPostGridItem: React.FC<BlogPostGridItemProps> = ({

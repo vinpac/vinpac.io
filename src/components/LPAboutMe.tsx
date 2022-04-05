@@ -7,28 +7,16 @@ import { intlRenderer } from '@lib/intl'
 
 const messages = defineMessages({
   paragraph1: {
-    id: 'components/LPAboutMe/p/1',
-    defaultMessage: `Eu me chamo <span>Vinicius Pacheco</span> e eu
-    sou um Desenvolvedor FullStack e Designer com experiência em
-    liderança. Eu combino design com a minha experiência em
-    programação pra transformar problemas complexos em soluções completas e
-    elegantes. Tenho muita experiência com Node.js, React e Typescript,
-    mas também consigo desenvolver em Python e PHP. Minha maior força é
-    minha velocidade para criar e sensibilidade para ouvir. Sempre
-    busco harmonizar funcionalidade e elegância.`,
+    id: 'k8PzCR',
+    defaultMessage: `Olá, sou <span>Vinicius Pacheco</span> e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais.`,
   },
   paragraph3: {
-    id: 'components/LPAboutMe/p/3',
-    defaultMessage: `Eu cresci em uma família pequena no interior do Rio do Janeiro. As
-    coisas não eram muito fáceis.
-    <span>Foi na programação que encontrei meu espaço de expressão aos 14 anos</span>.
-    Aos 17 anos fui chamado para trabalhar em um projeto de São Paulo.
-    Não demorou muito pra eu decidir em mudar pra lá. Fui pra mais de
-    450km da onde eu morava, sozinho, aos 19 anos.`,
+    id: '7xYPxA',
+    defaultMessage: `Cresci em Petrópolis, uma pequena cidade do Rio de Janeiro. As coisas não eram tão fáceis. <span>Com 14 anos, eu conheci na programação a minha forma de expressão</span>. Alguns anos e projetos depois, aos 17, a Atados me contratou como freelancer para construir sua primeira plataforma internacional. Eles me convidaram para mudar pra São Paulo, a 400 quilômetros dali. Aceitei o convite e me aventurei numa cidade nova aos 19.`,
   },
   arrowMessage: {
-    id: 'components/LPAboutMe/arrowMessage',
-    defaultMessage: 'Curtiu? Segue lá no',
+    id: 'oNYXnh',
+    defaultMessage: 'Veja todas meus desenhos no',
   },
 })
 
@@ -73,14 +61,11 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           className="transform rotate-45 -top-24 left-18 my-auto lg:-left-36 absolute z-20"
         />
         <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white">
-          <FormattedMessage
-            id="components/LPAboutMe/title"
-            defaultMessage="Sobre mim"
-          />
+          <FormattedMessage id="PscvAo" defaultMessage="Sobre mim" />
         </h1>
         <p className="text-2xl md:text-3xl font-medium text-primary-700 dark:text-primary-300 mb-8">
           <FormattedMessage
-            id="components/LPAboutMe/subtitle"
+            id="N5DL11"
             defaultMessage="De Petropólis para o mundo"
           />
         </p>
@@ -100,7 +85,7 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
           />
           <h2 className="text-2xl mb-4 font-medium mt-8 text-gray-800 dark:text-white">
             <FormattedMessage
-              id="components/LPAboutMe/title/2"
+              id="K5hD19"
               defaultMessage="Programação como uma forma de expressão"
             />
           </h2>
@@ -121,29 +106,26 @@ const LPAboutMe: React.FC<Props> = ({ className }) => {
 
           <p className="mb-4">
             <FormattedMessage
-              id="components/LPAboutMe/p/4"
-              defaultMessage="Em São Paulo conheci todo tipo de gente. Na Atados criei amigos pra
-            vida. Conheci pessoas sensíveis que não só me ofereceram um espaço para
-            criar, mas também me mostraram o poder da empatia, da escuta e da
-            vulnerabilidade."
+              id="QpMbuR"
+              defaultMessage="Em São Paulo conheci uma gama muito diversificada de pessoas. Trabalhando na Atados fiz amigos para a vida. Conheci pessoas sensíveis que me deram um espaço para criar, o que fortaleceu minha empatia, minha capacidade de ouvir e minha expressão vulnerável."
             />
           </p>
           <p className="mb-4">
             <FormattedMessage
-              id="components/LPAboutMe/p/5"
-              defaultMessage="Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que tomar a decisão de não fazer
-              faculdade e mudar pra São Paulo foi a melhor decisão que eu podia ter tomado."
+              id="h/PBBt"
+              defaultMessage="Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que decidir não fazer
+              faculdade e mudar pra São Paulo para trabalhar foi a melhor decisão que eu podia ter tomado. Foi aprendendo na prática que eu criei meu próprio caminho."
             />
           </p>
           <h2 className="text-2xl mb-4  font-medium text-gray-800 dark:text-white mt-8">
             <FormattedMessage
-              id="components/LPAboutMe/title/3"
+              id="WK/SgI"
               defaultMessage="Não só de trabalho, eu vou vivendo..."
             />
           </h2>
           <p className="mb-4">
             <FormattedMessage
-              id="components/LPAboutMe/p/6"
+              id="71KGgl"
               defaultMessage="Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha
             praia. Alias, me amarro numa boa praia. Sempre
             que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma

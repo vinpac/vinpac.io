@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { vinicius } from '@static-constants'
 
 export interface PostAuthorAvatarWithLinkProps {
-  readonly className?: string
+  className?: string
 }
 
 const PostAuthorAvatarWithLink: React.FC<PostAuthorAvatarWithLinkProps> = ({

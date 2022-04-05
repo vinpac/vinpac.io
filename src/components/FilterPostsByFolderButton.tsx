@@ -4,8 +4,8 @@ import SearchLink from '@components/SearchLink'
 import { FiFolder } from 'react-icons/fi'
 
 export interface FilterPostsByFolderButtonProps {
-  readonly folder: string
-  readonly className?: string
+  folder: string
+  className?: string
 }
 
 const FilterPostsByFolderButton: React.FC<FilterPostsByFolderButtonProps> = ({

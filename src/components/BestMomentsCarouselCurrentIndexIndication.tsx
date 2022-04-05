@@ -3,14 +3,16 @@ import cx from 'classnames'
 import Tooltip from '@reach/tooltip'
 
 export interface BestMomentsCarouselCurrentIndexIndicationProps {
-  readonly className?: string
-  readonly positionClassName?: string
-  readonly activeSlideIndex: number
-  readonly timeout: number
-  readonly slidesLength: number
+  className?: string
+  positionClassName?: string
+  activeSlideIndex: number
+  timeout: number
+  slidesLength: number
 }
 
-const BestMomentsCarouselCurrentIndexIndication: React.FC<BestMomentsCarouselCurrentIndexIndicationProps> = ({
+const BestMomentsCarouselCurrentIndexIndication: React.FC<
+  BestMomentsCarouselCurrentIndexIndicationProps
+> = ({
   className,
   positionClassName = 'relative',
   activeSlideIndex,

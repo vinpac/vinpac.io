@@ -2,16 +2,16 @@ import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 import cx from 'classnames'
 
 export interface ButtonProps {
-  readonly as?:
+  as?:
     | React.ComponentType<{
         ref?: any
         className: string
         children?: React.ReactNode
       }>
     | string
-  readonly className?: string
-  readonly colorSchema?: keyof typeof colorMapCx
-  readonly size?: keyof typeof sizeMapCx | null
+  className?: string
+  colorSchema?: keyof typeof colorMapCx
+  size?: keyof typeof sizeMapCx | null
 }
 
 const Button = React.forwardRef<
@@ -52,8 +52,7 @@ const colorMapCx = {
   theme:
     'bg-white dark:bg-gray-700 active:ring-primary-500 dark:hover:bg-gray-600 hover:ring-2 hover:ring-opacity-100 ring-primary-500 ',
   primary: 'bg-primary-500 hover:bg-primary-600 text-white ring-primary-500',
-  gray:
-    'bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white ring-gray-400',
+  gray: 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white ring-gray-400',
 } as const
 
 const sizeMapCx = {

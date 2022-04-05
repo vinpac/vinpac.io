@@ -2,12 +2,12 @@ import React from 'react'
 import cx from 'classnames'
 
 export interface TechStackColProps {
-  readonly title: string
-  readonly description: string
-  readonly subtitle?: string
-  readonly className?: string
-  readonly experience?: string
-  readonly children?: React.ReactNode
+  title: string
+  description: string
+  subtitle?: string
+  className?: string
+  experience?: string
+  children?: React.ReactNode
 }
 
 const TechStackCol: React.FC<TechStackColProps> = ({
