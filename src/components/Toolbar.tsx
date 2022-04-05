@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import Link from 'next/link'
-import { isBreakpoint, useToggleTheme , useTheme } from '@lib/theme'
+import { isBreakpoint, useToggleTheme, useTheme } from '@lib/theme'
 import { FiMenu } from 'react-icons/fi'
 import ToolbarButton from '@components/ToolbarButton'
 import { useQuickOpen } from '@lib/quickOpen/hooks'
@@ -74,13 +74,21 @@ const Toolbar: React.FC<ToolbarProps> = ({ className }) => {
           onClick={() => quickOpen.open({ text: '' })}
         />
         <div className="flex space-x-4 text-2xl border-l pl-4 border-gray-300 dark:border-gray-700">
-          <ToolbarButton label="GitHub" href={vinicius.gitHubURL}>
+          <ToolbarButton label="GitHub" href={vinicius.gitHubURL} isExternal>
             <FaGithub />
           </ToolbarButton>
-          <ToolbarButton label="Dribbble" href={vinicius.dribbbleURL}>
+          <ToolbarButton
+            label="Dribbble"
+            href={vinicius.dribbbleURL}
+            isExternal
+          >
             <FaDribbble />
           </ToolbarButton>
-          <ToolbarButton label="LinkedIn" href={vinicius.linkedInURL}>
+          <ToolbarButton
+            label="LinkedIn"
+            href={vinicius.linkedInURL}
+            isExternal
+          >
             <FaLinkedin />
           </ToolbarButton>
           <Tooltip label={themeToggleLabel}>

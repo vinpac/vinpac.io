@@ -12,6 +12,7 @@ export interface ToolbarButtonProps {
   children?: React.ReactNode
   className?: string
   textClassName?: string
+  isExternal?: boolean
 }
 
 const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
@@ -22,6 +23,7 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
       textClassName,
       label,
       fallbackToLabel = true,
+      isExternal,
       children,
       ...props
     },
@@ -37,7 +39,9 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = React.forwardRef(
             `text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white`,
           className,
         )}
-        {...props}
+        {...(isExternal
+          ? { ...props, target: '_blank', rel: 'noreferrer' }
+          : props)}
         aria-label={label}
       >
         {children || (fallbackToLabel && label)}
