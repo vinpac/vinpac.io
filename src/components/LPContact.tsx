@@ -18,8 +18,8 @@ const messages = defineMessages({
     defaultMessage: 'Open Source e Estudos',
   },
   myEmail: {
-    id: 'n5pgGm',
-    defaultMessage: 'Fale comigo',
+    id: 'qyjUyf',
+    defaultMessage: 'Pra Falar Comigo',
   },
 })
 

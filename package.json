@@ -10,7 +10,7 @@
     "test-all": "yarn lint && yarn type-check && yarn test",
     "intl:extract": "formatjs extract 'src/**/*.ts*' --out-file src/lang/_default.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
     "intl:compile": "formatjs compile src/lang/en.json --ast --out-file src/generated/lang/en.json",
-    "prepare": "husky install"
+    "prepare": "husky install && yarn intl:compile"
   },
   "lint-staged": {
     "**/*.js": [
