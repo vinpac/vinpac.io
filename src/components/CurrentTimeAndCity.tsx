@@ -27,7 +27,7 @@ const CurrentTimeAndCity: React.FC<Props> = ({ className }) => {
         <FormattedMessage
           id="3kNnP9"
           defaultMessage="São Paulo, SP {time} 🇧🇷"
-          values={{ time: now ? intl.formatTime(now) : '00' }}
+          values={{ time: now ? intl.formatTime(now) : '00:00' }}
         />
       </p>
     </div>
