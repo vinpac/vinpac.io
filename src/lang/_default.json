@@ -8,6 +8,9 @@
   "/pJiee": {
     "defaultMessage": "E o Chico"
   },
+  "0j0ptK": {
+    "defaultMessage": "Vinicius Pacheco Portfolio"
+  },
   "3kNnP9": {
     "defaultMessage": "São Paulo, SP {time} 🇧🇷"
   },
@@ -22,6 +25,9 @@
   },
   "6EqXIC": {
     "defaultMessage": "Projetos"
+  },
+  "7/lzrt": {
+    "defaultMessage": "Olá, sou Vinicius Pacheco e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."
   },
   "71KGgl": {
     "defaultMessage": "Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha praia. Alias, me amarro numa boa praia. Sempre que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma aventura. Principalmente se for com prancha. Bora dar um rolé de Skate? Tenho 2!"
@@ -79,6 +85,9 @@
   },
   "SR5Zcr": {
     "defaultMessage": "Desenvolver Full Stack em {city}"
+  },
+  "SWLuzB": {
+    "defaultMessage": "Infelizmente nada foi encontrado"
   },
   "SgXTSK": {
     "defaultMessage": "Contato"

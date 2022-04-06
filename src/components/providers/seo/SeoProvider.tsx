@@ -8,12 +8,12 @@ const messages = defineMessages({
     id: '0j0ptK',
   },
   description: {
-    defaultMessage: `Eu me chamo Vinicius Pacheco e eu
-    sou um Desenvolvedor FullStack e Designer com experiência em
-    liderança. Eu combino design com a minha experiência em
-    programação pra transformar problemas complexos em soluções completas e
-    elegantes`,
-    id: '4DE0UJ',
+    defaultMessage: `Olá, sou Vinicius Pacheco e sou desenvolvedor
+    Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript.
+    Com uma combinação única de experiência em design e desenvolvimento, crio interfaces
+    profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir
+    soluções inteligentes que permitem experiências ideais.`,
+    id: '7/lzrt',
   },
 })
 

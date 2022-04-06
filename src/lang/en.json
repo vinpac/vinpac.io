@@ -8,6 +8,9 @@
   "/pJiee": {
     "defaultMessage": "And Chico"
   },
+  "0j0ptK": {
+    "defaultMessage": "Vinicius Pacheco Portfolio"
+  },
   "3kNnP9": {
     "defaultMessage": "São Paulo, SP {time} 🇧🇷"
   },
@@ -22,6 +25,9 @@
   },
   "6EqXIC": {
     "defaultMessage": "Projects"
+  },
+  "7/lzrt": {
+    "defaultMessage": "Hi, I'm Vinicius Pacheco and  I'm a Full-stack developer with 7+ years of experience, specializing in React, Node.js, and TypeScript. With a unique combination of design and development experience, I build professional, pixel-perfect interfaces in a short amount of time. I excel at delivering smart solutions that enable seamless experiences."
   },
   "71KGgl": {
     "defaultMessage": "I love to play music. I play cavaquinho, banjo and tambourine. Playing samba on the street is my vibe. If going to the beach is possible, I'm easily there. Whenever I can, I carry my surfboard to the sea. I love a good adventure. Especially if it's on a board. Let's take a skate ride? I have 2!"
@@ -80,6 +86,9 @@
   "SR5Zcr": {
     "defaultMessage": "Full Stack Developer in {city}"
   },
+  "SWLuzB": {
+    "defaultMessage": "Unfortunately nothing was found"
+  },
   "SgXTSK": {
     "defaultMessage": "Contact"
   },
@@ -127,9 +136,6 @@
   },
   "m42V4+": {
     "defaultMessage": "Home"
-  },
-  "n5pgGm": {
-    "defaultMessage": "Talk to me"
   },
   "nYqYhT": {
     "defaultMessage": "Enable Dark Mode"
