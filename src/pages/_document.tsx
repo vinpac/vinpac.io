@@ -19,6 +19,7 @@ const Document: React.FC = () => {
           content="vinpac, vinicius pacheco, vinicius, pacheco, dev, developer, js, react"
         />
         <meta name="author" content="Vinicius Pacheco" />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <body>
         <Main />
