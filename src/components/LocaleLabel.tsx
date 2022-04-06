@@ -4,7 +4,7 @@ import { FiGlobe } from 'react-icons/fi'
 import { useIntl, defineMessages } from 'react-intl'
 
 const messages = defineMessages({
-  'en-US': {
+  en: {
     id: '8yLSUZ',
     defaultMessage: 'Inglês',
   },
@@ -22,13 +22,13 @@ const LocaleLabel: React.FC<LocaleLabelProps> = ({ locale }) => {
   const intl = useIntl()
   return (
     <>
-      {locale === 'en-US' ? (
+      {locale !== 'pt-BR' ? (
         <>
           <FiGlobe
             size={16}
             className="inline-block align-text-top text-theme-600"
           />{' '}
-          {intl.formatMessage(messages['en-US'])}
+          {intl.formatMessage(messages[locale])}
         </>
       ) : (
         <>🇧🇷 {intl.formatMessage(messages['pt-BR'])}</>

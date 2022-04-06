@@ -1,1 +1,1 @@
-export type ValidLocale = 'en-US' | 'pt-BR'
+export type ValidLocale = 'en' | 'pt-BR'

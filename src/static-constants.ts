@@ -1,4 +1,6 @@
-export const DEFAULT_LOCALE = 'pt-br'
+import { ValidLocale } from '@lib/i18n'
+
+export const DEFAULT_LOCALE: ValidLocale = 'pt-BR'
 
 export const vini = {
   image: '/assets/avatar.jpg',
@@ -6,20 +8,11 @@ export const vini = {
   email: 'oi@vinpac.io',
   phone: '+55 11 976574407',
   instagramURL: 'https://instagram.com/vin.pacheco',
-  twitterURL: 'https://linkedin/in/sambacode',
-  twitterHandle: 'sambacode',
+  twitterURL: 'https://twitter.com/vinpac_io',
+  twitterHandle: 'vinpac_io',
   linkedInURL: 'https://www.linkedin.com/in/vinpac/',
   dribbbleURL: 'https://dribbble.com/vinpac',
   gitHubURL: 'https://github.com/vinpac',
 } as const
 
-const configEnv = process.env.APP_CONFIG
-
-interface App {
-  messages: Record<any, string>
-}
-const { messages = {} }: Partial<App> = configEnv ? JSON.parse(configEnv) : {}
-
-export const app: App = {
-  messages,
-}
+export const locales: ValidLocale[] = ['en', 'pt-BR']

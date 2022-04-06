@@ -10,7 +10,7 @@ import {
   Suggestion,
   LinkSuggestion,
 } from '@lib/quickOpen/types'
-import { defineMessages, useIntl } from 'react-intl'
+import { defineMessages, FormattedMessage, useIntl } from 'react-intl'
 import { localizePathname } from '@lib/intl'
 
 const messages = defineMessages({
@@ -175,6 +175,7 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
           value={text}
+          autoFocus
         />
         <FiSearch
           size={28}
@@ -198,7 +199,10 @@ const QuickOpen: React.FC<QuickOpenProps> = ({
             loading="lazy"
           />
           <p className="text-gray-700 dark:text-gray-300 text-center font-medium fadeInUp-25 animated_faster">
-            Infelizmente nada foi encontrado
+            <FormattedMessage
+              defaultMessage="Infelizmente nada foi encontrado"
+              id="SWLuzB"
+            />
           </p>
         </div>
       )}

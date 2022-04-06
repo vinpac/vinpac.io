@@ -5,22 +5,16 @@ import {
   QuickOpen_OpenConfig,
   QuickOpenContextType,
 } from '@lib/quickOpen/context'
-import { BuildSuggestionsListFn, Suggestion } from '@lib/quickOpen/types'
+import { Suggestion } from '@lib/quickOpen/types'
 import { useTheme } from '@lib/theme'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
 import { useHotkeys } from 'react-hotkeys-hook'
+import { buildSuggestionsList } from '@lib/quickOpen'
 
 const QuickOpenDynamic = dynamic(() => import('components/QuickOpen'))
 
-export interface QuickOpenProviderProps {
-  buildSuggestionsList: BuildSuggestionsListFn
-}
-
-const QuickOpenProvider: React.FC<QuickOpenProviderProps> = ({
-  children,
-  buildSuggestionsList,
-}) => {
+const QuickOpenProvider: React.FC = ({ children }) => {
   const [showDialog, setShowDialog] = useState<boolean>(false)
   const [defaultText, setDefaultText] = useState('')
   const initialRoute = useRef<{ pathname: string; asPath: string } | null>(null)
