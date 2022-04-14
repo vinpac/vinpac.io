@@ -1,18 +1,10 @@
 import { BlogIndex, BlogPost } from '@lib/notion'
-import { useSWRFetch } from '@lib/fetch/hooks'
-import { useEffect, useMemo } from 'react'
-import { updateBlogIndexCacheInBrowser } from '@lib/blog/browser'
 import { SWRResponse } from 'swr'
 import { ValidLocale } from '@lib/i18n'
+import { useMemo } from 'react'
 
 export const useBlogIndex = (): SWRResponse<BlogIndex, Error> => {
-  const result = useSWRFetch<BlogIndex>('/api/blog')
-  useEffect(() => {
-    if (result.data) {
-      updateBlogIndexCacheInBrowser(result.data)
-    }
-  }, [result.data])
-  return result
+  throw new Error('Not implemented yet')
 }
 
 export interface UsePostOnLocaleResult {
