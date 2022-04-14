@@ -11,6 +11,9 @@
   "0j0ptK": {
     "defaultMessage": "Vinicius Pacheco Portfolio"
   },
+  "0njgbr": {
+    "defaultMessage": "Em São Paulo conheci uma gama muito diversificada de pessoas. Trabalhando na Atados fiz amigos para a vida. Conheci pessoas sensíveis que me deram um espaço para criar, o que fortaleceu minha empatia, minha capacidade de ouvir e minha expressão vulnerável."
+  },
   "3kNnP9": {
     "defaultMessage": "São Paulo, SP {time} 🇧🇷"
   },
@@ -29,11 +32,8 @@
   "7/lzrt": {
     "defaultMessage": "Olá, sou Vinicius Pacheco e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."
   },
-  "71KGgl": {
-    "defaultMessage": "Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha praia. Alias, me amarro numa boa praia. Sempre que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma aventura. Principalmente se for com prancha. Bora dar um rolé de Skate? Tenho 2!"
-  },
-  "7xYPxA": {
-    "defaultMessage": "Cresci em Petrópolis, uma pequena cidade do Rio de Janeiro. As coisas não eram tão fáceis. <span>Com 14 anos, eu conheci na programação a minha forma de expressão</span>. Alguns anos e projetos depois, aos 17, a Atados me contratou como freelancer para construir sua primeira plataforma internacional. Eles me convidaram para mudar pra São Paulo, a 400 quilômetros dali. Aceitei o convite e me aventurei numa cidade nova aos 19."
+  "7Ibjak": {
+    "defaultMessage": "Desenvolvedor Full Stack em {city}"
   },
   "8yLSUZ": {
     "defaultMessage": "Inglês"
@@ -80,12 +80,6 @@
   "PscvAo": {
     "defaultMessage": "Sobre mim"
   },
-  "QpMbuR": {
-    "defaultMessage": "Em São Paulo conheci uma gama muito diversificada de pessoas. Trabalhando na Atados fiz amigos para a vida. Conheci pessoas sensíveis que me deram um espaço para criar, o que fortaleceu minha empatia, minha capacidade de ouvir e minha expressão vulnerável."
-  },
-  "SR5Zcr": {
-    "defaultMessage": "Desenvolver Full Stack em {city}"
-  },
   "SWLuzB": {
     "defaultMessage": "Infelizmente nada foi encontrado"
   },
@@ -104,6 +98,15 @@
   "XSO+lQ": {
     "defaultMessage": "Bora conversar!"
   },
+  "XriOQ3": {
+    "defaultMessage": "Amo brincar de músico. Toco cavaquinho, banjo e pandeiro. Um samba na rua é minha praia. Alias, me amarro numa boa praia. Sempre que dá carrego minha prancha pro mar. Dificil é eu não aceitar uma aventura. Principalmente se for com prancha. Bora dar um rolé de Skate? Tenho 2!"
+  },
+  "YnTBat": {
+    "defaultMessage": "Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que decidir não fazer faculdade e mudar pra São Paulo para trabalhar foi a melhor decisão que eu podia ter tomado. Foi aprendendo na prática que eu criei meu próprio caminho."
+  },
+  "adR0F+": {
+    "defaultMessage": "Olá, sou <span>Vinicius Pacheco</span> e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."
+  },
   "bpZEeb": {
     "defaultMessage": "Começar Conversa"
   },
@@ -119,17 +122,17 @@
   "gFe2rH": {
     "defaultMessage": "Oi - Vim através do seu portfólio"
   },
-  "h/PBBt": {
-    "defaultMessage": "Aprendi a ouvir, sentir, comunicar e pedir ajuda. Olhando pra trás, vejo que decidir não fazer faculdade e mudar pra São Paulo para trabalhar foi a melhor decisão que eu podia ter tomado. Foi aprendendo na prática que eu criei meu próprio caminho."
-  },
   "hqh7Hj": {
     "defaultMessage": "Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas."
   },
   "ifZxwY": {
     "defaultMessage": "{count} projetos selecionados"
   },
-  "k8PzCR": {
-    "defaultMessage": "Olá, sou <span>Vinicius Pacheco</span> e sou desenvolvedor Full-stack com mais de 7 anos de experiência, especializado em React, Node.js e TypeScript. Com uma combinação única de experiência em design e desenvolvimento, crio interfaces profissionais e pixel-perfect em um curto espaço de tempo. Sou excelente em construir soluções inteligentes que permitem experiências ideais."
+  "jw1ksZ": {
+    "defaultMessage": "Cresci em Petrópolis, uma pequena cidade do Rio de Janeiro. As coisas não eram tão fáceis. <span>Com 14 anos, eu conheci na programação a minha forma de expressão</span>. Alguns anos e projetos depois, aos 17, a Atados me contratou como freelancer para construir sua primeira plataforma internacional. Eles me convidaram para mudar pra São Paulo, a 400 quilômetros dali. Aceitei o convite e me aventurei numa cidade nova aos 19."
+  },
+  "kOBTV2": {
+    "defaultMessage": "Vinicius surpreende a qualquer um pela capacidade técnica e de gestão, excelente profissional. Lida com novos desafios e problemas como degraus do dia a dia, é um profissional pra qualquer equipe."
   },
   "kUEOEk": {
     "defaultMessage": "{years} anos"
@@ -145,6 +148,12 @@
   },
   "oNYXnh": {
     "defaultMessage": "Veja todas meus desenhos no"
+  },
+  "qNPozH": {
+    "defaultMessage": "O Vinícius é simplesmente uma daquelas pessoas que está completamente fora da curva. Sua capacidade técnica e gestora se desenvolvem de uma maneira que deixa qualquer um pasmo. definitivamente um dos melhores profissionais que já tive o prazer de trabalhar."
+  },
+  "qbN79T": {
+    "defaultMessage": "Vinicius foi o responsável por construir e escalar o site do Atados (atados.com.br). Ele gerenciou nossa equipe por alguns anos. Com ele, além de criarmos uma plataforma com fácil usabilidade para ONGs, criamos também um sistema de gerenciamento inteligente, escalável e que possibilitou a área ser auto-sustentável. Espero que a gente possa criar mais projetos juntos no futuro"
   },
   "qyjUyf": {
     "defaultMessage": "Pra Falar Comigo"
