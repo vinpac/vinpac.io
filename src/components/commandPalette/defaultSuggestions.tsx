@@ -1,7 +1,7 @@
-import { PropsPassedToSuggestion, Suggestion } from '@lib/quickOpen/types'
+import { PropsPassedToSuggestion, Suggestion } from '@components/commandPalette'
 import { FaGithub, FaTwitter, FaDribbble } from 'react-icons/fa'
 import { defineMessages, useIntl } from 'react-intl'
-import QuickOpenSuggestionThemeSwapTitle from '@components/QuickOpenSuggestionThemeSwapTitle'
+
 import {
   FiEdit,
   FiHeart,
@@ -10,7 +10,8 @@ import {
   FiPackage,
   FiUser,
 } from 'react-icons/fi'
-import SwapThemeIcon from '@components/SwapThemeIcon'
+import { SwapThemeIcon } from '@components/theme'
+import { CommandPaletteSuggestionThemeSwapTitle } from './themeSwapTitle'
 
 const messages = defineMessages({
   myBlog: {
@@ -155,7 +156,7 @@ export const staticSuggestions: Suggestion[] = [
       'Mode',
     ],
     useAsFallback: true,
-    title: QuickOpenSuggestionThemeSwapTitle,
+    title: CommandPaletteSuggestionThemeSwapTitle,
     showDescription: false,
   },
 ]

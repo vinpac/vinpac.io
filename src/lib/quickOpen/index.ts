@@ -1,1 +1,0 @@
-export { buildSuggestionsList } from './suggestions'

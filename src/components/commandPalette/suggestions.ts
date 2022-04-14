@@ -1,9 +1,9 @@
-import { staticSuggestions } from '@lib/quickOpen/defaultSuggestions'
+import { staticSuggestions } from '@components/commandPalette/defaultSuggestions'
 import {
   Suggestion,
   BuildSuggestionsListFn,
   LinkSuggestion,
-} from '@lib/quickOpen/types'
+} from '@components/commandPalette'
 import { escapeRegex } from '@lib/utils/regexp'
 
 export const buildSearchRegex = (input: string): RegExp => {
