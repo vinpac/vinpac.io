@@ -1,16 +1,15 @@
 import '@reach/tooltip/styles.css'
 // Blog is currently disabled
 // import 'prismjs/themes/prism-tomorrow.css'
+// import '../css/notion.css'
 import '../css/tailwind.css'
 import '../css/animations.css'
-import '../css/notion.css'
 
 import { AppProps } from 'next/app'
-import PageTransitionLoadingBar from '@components/PageTransitionLoadingBar'
-import { ThemeProvider } from '@lib/theme'
-import SeoProvider from '@components/providers/seo'
-import I18nProvider from '@components/providers/i18n'
-import QuickOpenProvider from '@components/QuickOpenProvider'
+import { PageTransitionLoadingBar } from '@components/transition'
+import { ThemeProvider } from '@components/theme'
+import { SeoProvider, I18nProvider } from '@components/core'
+import { CommandPaletteProvider } from '@components/commandPalette'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -18,9 +17,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       <I18nProvider>
         <SeoProvider>
           <PageTransitionLoadingBar />
-          <QuickOpenProvider>
+          <CommandPaletteProvider>
             <Component {...pageProps} />
-          </QuickOpenProvider>
+          </CommandPaletteProvider>
         </SeoProvider>
       </I18nProvider>
     </ThemeProvider>
