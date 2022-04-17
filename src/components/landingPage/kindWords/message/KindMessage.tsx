@@ -1,15 +1,6 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
-import {
-  Card,
-  Stars,
-  Message,
-  Author,
-  AuthorAvatarCircle,
-  AuthorAvatarImage,
-  AuthorName,
-  AuthorRole,
-} from './KindMessage.styled'
+import s from './KindMessage.styled'
 
 interface Props {
   className?: string
@@ -32,32 +23,32 @@ export const KindMessage: React.FC<Props> = ({
 }) => {
   return (
     <div className={className}>
-      <Card>
-        <Stars>
+      <s.Card>
+        <s.Stars>
           <FaStar />
           <FaStar />
           <FaStar />
           <FaStar />
           <FaStar />
-        </Stars>
-        <Message>&quot;{message}&quot;</Message>
+        </s.Stars>
+        <s.Message>&quot;{message}&quot;</s.Message>
 
-        <Author>
+        <s.Author>
           {authorAvatarURL && (
-            <AuthorAvatarCircle>
-              <AuthorAvatarImage src={authorAvatarURL} alt={authorName} />
-            </AuthorAvatarCircle>
+            <s.AuthorAvatarCircle>
+              <s.AuthorAvatarImage src={authorAvatarURL} alt={authorName} />
+            </s.AuthorAvatarCircle>
           )}
 
           <div>
-            <AuthorName>{authorName}</AuthorName>
-            <AuthorRole>
+            <s.AuthorName>{authorName}</s.AuthorName>
+            <s.AuthorRole>
               {authorRole}
               {company && ` @ ${company}`}
-            </AuthorRole>
+            </s.AuthorRole>
           </div>
-        </Author>
-      </Card>
+        </s.Author>
+      </s.Card>
     </div>
   )
 }

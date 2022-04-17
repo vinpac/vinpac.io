@@ -1,6 +1,6 @@
-import wind from '@lib/wind'
+import { w } from 'stichwind'
 
-export const Button = wind.button(
+export const Button = w.button(
   `
   hover:shadow-outline text-center
   font-medium focus:outline-none
@@ -24,7 +24,7 @@ export const Button = wind.button(
         xl: 'px-6 py-5 rounded-lg text-xl',
       },
     },
-    defaultVariants: {
+    defaultProps: {
       size: 'base',
       color: 'theme',
     },

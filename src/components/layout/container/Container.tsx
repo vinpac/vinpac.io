@@ -1,4 +1,4 @@
-import wind from '@lib/wind'
+import { w } from 'stichwind'
 
-export const Container = wind.div('container')
+export const Container = w.div('container')
 Container.displayName = 'Container'

@@ -38,6 +38,7 @@
     "react-intl": "^5.24.8",
     "react-string-replace": "^1.0.0",
     "react-transition-group": "^4.4.2",
+    "stichwind": "^0.1.1",
     "swr": "^1.2.2"
   },
   "devDependencies": {
