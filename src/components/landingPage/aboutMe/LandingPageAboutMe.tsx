@@ -24,8 +24,8 @@ const messages = defineMessages({
     e me aventurei numa cidade nova aos 19.`,
   },
   arrowMessage: {
-    id: 'oNYXnh',
-    defaultMessage: 'Veja todas meus desenhos no',
+    id: '+EfYwC',
+    defaultMessage: 'Veja mais no',
   },
 })
 
