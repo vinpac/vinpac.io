@@ -196,12 +196,23 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
                     },
                   ]}
                 >
-                  <div className="p-4">
+                  <div className="relative p-4">
+                    <div className="absolute z-10 top-8 right-8">
+                      <Image
+                        src="/assets/projects/windstitch.svg"
+                        alt="Windstitch"
+                        width={80}
+                        height={80}
+                      />
+                    </div>
                     <Image
                       src="/assets/projects/windstitch.gif"
-                      alt=""
+                      alt={formatMessage({
+                        defaultMessage: 'Exemplo Windstitch',
+                        id: 'PuZjmu',
+                      })}
                       className="w-full rounded-xl"
-                      width={630}
+                      width={720}
                       height={480}
                     />
                   </div>
@@ -226,7 +237,7 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
                       alt=""
                       className="w-full"
                       width={489}
-                      height={370}
+                      height={320}
                     />
                   </div>
                 </LandingPageProject>
