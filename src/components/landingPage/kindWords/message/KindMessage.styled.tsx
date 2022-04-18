@@ -4,7 +4,7 @@ import { w } from 'windstitch'
 export default group({
   Card: w.div(
     `relative p-8 mb-8 bg-white border border-white
-    rounded-lg shadow dark:bg-gray-800 dark:border-gray-600`,
+    rounded-lg shadow dark:bg-gray-800 dark:border-gray-600 z-10`,
   ),
   Stars: w.div('flex mb-4 space-x-2 text-xl text-yellow-500'),
   Message: w.p('mb-5 text-lg italic text-gray-800 dark:text-gray-200'),

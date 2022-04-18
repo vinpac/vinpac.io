@@ -6254,10 +6254,10 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
-windstitch@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/windstitch/-/windstitch-0.1.1.tgz#4e45ca12287de011196ac9035c4221939fdabdb2"
-  integrity sha512-laHO71SzdmWdJOuv3rCH/PPFzHuyi8wFpMJvGuUA4wJ2SF7y7/I9AwkyTFf/bYyMjhM7czElklGAzuRKIEsycA==
+windstitch@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/windstitch/-/windstitch-0.2.0.tgz#84a6843c15c1460312e8d284b8ecfde44210f2ea"
+  integrity sha512-eQAUgFRhLHaZ9xtd6sYth6CVXVSvANBc4gY1o0Ojtr50rNbytOc3GOCJGDrxVTCJspfsFkCd3tJf7ebPP2qFow==
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"

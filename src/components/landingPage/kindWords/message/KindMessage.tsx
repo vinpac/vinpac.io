@@ -22,34 +22,32 @@ export const KindMessage: React.FC<Props> = ({
   message,
 }) => {
   return (
-    <div className={className}>
-      <s.Card>
-        <s.Stars>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-        </s.Stars>
-        <s.Message>&quot;{message}&quot;</s.Message>
+    <s.Card className={className}>
+      <s.Stars>
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
+      </s.Stars>
+      <s.Message>&quot;{message}&quot;</s.Message>
 
-        <s.Author>
-          {authorAvatarURL && (
-            <s.AuthorAvatarCircle>
-              <s.AuthorAvatarImage src={authorAvatarURL} alt={authorName} />
-            </s.AuthorAvatarCircle>
-          )}
+      <s.Author>
+        {authorAvatarURL && (
+          <s.AuthorAvatarCircle>
+            <s.AuthorAvatarImage src={authorAvatarURL} alt={authorName} />
+          </s.AuthorAvatarCircle>
+        )}
 
-          <div>
-            <s.AuthorName>{authorName}</s.AuthorName>
-            <s.AuthorRole>
-              {authorRole}
-              {company && ` @ ${company}`}
-            </s.AuthorRole>
-          </div>
-        </s.Author>
-      </s.Card>
-    </div>
+        <div>
+          <s.AuthorName>{authorName}</s.AuthorName>
+          <s.AuthorRole>
+            {authorRole}
+            {company && ` @ ${company}`}
+          </s.AuthorRole>
+        </div>
+      </s.Author>
+    </s.Card>
   )
 }
 

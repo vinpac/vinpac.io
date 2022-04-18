@@ -39,7 +39,7 @@
     "react-string-replace": "^1.0.0",
     "react-transition-group": "^4.4.2",
     "swr": "^1.2.2",
-    "windstitch": "^0.1.1"
+    "windstitch": "^0.2.0"
   },
   "devDependencies": {
     "@formatjs/cli": "^4.8.3",
