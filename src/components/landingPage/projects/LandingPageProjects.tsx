@@ -7,13 +7,6 @@ import { FiPlay } from 'react-icons/fi'
 import { FaDribbble, FaGithub } from 'react-icons/fa'
 import Image from 'next/image'
 
-const messages = defineMessages({
-  openSourceTitle: {
-    id: 'eL0Zgf',
-    defaultMessage: '// Sou um grande fã de <span>Código aberto</span>',
-  },
-})
-
 const financas = defineMessages({
   title: {
     id: 'AOsrhY',
@@ -23,18 +16,6 @@ const financas = defineMessages({
     id: 'JflVZj',
     defaultMessage:
       'Controle a finanças pessoais através de uma interface clara e direta. O desafio sempre foi ter vontade de registrar. Ser fácil é um grande primeiro passo.',
-  },
-})
-
-const pGraphQL = defineMessages({
-  title: {
-    id: 'CIe6I3',
-    defaultMessage: 'Estudo: GraphQL Parser',
-  },
-  description: {
-    id: 'hqh7Hj',
-    defaultMessage:
-      'Lexer, Parser e AST. Um estudo afim de entender como linguagens são lidas.',
   },
 })
 
@@ -66,7 +47,7 @@ interface Props {
 }
 
 export const LandingPageProjects: React.FC<Props> = ({ className }) => {
-  const intl = useIntl()
+  const { formatMessage } = useIntl()
 
   return (
     <div
@@ -95,8 +76,8 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
           <div className="-mx-4 space-y-8 sm:mx-0">
             <LandingPageProject
               className="shadow-lg"
-              title={intl.formatMessage(atados.title)}
-              description={intl.formatMessage(atados.description)}
+              title={formatMessage(atados.title)}
+              description={formatMessage(atados.description)}
               years="> 4"
               technologies={[
                 'Figma',
@@ -143,8 +124,8 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
             </LandingPageProject>
             <LandingPageProject
               className="shadow-md"
-              title={intl.formatMessage(financas.title)}
-              description={intl.formatMessage(financas.description)}
+              title={formatMessage(financas.title)}
+              description={formatMessage(financas.description)}
               technologies={['Figma', 'GraphQL', 'React']}
               divider
               resources={[
@@ -175,35 +156,53 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
             <h2 className="items-center px-4 text-2xl text-gray-700 dark:text-gray-300 md:px-0">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: intl.formatMessage(messages.openSourceTitle, {
-                    span: (...chunks: any) =>
-                      `<span class="font-medium text-purple-800 dark:text-purple-300">${chunks.join(
-                        '',
-                      )}</span>`,
-                  }),
+                  __html: formatMessage(
+                    {
+                      id: 'eL0Zgf',
+                      defaultMessage:
+                        '// Sou um grande fã de <span>Código aberto</span>',
+                    },
+                    {
+                      span: (...chunks: any) =>
+                        `<span class="font-medium text-purple-800 dark:text-purple-300">${chunks.join(
+                          '',
+                        )}</span>`,
+                    },
+                  ),
                 }}
               />
-              <span className="relative inline-block w-4 h-8 ml-2 align-baseline bg-purple-800 bg-opacity-50 top-1 dark:bg-purple-400 animate-blink"></span>
+              <span role="presentation" className="opacity-50">
+                <span className="relative inline-block w-4 h-8 -ml-3.5 align-baseline bg-purple-800 top-1 dark:bg-purple-400 animate-blink" />
+              </span>
             </h2>
             <div className="-mx-4 space-y-8 md:flex md:space-y-0">
               <div className="w-full px-4 md:w-1/2">
                 <LandingPageProject
                   className="shadow-md md:h-full"
-                  title={intl.formatMessage(pGraphQL.title)}
-                  description={intl.formatMessage(pGraphQL.description)}
-                  technologies={['Typescript']}
+                  title={formatMessage({
+                    defaultMessage: 'Windstitch',
+                    id: 'KRA21T',
+                  })}
+                  description={formatMessage({
+                    defaultMessage:
+                      'Stiches-like API for Tailwind CSS. A 2kb, Simple Styling Library that helps you set when a className should be applied to a component.',
+                    id: '3v/iPC',
+                  })}
+                  technologies={['Typescript', 'TailwindCSS', 'React']}
                   resources={[
                     {
                       icon: FaGithub,
-                      url: 'https://github.com/vinpac/graphql-study',
+                      url: 'https://github.com/vinpac/windstitch',
                     },
                   ]}
                 >
                   <div className="p-4">
-                    <img
-                      src="/assets/projects/GraphQL.png"
+                    <Image
+                      src="/assets/projects/windstitch.gif"
                       alt=""
-                      className="w-full"
+                      className="w-full rounded-xl"
+                      width={630}
+                      height={480}
                     />
                   </div>
                 </LandingPageProject>
@@ -212,9 +211,7 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
                 <LandingPageProject
                   className="shadow-md md:h-full"
                   title="nexus-typeorm-plugin"
-                  description={intl.formatMessage(
-                    nexusTypeORMPlugin.description,
-                  )}
+                  description={formatMessage(nexusTypeORMPlugin.description)}
                   technologies={['Typescript']}
                   resources={[
                     {
@@ -224,10 +221,12 @@ export const LandingPageProjects: React.FC<Props> = ({ className }) => {
                   ]}
                 >
                   <div className="p-4">
-                    <img
+                    <Image
                       src="/assets/projects/Doky.png"
                       alt=""
                       className="w-full"
+                      width={489}
+                      height={370}
                     />
                   </div>
                 </LandingPageProject>

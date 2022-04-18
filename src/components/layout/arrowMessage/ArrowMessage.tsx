@@ -6,20 +6,6 @@ import Arrow4 from '@assets/svg/arrow-4.svg'
 import Arrow5 from '@assets/svg/arrow-5.svg'
 import cx from 'classnames'
 
-// TODO: TailwindCSS won't know doesn't know to extract this
-// Needs fixing
-const flipClassNames = (cx: string): string =>
-  cx.replace(/(-)?(translate-[xy])/g, (_, negativeSymbol, baseClassName) => {
-    // If has the negative symbol
-    if (negativeSymbol) {
-      // Remove it
-      return baseClassName
-    }
-
-    // Add the negative symbol
-    return `-${baseClassName}`
-  })
-
 interface Props {
   className?: string
   message: string | React.ReactNode
@@ -44,8 +30,7 @@ export const ArrowMessage: React.FC<Props> = ({
         style={{ fontFamily: 'Nanum Pen Script, Georgia, serif' }}
         className={cx(
           'block text-2xl max-w-xs transform',
-          shape && !flip && classNameByShape[shape],
-          shape && flip && flipClassNames(classNameByShape[shape]),
+          shape && classNameByShape[shape],
         )}
       >
         {message}
