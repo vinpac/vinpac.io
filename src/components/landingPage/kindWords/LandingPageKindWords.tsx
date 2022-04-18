@@ -40,7 +40,7 @@ export const LandingPageKindWords: React.FC<Props> = ({ className }) => {
         <h2 className="mb-4 text-4xl font-bold sm:text-5xl md:text-7xl dark:text-white">
           <FormattedMessage id="nhjJTT" defaultMessage="Espaço da gentileza" />
         </h2>
-        <p className="mb-12 text-xl font-medium text-yellow-500 sm:text-2xl md:text-3xl">
+        <p className="mb-12 text-xl text-yellow-500 sm:text-2xl md:text-3xl">
           <FormattedMessage
             id="yt94QM"
             defaultMessage="Mensagens de quem trabalhou comigo"

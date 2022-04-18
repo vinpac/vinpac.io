@@ -26,22 +26,19 @@ export const LandingPageHero: React.FC = () => {
   const intl = useIntl()
 
   return (
-    <div
-      className="relative overflow-hidden pb-36 md:pb-48"
-      style={{ backgroundImage: '/assets/globe.svg' }}
-    >
+    <div className="relative overflow-hidden pb-36 md:pb-56">
       <div className="container relative z-10 pt-5 md:pt-10">
         <figure className="absolute rounded-xl -right-36 top-10 hidden lg:block lg:w-[400px] lg:h-[400px] xl:w-[460px] xl:h-[460px]">
           <ArrowMessage
             shape="2"
             message={intl.formatMessage(messages.me)}
-            className="absolute -ml-4 -left-64 -bottom-6 dark:text-gray-200 "
+            className="absolute -ml-4 -left-64 -bottom-6 dark:text-gray-200"
             direction="right"
           />
           <ArrowMessage
             shape="3"
             message={intl.formatMessage(messages.chico)}
-            className="absolute -ml-4 -bottom-24 right-36 dark:text-gray-200 "
+            className="absolute -ml-4 -bottom-24 right-36 dark:text-gray-200"
             direction="right"
           />
           <div className="absolute inset-0 z-10">

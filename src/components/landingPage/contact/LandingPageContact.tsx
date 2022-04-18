@@ -36,7 +36,7 @@ export const LandingPageContact: React.FC<Props> = ({ className }) => {
         <h1 className="mb-4 text-4xl font-bold text-gray-700 sm:text-5xl md:text-7xl dark:text-white">
           <FormattedMessage id="XSO+lQ" defaultMessage="Bora conversar!" />
         </h1>
-        <p className="mb-12 text-xl font-medium text-gray-400 sm:text-2xl md:text-3xl">
+        <p className="mb-12 text-xl text-gray-400 sm:text-2xl md:text-3xl">
           <FormattedMessage
             id="46Cs0y"
             defaultMessage="Eu não sou dificil de achar, seguinte:"
