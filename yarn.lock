@@ -5687,11 +5687,6 @@ stack-utils@^2.0.3:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stichwind@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/stichwind/-/stichwind-0.1.1.tgz#3838ebec7e454a201fe804cc40b20d07fdb9443e"
-  integrity sha512-m/sYtDAJFgT7C32JIpRoJjnYimOfdAoYM6M58fIo612vjUYwQohmFc9OX1+zQmU+gj52+sabXOZu9kO/WZrPRA==
-
 string-argv@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.3.1.tgz#95e2fbec0427ae19184935f816d74aaa4c5c19da"
@@ -6258,6 +6253,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+windstitch@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/windstitch/-/windstitch-0.1.1.tgz#4e45ca12287de011196ac9035c4221939fdabdb2"
+  integrity sha512-laHO71SzdmWdJOuv3rCH/PPFzHuyi8wFpMJvGuUA4wJ2SF7y7/I9AwkyTFf/bYyMjhM7czElklGAzuRKIEsycA==
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"

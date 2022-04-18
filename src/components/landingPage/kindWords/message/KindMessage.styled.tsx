@@ -1,5 +1,5 @@
-import { group } from '@lib/stichwind'
-import { w } from 'stichwind'
+import { group } from '@lib/windstitch'
+import { w } from 'windstitch'
 
 export default group({
   Card: w.div(
