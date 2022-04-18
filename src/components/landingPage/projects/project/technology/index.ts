@@ -1,1 +1,1 @@
-export * from './LandingPageProjectTeamMember'
+export * from './LandingPageProjectTechnology'

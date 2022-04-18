@@ -92,6 +92,7 @@ export const LandingPageProject: React.FC<Props> = React.memo(
               {technologies.length > 4 && (
                 <LandingPageProjectTechnology
                   label={technologies.slice(4).join(', ')}
+                  className="opacity-50"
                 >
                   +{technologies.length - 4}
                 </LandingPageProjectTechnology>
